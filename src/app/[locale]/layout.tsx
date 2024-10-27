@@ -1,13 +1,31 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Roboto_Mono } from "next/font/google";
 import "../../styles/normalize.css";
 import "../../styles/global.css";
-
+import { ReactNode } from "react";
+type Props = {
+    children: ReactNode;
+    params: { locale: string };
+};
 const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
+export async function generateMetadata({
+    params: { locale },
+}: Omit<Props, "children">) {
+    const t = await getTranslations({ locale, namespace: "LocaleLayout" });
 
+    return {
+        title: t("title"),
+        description: t("description"),
+        icons: {
+            icon: "/favicon/icon.png",
+            shortcut: "/favicon/shortcut.png",
+            apple: "/favicon/apple.png",
+        },
+    };
+}
 export default async function LocaleLayout({
     children,
     params,

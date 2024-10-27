@@ -14,8 +14,8 @@ export default function Landing() {
             <div className={styles.right}>
                 <Image
                     src={landing}
-                    width={500}
-                    height={410}
+                    width={450}
+                    height={369}
                     className={styles.landingImage}
                     alt="Photo of the holy quran"
                     placeholder="blur"

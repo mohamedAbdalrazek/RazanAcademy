@@ -3,6 +3,11 @@
         "title": "Hello world!",
         "about": "Go to the about page"
     },
+    "LocaleLayout":{
+        "title":"Razan Academy",
+        "description":"Razan Academy for Quranic Studies"
+
+    },
     "Landing": {
         "header": "Razan Academy for Quranic Studies",
         "subHeader": "we are committed to providing a unique and inspiring Quranic learning experience. Our academy is founded on the principles of faith and determination, creating a space where both children and women can learn the Quran in a way that blends tradition with modernity."
@@ -35,6 +40,7 @@
             }
         }
     },
+
     "Footer": {
         "name": "RAZAN Academy",
         "customer": "Customer Support"

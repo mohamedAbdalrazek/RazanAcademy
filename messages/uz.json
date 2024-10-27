@@ -3,6 +3,10 @@
         "title": "Hello world!",
         "about": "Go to the about page"
     },
+    "LocaleLayout":{
+        "title":"Razan Akademiyasi",
+        "description":"Razan Akademiyasi Qur'on o'qishlari uchun"
+    },
     "Landing": {
         "header": "Razan Akademiyasi Qur'on o'qishlari uchun",
         "subHeader": "Biz noyob va ilhomlantiruvchi Qur'on o'rganish tajribasini taqdim etishga intilamiz. Bizning akademiyamiz ishonch va qat'iyat tamoyillari asosida tashkil etilgan, bu yerda bolalar va ayollar Qur'onni an'anani zamonaviylik bilan birlashtirib o'rganishlari uchun joy yaratilgan."
