@@ -2,7 +2,9 @@ import React from "react";
 import whatsapp from "../../public/whatsapp.png";
 import Image from "next/image";
 import styles from "../styles/WhatsappButton.module.css"
+import { useTranslations } from "next-intl";
 export default function WhatsappButton() {
+    const t = useTranslations("WhatsappButton")
     return (
         <button className={styles.buttonWrapper}>
             <Image
@@ -14,7 +16,7 @@ export default function WhatsappButton() {
                 className={styles.whatsappLogo}
             />
             <p className={styles.buttonText}>
-                Contact Us on Whatsapp
+                {t(`text`)}
             </p>
         </button>
     );

@@ -4,7 +4,9 @@ import React from "react";
 import logo from "../../public/logo.png";
 import shape from "../../public/footer-shape.png";
 import styles from "../styles/Footer.module.css"
+import { useTranslations } from "next-intl";
 export default function Footer() {
+    const t = useTranslations("Footer")
     return (
         <footer className={styles.footer}>
             <div className={styles.left}>
@@ -20,10 +22,10 @@ export default function Footer() {
                 </Link>
                 <div className={styles.leftTextWrapper}>
                     <h4>
-                        RAZAN Academy
+                        {t(`name`)}
                     </h4>
                     <span>
-                        Customer Support
+                        {t(`customer`)}
                     </span>
                 </div>
             </div>

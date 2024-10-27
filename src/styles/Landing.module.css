@@ -1,0 +1,45 @@
+.landing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 40px 40px;
+}
+.left{
+    width: 55%;
+}
+.landingHeader{
+    color: var(--main-dark);
+    font-size: 3.6rem;
+    font-weight:bolder;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+.subHeader{
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--sub-dark);
+    margin-left: 20px;
+}
+
+.right{
+    width: 40%;
+    position: relative;
+    display: block;
+}
+
+.right::after {
+    content: ''; 
+    position: absolute;
+    bottom: -10px; 
+    left: 50%;
+    transform: translateX(-57%);
+    width: 70%; 
+    height: 20px; 
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    filter: blur(8px); 
+    z-index: -1; 
+    opacity: .3;
+}

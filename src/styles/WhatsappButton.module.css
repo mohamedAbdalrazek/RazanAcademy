@@ -12,7 +12,7 @@
     transition: all 0.3s ease-in-out;
 }
 .buttonWrapper:hover {
-    transform: scale(1.04);
+    transform: scale(1.02);
 }
 .buttonText {
     font-size: 1rem;
