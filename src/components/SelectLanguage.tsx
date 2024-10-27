@@ -1,19 +1,32 @@
-"use client"
+"use client";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { useLocale } from "next-intl";
+import Image from "next/image";
 import { useParams } from "next/navigation";
-import React, { ChangeEvent, useTransition } from "react";
-
+import React, { useState, useTransition } from "react";
+import styles from "../styles/Select.module.css";
+import ArrowDown from "./icons/ArrowDown";
+type Option = {
+    value: "en" | "uz";
+    label: string;
+    imgSrc: string;
+};
 export default function SelectLanguage() {
-    const router= useRouter()
-    const locale = useLocale()
-    const pathname = usePathname()
-    console.log(locale)
-    const params = useParams()
+    const router = useRouter();
+    const locale = useLocale();
+    const pathname = usePathname();
+    console.log(locale);
+    const params = useParams();
     const [, startTransition] = useTransition();
-    const onChange = (e: ChangeEvent<HTMLSelectElement>) => {
-        const nextLocale = e.target.value ;
-        console.log(nextLocale)
+    const [showDropdown, setShowDropdown] = useState(false);
+    const options: Option[] = [
+        { value: "en", label: "En", imgSrc: "/en.png" },
+        { value: "uz", label: "Uz", imgSrc: "/uz.png" },
+    ];
+    const selected = options.filter((option) => {
+        return option.value === locale;
+    })[0];
+    const changeLanguage = (nextLocale: "uz" | "en") => {
         startTransition(() => {
             router.replace(
                 // @ts-expect-error -- TypeScript will validate that only known `params`
@@ -24,10 +37,51 @@ export default function SelectLanguage() {
             );
         });
     };
+    const handleClick = () => {
+        setShowDropdown(!showDropdown);
+    };
     return (
-        <select onChange={onChange} defaultValue={locale}>
-            <option value="en">En</option>
-            <option value="uz">Uz</option>
-        </select>
+        <div className={styles.dropdown}>
+            <button
+                className={`${styles.dropdownBtn} ${
+                    showDropdown && styles.activeBtn
+                }`}
+                onClick={handleClick}
+            >
+                <Image
+                    width={20}
+                    height={25}
+                    src={selected.imgSrc}
+                    alt={selected.label}
+                    className={styles.optionImage}
+                />
+                <span>{selected.label}</span>
+                <ArrowDown className={styles.arrowDown} />
+            </button>
+            {showDropdown && (
+                <div className={styles.dropdownOptions}>
+                    {options.map((option) => {
+                        return (
+                            locale != option.value && (
+                                <div
+                                    key={option.value}
+                                    className={styles.dropdownOption}
+                                    onClick={() => changeLanguage(option.value)}
+                                >
+                                    <Image
+                                        src={option.imgSrc}
+                                        alt={option.label}
+                                        width={20}
+                                        height={25}
+                                        className={styles.optionImage}
+                                    />
+                                    <span>{option.label}</span>
+                                </div>
+                            )
+                        );
+                    })}
+                </div>
+            )}
+        </div>
     );
 }
