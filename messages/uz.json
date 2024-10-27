@@ -1,0 +1,34 @@
+{
+    "HomePage": {
+        "title": "Hello world!",
+        "about": "Go to the about page"
+    },
+    "Nav": {
+        "links": {
+            "home": {
+                "title": "Bosh sahifa",
+                "href": "/"
+            },
+            "aboutUs": {
+                "title": "Biz haqimizda",
+                "href": "/about"
+            },
+            "bricing": {
+                "title": "Narxlash",
+                "href": "/bricing"
+            },
+            "library": {
+                "title": "Kutubxona",
+                "href": "/library"
+            },
+            "blog": {
+                "title": "Blog",
+                "href": "/blog"
+            },
+            "contactUs": {
+                "title": "Biz bilan bog'lanish",
+                "href": "/contact"
+            }
+        }
+    }
+}

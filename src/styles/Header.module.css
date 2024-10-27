@@ -1,0 +1,49 @@
+.header{
+    /* height: 50vh; */
+    display: flex;
+    height: 200px;
+}
+.logoWrapper{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.logo{
+}
+.cover{
+    background-color: var(--main-dark);
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+}
+.coverTextWrapper{
+    color: white;
+    text-align: center;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+.coverTextWrapper p{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+.coverTextWrapper p:first-of-type{
+    font-size: 3.4rem;
+    margin-bottom: 25px;
+}
+.coverBackgroundWrapper{
+    position: absolute;
+    opacity: 15%;
+    z-index: 1;
+    top: -40%;
+    width: 400px;
+    height: 190%;
+    transform: scaleX(-1);
+}

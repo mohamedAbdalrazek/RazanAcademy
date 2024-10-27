@@ -1,0 +1,18 @@
+.nav{
+    display: flex;
+    padding-left: 20%;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    
+}
+.navLink{
+    text-decoration: none;
+    color: var(--main-dark);
+    transition: all .3s ease-in-out;
+
+}
+.navLink:hover{
+    transform: scale(1.1);
+}

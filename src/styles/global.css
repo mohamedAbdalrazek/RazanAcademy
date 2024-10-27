@@ -1,0 +1,13 @@
+:root{
+    --main-dark : #264653;
+    --main-light : #ffffff;
+    --sub-dark :#727171;
+    --active-link:#e63946;
+
+}
+*{
+    font-family: var(--font-roboto-mono);
+}
+a.active{
+    color: var(--active-link);
+}

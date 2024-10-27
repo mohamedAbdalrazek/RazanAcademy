@@ -1,0 +1,34 @@
+{
+    "HomePage": {
+        "title": "Hello world!",
+        "about": "Go to the about page"
+    },
+    "Nav": {
+        "links": {
+            "home": {
+                "title": "Home",
+                "href": "/"
+            },
+            "aboutUs": {
+                "title": "About Us",
+                "href": "/about"
+            },
+            "bricing": {
+                "title": "Bricing",
+                "href": "/bricing"
+            },
+            "library": {
+                "title": "Library",
+                "href": "/library"
+            },
+            "blog": {
+                "title": "Blog",
+                "href": "/blog"
+            },
+            "contactUs": {
+                "title": "Contact Us",
+                "href": "/contact"
+            }
+        }
+    }
+}
