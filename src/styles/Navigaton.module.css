@@ -10,6 +10,7 @@
 }
 .navLink{
     text-decoration: none;
+    font-weight: 600;
     color: var(--main-dark);
     transition: all .3s ease-in-out;
 

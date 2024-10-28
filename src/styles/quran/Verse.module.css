@@ -1,0 +1,33 @@
+.verse {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 15px;
+    width: 90%;
+    margin: auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    text-align: right;
+}
+.arabic {
+    display: flex;
+    justify-content: end;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+
+}
+.arabicText{
+    font-size: 1.6rem;
+
+}
+.arabic:hover {
+    color: var(--main-dark);
+}
+.englishText{
+    font-size: 1.2rem;
+    text-align: left;
+    color: var(--sub-dark);
+}

@@ -10,6 +10,10 @@ type Props = {
     children: ReactNode;
     params: { locale: string };
 };
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Nav from "@/components/Nav";
+import WhatsappButton from "@/components/WhatsappButton";
 const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 export async function generateMetadata({
     params: { locale },
@@ -47,7 +51,11 @@ export default async function LocaleLayout({
         <html lang={locale}>
             <body className={`${roboto_mono.className}`}>
                 <NextIntlClientProvider messages={messages}>
+                    <Header />
+                    <Nav />
                     {children}
+                    <WhatsappButton />
+                    <Footer />
                 </NextIntlClientProvider>
             </body>
         </html>

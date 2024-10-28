@@ -22,6 +22,14 @@
                 "title": "About Us",
                 "href": "/about"
             },
+            "courses": {
+                "title": "Courses",
+                "href": "/courses"
+            },
+            "quran": {
+                "title": "Quran",
+                "href": "/quran"
+            },
             "bricing": {
                 "title": "Bricing",
                 "href": "/bricing"

@@ -1,0 +1,36 @@
+.ayah {
+    position: relative;
+    color: var(--main-dark);
+    font-size: 1.4rem;
+}
+.ayah::after {
+    content: "\06DD";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.sm::after{
+    font-size: 2.3rem;
+    transform: translate(-50%, -55%);
+
+
+}
+.md{
+    font-size: 1.3rem;
+}
+.md::after{
+    font-size: 2.5rem;
+    transform: translate(-50%, -58%);
+
+}
+.lg{
+    font-size: 1.2rem;
+}
+.lg::after{
+    font-size: 2.5rem;
+    transform: translate(-50%, -56%);
+    
+}
+
+

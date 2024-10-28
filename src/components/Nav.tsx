@@ -8,10 +8,11 @@ export default function Nav() {
     const navKeys = [
         "home",
         "aboutUs",
+        "courses",
+        "quran",
         "bricing",
         "library",
         "blog",
-        "contactUs",
     ];
     const t = useTranslations("Nav");
     const pathaname = usePathname()

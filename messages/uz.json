@@ -3,9 +3,9 @@
         "title": "Hello world!",
         "about": "Go to the about page"
     },
-    "LocaleLayout":{
-        "title":"Razan Akademiyasi",
-        "description":"Razan Akademiyasi Qur'on o'qishlari uchun"
+    "LocaleLayout": {
+        "title": "Razan Akademiyasi",
+        "description": "Razan Akademiyasi Qur'on o'qishlari uchun"
     },
     "Landing": {
         "header": "Razan Akademiyasi Qur'on o'qishlari uchun",
@@ -20,6 +20,14 @@
             "aboutUs": {
                 "title": "Biz haqimizda",
                 "href": "/about"
+            },
+            "courses": {
+                "title": "Courses",
+                "href": "/courses"
+            },
+            "quran": {
+                "title": "Quran",
+                "href": "/quran"
             },
             "bricing": {
                 "title": "Narxlash",

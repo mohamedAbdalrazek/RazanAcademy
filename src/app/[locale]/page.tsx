@@ -1,8 +1,6 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+
 import Landing from "@/components/Landing";
-import Nav from "@/components/Nav";
-import WhatsappButton from "@/components/WhatsappButton";
+
 // import { useTranslations } from "next-intl";
 
 
@@ -14,11 +12,9 @@ export default function IndexPage() {
 
     return (
             <div>
-                <Header />
-                <Nav />
+
                 <Landing />
-                <WhatsappButton />
-                <Footer />
+
             </div>
     );
 }

@@ -1,0 +1,70 @@
+.chapterCard{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: end;
+    padding: 20px 5px 20px 30px;
+    gap: 15px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-decoration: none;
+}
+.chapterCard:hover{
+    box-shadow: 0px 10px 50px 0px  rgba(0, 0, 0, 0.2);
+
+    /* box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.1); */
+    transform: scale(1.03);
+}
+.chapterNumberWrapper {
+    width: 10%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    background: radial-gradient(circle, #fdf2e9, #f0d9b5); 
+    border: 1px solid #8a5b1f; 
+    border-radius: 50%; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    position: relative;
+}
+
+.chapterNumber {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8a5b1f; /* Matching text color */
+    font-family: 'Amiri', serif; 
+}
+
+.chapterNumberWrapper::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    border: 1px solid #8a5b1f;
+    opacity: .5;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chapterInfo{
+    text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 90%;
+
+}
+.arabicName,
+.englishName{
+    color: var(--main-dark);
+    font-size: 1.2rem;
+    align-items: center;
+    font-weight: 500;
+}
+.chapterPlace{
+    color: var(--sub-text);
+}
