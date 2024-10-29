@@ -1,6 +1,6 @@
 import React, { MutableRefObject } from "react";
 import Verse from "./Verse";
-import styles from "../../styles/quran/VersesList.module.css";
+import styles from "@/styles/quran/VersesList.module.css";
 import Image from "next/image";
 import bismallahImage from "../../../public/png/bismallah.png";
 

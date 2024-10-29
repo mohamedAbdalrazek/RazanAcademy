@@ -1,139 +1,34 @@
-"use client";
-import VersesList from "@/components/quran/VersesList";
-import VersesNumbersList from "@/components/quran/VersesNumbersList";
-import Skeleton from "@/components/global/Skeleton";
-import React, { MutableRefObject, useEffect, useRef, useState } from "react";
-import styles from "../../../../styles/quran/Chapter.module.css";
+import React from "react";
+import styles from "@/styles/quran/Chapter.module.css";
 import localFont from "next/font/local";
-import AudioPlayer from "@/components/global/AudioPlayer";
+import ChapterLayout from "@/components/quran/ChapterLayout";
+import { getTranslations } from "next-intl/server";
+import { getChapterInfo } from "@/lib/chapter";
 const hafsFont = localFont({ src: "../../../../fonts/Hafs.ttf" });
 
-type Verse = {
-    id: string;
-    arabic_verse: string;
-    english_verse: string;
-    audio: string;
+
+type Props = {
+    params: { locale: string, id:string };
 };
-type ChapterInfo = {
-    name_arabic: string;
-    name_english: string;
-    bismillah_pre: boolean;
-    revelation_place: string;
-};
-type Chapter = {
-    fullAudio: string;
-    verses: Verse[];
-    chapterInfo: ChapterInfo;
-};
+
+export async function generateMetadata({
+    params: { locale, id },
+}: Omit<Props, "children">) {
+    const t = await getTranslations({ locale, namespace: "metaData" });
+    const chapterInfo = await getChapterInfo(id)
+    return {
+        title: t("ChapterPage.title", {name:chapterInfo.name_simple}),
+        description: t("ChapterPage.description", {name:chapterInfo.name_simple}),
+    };
+}
 export default function Chapter({
     params: { id },
 }: {
-    params: { id: string; locale: string };
+    params: { id: string };
 }) {
-    const [chapter, setChapter] = useState<Chapter>();
-    const [loading, setLoading] = useState(true);
-    const [errorMsg, setErrorMessage] = useState("");
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    const [playingSrc, setPlayingSrc] = useState<string | null>(null);
-
-    const handlePlayAudio = (
-        src: string,
-        ref: MutableRefObject<HTMLAudioElement | null> | null
-    ) => {
-        // Pause the current audio if playing something else
-        if (audioRef.current && playingSrc !== src) {
-            audioRef.current.pause();
-            audioRef.current = null;
-        }
-
-        // If clicking the same audio, toggle it
-        if (playingSrc === src && audioRef.current) {
-            if (!ref?.current) {
-                audioRef.current.pause();
-                setPlayingSrc(null);
-            }
-            return;
-        }
-
-        // Create and play a new Audio instance
-        const audio = new Audio(src);
-        audioRef.current = ref ? ref.current : audio;
-        setPlayingSrc(src);
-        if (!ref?.current) audio.play();
-
-        // Reset playingSrc when audio ends
-        audio.onended = () => setPlayingSrc(null);
-    };
-    useEffect(() => {
-        try {
-            fetch(`http://localhost:3000/api/chapters/${id}`, {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            })
-                .then((res) => res.json())
-                .then((data) => {
-                    console.log(data);
-                    if (data.verses && data.verses.length && data.fullAudio) {
-                        setChapter(data);
-                    } else {
-                        setErrorMessage(
-                            "Something went wrong please refresh the page"
-                        );
-                    }
-                })
-                .catch((error) => {
-                    console.log(error, "from inside");
-                    setErrorMessage(
-                        "Something went wrong please refresh the page"
-                    );
-                })
-                .finally(() => {
-                    setLoading(false);
-                });
-        } catch (error) {
-            setLoading(false);
-            setErrorMessage("Something went wrong please refresh the page");
-            console.log(error);
-        }
-    }, [id]);
-
-    console.log(chapter?.chapterInfo);
     return (
         <div className={`${hafsFont.className} ${styles.chapter}`}>
-            {loading ? (
-                <Skeleton />
-            ) : chapter && chapter.verses.length && chapter.fullAudio ? (
-                <div>
-                    <div className={styles.chapterInfo}>
-                        <div className={styles.chapterNames}>
-                            <h1>{chapter.chapterInfo.name_english}</h1>
-                            <h1>سورة {chapter.chapterInfo.name_arabic} </h1>
-                        </div>
-                        <AudioPlayer
-                            handlePlayAudio={handlePlayAudio}
-                            src={chapter.fullAudio}
-                        />
-                    </div>
-                    <div className="separationLine" />
-                    <div className={styles.chapterVerses}>
-                        <VersesNumbersList
-                            numberOfVerses={chapter.verses.length}
-                        />
-                        <VersesList
-                            verses={chapter.verses}
-                            bismallah={chapter.chapterInfo.bismillah_pre}
-                            playingSrc={playingSrc}
-                            handlePlayAudio={handlePlayAudio}
-                        />
-                    </div>
-                    <div className="separationLine" />
-
-                </div>
-            ) : (
-                errorMsg
-            )}
+            <ChapterLayout id={id} />
         </div>
     );
 }

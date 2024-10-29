@@ -15,7 +15,6 @@ export default function SelectLanguage() {
     const router = useRouter();
     const locale = useLocale();
     const pathname = usePathname();
-    console.log(locale);
     const params = useParams();
     const [, startTransition] = useTransition();
     const [showDropdown, setShowDropdown] = useState(false);

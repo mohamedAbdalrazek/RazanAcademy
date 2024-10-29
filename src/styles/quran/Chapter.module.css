@@ -1,27 +1,3 @@
 .chapter{
     padding: 40px;
 }
-.chapterVerses{
-    display: flex;
-    justify-content: space-between;
-    
-}
-.chapterInfo{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
-
-}
-
-.chapterNames{
-    display: flex;
-    gap: 20px;
-}
-.chapterInfo h1{
-    margin: 0;
-    color: var(--main-dark);
-}

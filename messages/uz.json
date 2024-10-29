@@ -4,16 +4,20 @@
         "about": "Go to the about page"
     },
     "metaData": {
-        "Layout":{
+        "Layout": {
             "title": "Razan Akademiyasi"
         },
         "HomePage": {
-            "title":"Bosh sahifa",
+            "title": "Bosh sahifa",
             "description": "Qur'oniy tadqiqotlar uchun Razan Akademiyasi"
         },
         "QuranPage": {
             "title": "Qur'on Suralari",
             "description": "Qur'onning barcha suralarini batafsil ma'lumotlar bilan o'rganing va har bir bobga oson kirishni ta'minlang. Razan Akademiyasi tomonidan taqdim etilgan."
+        },
+        "ChapterPage": {
+            "title": "Surah {name}",
+            "description": "Surah {name} ni to‘liq tinglang va har bir oyatni alohida tinglash imkoniyatidan foydalanib, yod olish va tushunishni osonlashtiring. Qur'onning ushbu mazmunli surasini anglash va yod olishni istaganlar uchun mukammal."
         }
     },
     "Landing": {

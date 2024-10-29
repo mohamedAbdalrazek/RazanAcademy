@@ -66,7 +66,6 @@
 }
 
 .chapterCard:hover .chapterNumberWrapper {
-    background: #806441;
     background: var(--main-dark);
     border-color: var(--main-dark);
     

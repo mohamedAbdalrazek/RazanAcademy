@@ -43,7 +43,6 @@ export async function getVersesAudio(id: string) {
     const data = await responseVersesAudio.json()
     return data.audio_files
 }
-//https://api.quran.com/api/v4/chapters/100
 
 export async function getChapterInfo(id: string) {
     const responseChapterInfo = await fetch(`https://api.quran.com/api/v4/chapters/${id}`, {

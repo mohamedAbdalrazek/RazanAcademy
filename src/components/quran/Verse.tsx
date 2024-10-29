@@ -1,7 +1,7 @@
 import React, { MutableRefObject } from "react";
 import DOMPurify from "dompurify";
 import VerseNumber from "../icons/VerseNumber";
-import styles from "../../styles/quran/Verse.module.css";
+import styles from "@/styles/quran/Verse.module.css";
 import PauseButton from "../icons/PauseButton";
 import PlayButton from "../icons/PlayButton";
 type Verse = {

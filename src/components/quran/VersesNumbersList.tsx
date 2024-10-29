@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { ChangeEvent, useState } from "react";
-import styles from "../../styles/quran/VersesNumbersList.module.css";
+import styles from "@/styles/quran/VersesNumbersList.module.css";
 export default function VersesNumbersList({
     numberOfVerses,
 }: {
@@ -9,7 +9,6 @@ export default function VersesNumbersList({
     const [numbersArray, setNumbersArray] = useState(
         Array.from(Array(numberOfVerses).keys())
     );
-    console.log(typeof numbersArray[2]);
     const filterVerses = (e: ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setNumbersArray(() => {

@@ -4,16 +4,20 @@
         "about": "Go to the about page"
     },
     "metaData": {
-        "Layout":{
+        "Layout": {
             "title": "Razan Academy"
         },
         "HomePage": {
-            "title":"Home Page",
+            "title": "Home Page",
             "description": "Razan Academy for Quranic Studies"
         },
         "QuranPage": {
             "title": "Quran Chapters",
             "description": "Explore all Surahs of the Quran with detailed information and easy access to each chapter. Presented by Razan Academy for Quranic Studies."
+        },
+        "ChapterPage": {
+            "title": "Surah {name}",
+            "description": "Listen to the complete recitation of Surah {name}, with audio for each individual verse for easier learning and reflection. Perfect for those seeking to understand and memorize this profound chapter of the Quran."
         }
     },
     "Landing": {
