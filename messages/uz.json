@@ -4,8 +4,11 @@
         "about": "Go to the about page"
     },
     "metaData": {
+        "Layout":{
+            "title": "Razan Akademiyasi"
+        },
         "HomePage": {
-            "title": "Razan Akademiyasi",
+            "title":"Bosh sahifa",
             "description": "Qur'oniy tadqiqotlar uchun Razan Akademiyasi"
         },
         "QuranPage": {

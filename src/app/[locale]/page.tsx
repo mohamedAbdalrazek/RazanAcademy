@@ -1,6 +1,8 @@
 
 import Landing from "@/components/Landing";
 import { getTranslations } from "next-intl/server";
+
+// import { useTranslations } from "next-intl";
 type Props = {
     params: { locale: string };
 };
@@ -12,15 +14,8 @@ export async function generateMetadata({
     return {
         title: t("HomePage.title"),
         description: t("HomePage.description"),
-        icons: {
-            icon: "/favicon/icon.png",
-            shortcut: "/favicon/shortcut.png",
-            apple: "/favicon/apple.png",
-        },
     };
 }
-// import { useTranslations } from "next-intl";
-
 
 
 export default function IndexPage() {

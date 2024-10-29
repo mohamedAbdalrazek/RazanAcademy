@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/utils/Skeleton.module.css";
+import styles from "@/styles/utils/Skeleton.module.css";
 export default function Skeleton() {
     return (
         <div className={styles.skeletonCard}>

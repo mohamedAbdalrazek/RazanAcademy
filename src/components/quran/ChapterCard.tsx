@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/quran/ChapterCard.module.css";
+import styles from "@/styles/quran/ChapterCard.module.css";
 import { Link } from "@/i18n/routing";
 type Chapter = {
     id: number;
@@ -10,7 +10,6 @@ type Chapter = {
 export default function ChapterCard({chapter}: {chapter:Chapter}) {
     const { id, name_arabic, name_english, revelation_place } = chapter;
     const url = id.toString();
-
     return (
         <Link href={`/quran/${url}`} className={styles.chapterCard}>
             <div className={styles.chapterInfo}>

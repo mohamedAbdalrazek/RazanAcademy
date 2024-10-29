@@ -1,6 +1,6 @@
 import React from "react";
 import ChapterCard from "./ChapterCard";
-import styles from "../../styles/quran/ChapterList.module.css"
+import styles from "@/styles/quran/ChapterList.module.css"
 type Chapter = {
     id: number;
     revelation_place: string;

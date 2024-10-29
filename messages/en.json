@@ -4,8 +4,11 @@
         "about": "Go to the about page"
     },
     "metaData": {
+        "Layout":{
+            "title": "Razan Academy"
+        },
         "HomePage": {
-            "title": "Razan Academy",
+            "title":"Home Page",
             "description": "Razan Academy for Quranic Studies"
         },
         "QuranPage": {
