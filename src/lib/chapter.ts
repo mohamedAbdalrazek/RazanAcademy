@@ -1,4 +1,4 @@
-export async function getVerses(id:string){
+export async function getVerses(id: string) {
     const responseVerses = await fetch(`https://api.quran.com/api/v4/quran/verses/uthmani?chapter_number=${id}`, {
         method: "GET",
         headers: {
@@ -9,7 +9,7 @@ export async function getVerses(id:string){
     return data.verses
 }
 
-export async function getTranslatedVerses(id:string){
+export async function getTranslatedVerses(id: string) {
     const responseTranslatedVerses = await fetch(`https://api.quran.com/api/v4/quran/translations/131?chapter_number=${id}`, {
         method: "GET",
         headers: {
@@ -21,7 +21,7 @@ export async function getTranslatedVerses(id:string){
 }
 
 
-export async function getFullAudio(id:string){
+export async function getFullAudio(id: string) {
     const responseFullAudio = await fetch(`https://api.quran.com/api/v4/chapter_recitations/2/${id}`, {
         method: "GET",
         headers: {
@@ -32,8 +32,9 @@ export async function getFullAudio(id:string){
     return data.audio_file.audio_url
 }
 
-export async function getVersesAudio(id:string){
-    const responseVersesAudio = await fetch(`https://api.quran.com/api/v4/recitations/2/by_chapter/${id}`, {
+export async function getVersesAudio(id: string) {
+    const responseVersesAudio = await fetch(`https://api.quran.com/api/v4/quran/recitations/2?chapter_number=${id}`, {
+        
         method: "GET",
         headers: {
             "Content-Type": "application/json",
@@ -41,4 +42,16 @@ export async function getVersesAudio(id:string){
     })
     const data = await responseVersesAudio.json()
     return data.audio_files
+}
+//https://api.quran.com/api/v4/chapters/100
+
+export async function getChapterInfo(id: string) {
+    const responseChapterInfo = await fetch(`https://api.quran.com/api/v4/chapters/${id}`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+    const data = await responseChapterInfo.json()
+    return data.chapter
 }

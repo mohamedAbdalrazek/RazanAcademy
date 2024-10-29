@@ -2,7 +2,7 @@
 import ChapterList from "@/components/quran/ChapterList";
 import React, { useEffect, useState } from "react";
 import styles from "../../../styles/quran/ChapterPage.module.css";
-import Skeleton from "@/components/utils/Skeleton";
+import Skeleton from "@/components/global/Skeleton";
 type Chapter = {
     id: number;
     revelation_place: string;

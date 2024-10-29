@@ -7,26 +7,39 @@
     margin: auto;
     padding: 20px 30px;
     border-radius: 10px;
-    background-color: #f8f8f8;
     text-align: right;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+.audioWrapper {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.audioWrapper:hover .arabic,
+.audioWrapper:hover .buttonWrapper {
+    color: var(--main-dark);
+    fill: var(--main-dark);
+}
+
+.buttonWrapper {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    width: 18px;
 }
 .arabic {
-    display: flex;
-    justify-content: end;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 15px;
-    cursor: pointer;
-
+    line-height: 1.6;
+    color: black;
 }
-.arabicText{
+.arabicText {
     font-size: 1.6rem;
+}
 
-}
-.arabic:hover {
-    color: var(--main-dark);
-}
-.englishText{
+.englishText {
     font-size: 1.2rem;
     text-align: left;
     color: var(--sub-dark);
