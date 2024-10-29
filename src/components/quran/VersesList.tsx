@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { MutableRefObject } from "react";
 import Verse from "./Verse";
 import styles from "../../styles/quran/VersesList.module.css";
 import Image from "next/image";
@@ -13,37 +13,18 @@ type Verse = {
 
 export default function VersesList({
     verses,
-    bismallah
+    bismallah,
+    playingSrc,
+    handlePlayAudio,
 }: {
     verses: Verse[];
     bismallah: boolean;
+    playingSrc: string | null;
+    handlePlayAudio: (
+        arg0: string,
+        ref: MutableRefObject<HTMLAudioElement | null>|null
+    ) => void;
 }) {
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    const [playingSrc, setPlayingSrc] = useState<string | null>(null);
-
-    const handlePlayAudio = (src: string) => {
-        // Pause the current audio if playing something else
-        if (audioRef.current && playingSrc !== src) {
-            audioRef.current.pause();
-            audioRef.current = null;
-        }
-
-        // If clicking the same audio, toggle it
-        if (playingSrc === src && audioRef.current) {
-            audioRef.current.pause();
-            setPlayingSrc(null);
-            return;
-        }
-
-        // Create and play a new Audio instance
-        const audio = new Audio(src);
-        audioRef.current = audio;
-        setPlayingSrc(src);
-        audio.play();
-
-        // Reset playingSrc when audio ends
-        audio.onended = () => setPlayingSrc(null);
-    };
     const versesListElement = verses.map((verse) => {
         const id = Number(verse.id) + 1;
         return (
@@ -53,7 +34,7 @@ export default function VersesList({
                 arabic_verse={verse.arabic_verse}
                 english_verse={verse.english_verse}
                 audio={verse.audio}
-                handleClick={handlePlayAudio}
+                handlePlayAudio={handlePlayAudio}
                 isplaying={playingSrc === verse.audio}
             />
         );

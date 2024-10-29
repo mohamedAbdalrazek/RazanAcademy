@@ -2,7 +2,7 @@
 import VersesList from "@/components/quran/VersesList";
 import VersesNumbersList from "@/components/quran/VersesNumbersList";
 import Skeleton from "@/components/global/Skeleton";
-import React, { useEffect, useState } from "react";
+import React, { MutableRefObject, useEffect, useRef, useState } from "react";
 import styles from "../../../../styles/quran/Chapter.module.css";
 import localFont from "next/font/local";
 import AudioPlayer from "@/components/global/AudioPlayer";
@@ -33,6 +33,37 @@ export default function Chapter({
     const [chapter, setChapter] = useState<Chapter>();
     const [loading, setLoading] = useState(true);
     const [errorMsg, setErrorMessage] = useState("");
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+    const [playingSrc, setPlayingSrc] = useState<string | null>(null);
+
+    const handlePlayAudio = (
+        src: string,
+        ref: MutableRefObject<HTMLAudioElement | null> | null
+    ) => {
+        // Pause the current audio if playing something else
+        if (audioRef.current && playingSrc !== src) {
+            audioRef.current.pause();
+            audioRef.current = null;
+        }
+
+        // If clicking the same audio, toggle it
+        if (playingSrc === src && audioRef.current) {
+            if (!ref?.current) {
+                audioRef.current.pause();
+                setPlayingSrc(null);
+            }
+            return;
+        }
+
+        // Create and play a new Audio instance
+        const audio = new Audio(src);
+        audioRef.current = ref ? ref.current : audio;
+        setPlayingSrc(src);
+        if (!ref?.current) audio.play();
+
+        // Reset playingSrc when audio ends
+        audio.onended = () => setPlayingSrc(null);
+    };
     useEffect(() => {
         try {
             fetch(`http://localhost:3000/api/chapters/${id}`, {
@@ -77,18 +108,28 @@ export default function Chapter({
                 <div>
                     <div className={styles.chapterInfo}>
                         <div className={styles.chapterNames}>
-
                             <h1>{chapter.chapterInfo.name_english}</h1>
                             <h1>سورة {chapter.chapterInfo.name_arabic} </h1>
                         </div>
-                        <AudioPlayer src={chapter.fullAudio} />
+                        <AudioPlayer
+                            handlePlayAudio={handlePlayAudio}
+                            src={chapter.fullAudio}
+                        />
                     </div>
+                    <div className="separationLine" />
                     <div className={styles.chapterVerses}>
                         <VersesNumbersList
                             numberOfVerses={chapter.verses.length}
                         />
-                        <VersesList verses={chapter.verses} bismallah={chapter.chapterInfo.bismillah_pre} />
+                        <VersesList
+                            verses={chapter.verses}
+                            bismallah={chapter.chapterInfo.bismillah_pre}
+                            playingSrc={playingSrc}
+                            handlePlayAudio={handlePlayAudio}
+                        />
                     </div>
+                    <div className="separationLine" />
+
                 </div>
             ) : (
                 errorMsg

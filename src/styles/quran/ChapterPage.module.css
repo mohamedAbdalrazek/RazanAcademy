@@ -1,3 +1,10 @@
 .chapters{
     padding: 30px 40px;
 }
+.header{
+    color: var(--main-dark);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 3rem;
+}

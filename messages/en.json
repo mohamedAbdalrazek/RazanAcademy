@@ -3,10 +3,15 @@
         "title": "Hello world!",
         "about": "Go to the about page"
     },
-    "LocaleLayout":{
-        "title":"Razan Academy",
-        "description":"Razan Academy for Quranic Studies"
-
+    "metaData": {
+        "HomePage": {
+            "title": "Razan Academy",
+            "description": "Razan Academy for Quranic Studies"
+        },
+        "QuranPage": {
+            "title": "Quran Chapters",
+            "description": "Explore all Surahs of the Quran with detailed information and easy access to each chapter. Presented by Razan Academy for Quranic Studies."
+        }
     },
     "Landing": {
         "header": "Razan Academy for Quranic Studies",
@@ -30,9 +35,9 @@
                 "title": "Quran",
                 "href": "/quran"
             },
-            "bricing": {
-                "title": "Bricing",
-                "href": "/bricing"
+            "pricing": {
+                "title": "Pricing",
+                "href": "/pricing"
             },
             "library": {
                 "title": "Library",
@@ -48,7 +53,9 @@
             }
         }
     },
-
+    "QuranList": {
+        "header": "Chapters of the Quran"
+    },
     "Footer": {
         "name": "RAZAN Academy",
         "customer": "Customer Support"

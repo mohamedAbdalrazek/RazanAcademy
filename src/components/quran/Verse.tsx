@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MutableRefObject } from "react";
 import DOMPurify from "dompurify";
 import VerseNumber from "../icons/VerseNumber";
 import styles from "../../styles/quran/Verse.module.css";
@@ -10,7 +10,7 @@ type Verse = {
     english_verse: string;
     audio: string;
 
-    handleClick: (arg0: string) => void;
+    handlePlayAudio: (arg0: string, ref:MutableRefObject<HTMLAudioElement | null>|null) => void;
     isplaying: boolean;
 };
 export default function Verse({
@@ -18,7 +18,7 @@ export default function Verse({
     arabic_verse,
     english_verse,
     audio,
-    handleClick,
+    handlePlayAudio,
     isplaying,
 }: Verse) {
     const safeHtml = DOMPurify.sanitize(english_verse);
@@ -27,7 +27,7 @@ export default function Verse({
         <div className={styles.verse} id={id.toString()}>
             <div
                 className={styles.audioWrapper}
-                onClick={() => handleClick(audio)}
+                onClick={() => handlePlayAudio(audio, null)}
             >
                 <div className={styles.buttonWrapper}>
 

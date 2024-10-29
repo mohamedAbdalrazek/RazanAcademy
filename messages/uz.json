@@ -3,9 +3,15 @@
         "title": "Hello world!",
         "about": "Go to the about page"
     },
-    "LocaleLayout": {
-        "title": "Razan Akademiyasi",
-        "description": "Razan Akademiyasi Qur'on o'qishlari uchun"
+    "metaData": {
+        "HomePage": {
+            "title": "Razan Akademiyasi",
+            "description": "Qur'oniy tadqiqotlar uchun Razan Akademiyasi"
+        },
+        "QuranPage": {
+            "title": "Qur'on Suralari",
+            "description": "Qur'onning barcha suralarini batafsil ma'lumotlar bilan o'rganing va har bir bobga oson kirishni ta'minlang. Razan Akademiyasi tomonidan taqdim etilgan."
+        }
     },
     "Landing": {
         "header": "Razan Akademiyasi Qur'on o'qishlari uchun",
@@ -29,9 +35,9 @@
                 "title": "Quran",
                 "href": "/quran"
             },
-            "bricing": {
+            "pricing": {
                 "title": "Narxlash",
-                "href": "/bricing"
+                "href": "/pricing"
             },
             "library": {
                 "title": "Kutubxona",
@@ -46,6 +52,9 @@
                 "href": "/contact"
             }
         }
+    },
+    "QuranList": {
+        "header": "Qur'on suralari"
     },
     "Footer": {
         "name": "RAZAN Akademiyasi",

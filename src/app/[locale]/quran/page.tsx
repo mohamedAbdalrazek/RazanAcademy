@@ -3,6 +3,8 @@ import ChapterList from "@/components/quran/ChapterList";
 import React, { useEffect, useState } from "react";
 import styles from "../../../styles/quran/ChapterPage.module.css";
 import Skeleton from "@/components/global/Skeleton";
+import { useTranslations } from "next-intl";
+import { Metadata } from "next";
 type Chapter = {
     id: number;
     revelation_place: string;
@@ -10,7 +12,9 @@ type Chapter = {
     name_arabic: string;
 };
 
+
 export default function Quran() {
+    const t = useTranslations("QuranList");
     const [chapters, setChapters] = useState<Chapter[]>();
     const [loading, setLoading] = useState(true);
     const [errorMsg, setErrorMessage] = useState("");
@@ -50,6 +54,7 @@ export default function Quran() {
 
     return (
         <div className={styles.chapters}>
+            <h1 className={styles.header}>{t(`header`)}</h1>
             {loading ? (
                 <Skeleton />
             ) : chapters && chapters.length ? (

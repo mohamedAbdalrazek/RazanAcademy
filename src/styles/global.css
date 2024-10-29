@@ -29,3 +29,7 @@
 a.active {
     color: var(--active-link);
 }
+.separationLine{
+    height: 2px;
+    background-color: #d8d3d3;
+}

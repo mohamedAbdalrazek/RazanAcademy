@@ -10,15 +10,16 @@ export default function Nav() {
         "aboutUs",
         "courses",
         "quran",
-        "bricing",
+        "pricing",
         "library",
         "blog",
     ];
     const t = useTranslations("Nav");
     const pathaname = usePathname()
+    console.log(pathaname)
     const linksElement = navKeys.map((key) => {
         const href = t(`links.${key}.href`)
-        const isActive = href == pathaname
+        const isActive = pathaname.split("/").includes(key)
         return (
             <Link href={href} key={key} className={`${styles.navLink} ${isActive &&"active"}`}>
                 {t(`links.${key}.title`)}
