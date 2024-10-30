@@ -6,19 +6,20 @@ import { getTranslations } from "next-intl/server";
 import { getChapterInfo } from "@/lib/chapter";
 const hafsFont = localFont({ src: "../../../../fonts/Hafs.ttf" });
 
-
 type Props = {
-    params: { locale: string, id:string };
+    params: { locale: string; id: string };
 };
 
 export async function generateMetadata({
     params: { locale, id },
 }: Omit<Props, "children">) {
     const t = await getTranslations({ locale, namespace: "metaData" });
-    const chapterInfo = await getChapterInfo(id)
+    const chapterInfo = await getChapterInfo(id);
     return {
-        title: t("ChapterPage.title", {name:chapterInfo.name_simple}),
-        description: t("ChapterPage.description", {name:chapterInfo.name_simple}),
+        title: t("ChapterPage.title", { name: chapterInfo.name_simple }),
+        description: t("ChapterPage.description", {
+            name: chapterInfo.name_simple,
+        }),
     };
 }
 export default function Chapter({

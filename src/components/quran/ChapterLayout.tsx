@@ -28,7 +28,7 @@ export default function ChapterLayout({ id }: { id: string }) {
     const [errorMsg, setErrorMessage] = useState("");
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [playingSrc, setPlayingSrc] = useState<string | null>(null);
-
+    
     const handlePlayAudio = (
         src: string,
         ref: MutableRefObject<HTMLAudioElement | null> | null
@@ -75,7 +75,7 @@ export default function ChapterLayout({ id }: { id: string }) {
                 }
             })
             .catch((error) => {
-                console.log(error, "from inside");
+                console.log(error);
                 setErrorMessage("Something went wrong please refresh the page");
             })
             .finally(() => {

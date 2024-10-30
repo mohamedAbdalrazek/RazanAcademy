@@ -1,5 +1,30 @@
+import { useTranslations } from "next-intl";
 import React from "react";
+import styles from "@/styles/about-us/AboutUs.module.css";
+import Heading from "@/components/global/Heading";
+import { getTranslations } from "next-intl/server";
+import AboutUsSections from "@/components/about-us/AboutUsSections";
 
+type Props = {
+    params: { locale: string };
+};
+
+export async function generateMetadata({
+    params: { locale },
+}: Omit<Props, "children">) {
+    const t = await getTranslations({ locale, namespace: "metaData" });
+
+    return {
+        title: t("AboutPage.title"),
+        description: t("AboutPage.description"),
+    };
+}
 export default function About() {
-    return <div>page</div>;
+    const t = useTranslations("AboutUs");
+    return (
+        <div className={styles.aboutPage}>
+            <Heading text={t("header")} />
+            <AboutUsSections />
+        </div>
+    );
 }

@@ -1,0 +1,27 @@
+.header h1 {
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+    margin: 0;
+    margin-bottom: 40px;
+    color: var(--main-dark);
+}
+
+.header h1:after,
+.header h1:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 25%;
+    left: 12%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-bottom: 2px solid #ccc;
+}
+.header h1:after{
+    left: auto;
+    right: 12%;
+
+}

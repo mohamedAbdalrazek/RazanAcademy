@@ -18,6 +18,10 @@
         "ChapterPage": {
             "title": "Surah {name}",
             "description": "Surah {name} ni to‘liq tinglang va har bir oyatni alohida tinglash imkoniyatidan foydalanib, yod olish va tushunishni osonlashtiring. Qur'onning ushbu mazmunli surasini anglash va yod olishni istaganlar uchun mukammal."
+        },
+        "AboutPage": {
+            "title": "Biz haqimizda - Qur'on ta'limi va moslashuvchan o'qish",
+            "description": "Bizning o'ziga xos Qur'on ta'limi yondashuvimizni kashf eting, bu yondashuv malakali o'qituvchilar tomonidan qo'llab-quvvatlovchi muhitda olib boriladi. Hamma yoshdagilar uchun Qur'onni o'qish, Tajvid va yodlashni moslashuvchan onlayn dasturlar orqali o'rganing."
         }
     },
     "Landing": {
@@ -62,6 +66,29 @@
     },
     "QuranList": {
         "header": "Qur'on suralari"
+    },
+    "AboutUs": {
+        "header": "Biz haqimizda",
+        "distinctiveEducational": {
+            "header": "Ajralib turuvchi ta'lim yondashuvi",
+            "body": "Biz zamonaviy ta'lim usullaridan foydalanamiz, bu usullar Qur'on mazmunini tushunishga, oyatlarni yodlashdan tashqari e'tibor qaratadi. Bu talabalar uchun Qur'onning chuqur xabarlarini yanada ma'noli va ta'sirchan tarzda anglashga yordam beradi."
+        },
+        "certifiedTeachers": {
+            "header": "Sertifikatlangan va tajribali o'qituvchilar",
+            "body": "Bizning jamoamiz Qur'on ta'limiga ixtisoslashgan yuqori malakali o'qituvchilardan iborat. Ular barcha yosh guruhlari uchun mos ta'lim texnikalarini qo'llaydilar, bu esa keng qamrovli va qiziqarli ta'lim tajribasini ta'minlaydi."
+        },
+        "safeLearning": {
+            "header": "Ijobiy va xavfsiz ta'lim muhiti",
+            "body": "Biz talabalarni o'zaro aloqada bo'lishga, savollar berishga va ruhiy hamda til ko'nikmalarini rivojlantirishga undovchi qo'llab-quvvatlovchi ta'lim muhitini taqdim etamiz. Bu muhit Islomiy qadriyatlarni hurmat qiladigan va mustahkamlovchi yo'sinda amalga oshiriladi."
+        },
+        "diversePrograms": {
+            "header": "Keng qamrovli va xilma-xil dasturlar",
+            "body": "Bizning dasturlarimiz bolalar uchun maxsus kurslarni o'z ichiga oladi, bu kurslar Qur'onni o'qish va Tajweedni soddalashtirilgan va qiziqarli tarzda o'rgatishga qaratilgan. Shuningdek, biz kattalar uchun kurslar, jumladan, Qur'on yodlash, Tajweed bilan Qur'on o'qish va Noor-Al-Bayan kursini taklif etamiz."
+        },
+        "flexibleLearning": {
+            "header": "Moslashuvchan ta'lim imkoniyatlari",
+            "body": "Onlayn ta'lim mavjud bo'lgani uchun sizga mos vaqt va jadvalni tanlash imkoniyati bor."
+        }
     },
     "Footer": {
         "name": "RAZAN Akademiyasi",

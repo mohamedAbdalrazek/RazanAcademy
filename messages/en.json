@@ -18,6 +18,10 @@
         "ChapterPage": {
             "title": "Surah {name}",
             "description": "Listen to the complete recitation of Surah {name}, with audio for each individual verse for easier learning and reflection. Perfect for those seeking to understand and memorize this profound chapter of the Quran."
+        },
+        "AboutPage": {
+            "title": "About Us - Quranic Education and Flexible Learning",
+            "description": "Discover our unique Quranic education approach, led by certified teachers in a supportive environment. Learn Quran recitation, Tajweed, and memorization with flexible online programs for all ages."
         }
     },
     "Landing": {
@@ -62,6 +66,29 @@
     },
     "QuranList": {
         "header": "Chapters of the Quran"
+    },
+    "AboutUs": {
+        "header": "About Us",
+        "distinctiveEducational": {
+            "header": "Distinctive Educational Approach",
+            "body": "We use modern teaching methods that focus on understanding the meanings of the Quran in addition to memorizing its verses. This helps students grasp the profound messages of the Quran in a more meaningful and impactful way."
+        },
+        "certifiedTeachers": {
+            "header": "Certified and Experienced Teachers",
+            "body": "Our team consists of highly qualified teachers who specialize in Quranic education. They employ teaching techniques suitable for all age groups, ensuring a comprehensive and enjoyable learning experience."
+        },
+        "safeLearning": {
+            "header": "Encouraging and Safe Learning Environment",
+            "body": "We provide a supportive learning environment that encourages students to interact, ask questions, and develop their spiritual and linguistic skills in a way that respects and reinforces Islamic values."
+        },
+        "diversePrograms": {
+            "header": "Comprehensive and Diverse Programs",
+            "body": " Our programs include special courses for children, focusing on teaching recitation and Tajweed in a simplified and engaging manner. We also offer courses for adults, including Quran memorization,reading quran with tjweed, Noor-Al-Bayan course."
+        },
+        "flexibleLearning": {
+            "header": "Flexible Learning Options",
+            "body": "With online learning available, you can choose the times and schedules that suit you and"
+        }
     },
     "Footer": {
         "name": "RAZAN Academy",
