@@ -93,10 +93,9 @@
             "header": "Moslashuvchan ta'lim imkoniyatlari",
             "body": "Onlayn ta'lim mavjud bo'lgani uchun sizga mos vaqt va jadvalni tanlash imkoniyati bor."
         },
-        "subHeader": "O'qituvchilarimiz",
+        "subHeaderTeachers": "O'qituvchilarimiz",
         "teachers": {
-            "qualifications":"Malaka",
-
+            "qualifications": "Malaka",
             "hager": {
                 "name": "Hager Abderlazek",
                 "description": "10 yildan ortiq tajribaga ega, sertifikatlangan Qur'on o'qituvchisi. Tajweed va Qur'onni yodlash bo'yicha ixtisoslashgan, barcha yoshdagi talabalarga moslashtirilgan ta'lim berish.",
@@ -111,6 +110,21 @@
                 "name": "Fatima Ahmed",
                 "description": "Kattalar uchun Qur'on yodlash bo'yicha 8 yillik tajribaga ega. Yangi boshlovchilar va ilg'or talabalarga mo'ljallangan kurslarni o'tkazadi.",
                 "qualifications": "O'qituvchi Sertifikati, Qur'on Yodlash va Tajweedda Mutaxassis"
+            }
+        },
+        "subHeaderCertifications": "Sertifikatlar",
+        "certifications": {
+            "imageOne": {
+                "src": "",
+                "title": ""
+            },
+            "imageTwo": {
+                "src": "",
+                "title": ""
+            },
+            "imageThree": {
+                "src": "",
+                "title": ""
             }
         }
     },

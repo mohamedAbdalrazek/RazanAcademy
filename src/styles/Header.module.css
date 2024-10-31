@@ -35,6 +35,7 @@
     font-size: 1.5rem;
 }
 .coverTextWrapper p:first-of-type{
+    font-weight: 700;
     font-size: 3rem;
     margin-bottom: 25px;
 }

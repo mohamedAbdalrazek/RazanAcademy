@@ -4,6 +4,9 @@ import localFont from "next/font/local";
 import ChapterLayout from "@/components/quran/ChapterLayout";
 import { getTranslations } from "next-intl/server";
 import { getChapterInfo } from "@/lib/chapter";
+
+
+
 const hafsFont = localFont({ src: "../../../../fonts/Hafs.ttf" });
 
 type Props = {

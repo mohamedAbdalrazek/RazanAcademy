@@ -5,8 +5,12 @@ import coverBackground from "../../public/cover-background.png";
 import styles from "../styles/Header.module.css";
 import { Link } from "@/i18n/routing";
 import { Amiri, Noto_Nastaliq_Urdu } from "next/font/google";
-const amiri = Amiri({ subsets: ["latin"], weight:["400"], style:["italic"] });
-const noto_nastaliq_urdu = Noto_Nastaliq_Urdu({ subsets: ["arabic"]});
+const amiri = Amiri({ subsets: ["latin"], weight: ["400"], style: ["italic"] });
+const noto_nastaliq_urdu = Noto_Nastaliq_Urdu({
+    subsets: ["arabic", "latin", "latin-ext"],
+    display: "swap",
+    weight: ["700"],
+});
 
 export default function Header() {
     return (
@@ -32,8 +36,12 @@ export default function Header() {
                     />
                 </div>
                 <div className={styles.coverTextWrapper}>
-                    <p className={noto_nastaliq_urdu.className}>أكاديمية رزان للدراسات القرآنية</p>
-                    <p className={amiri.className}>RAZAN Academy for Teaching the Holy Quran</p>
+                    <p className={noto_nastaliq_urdu.className}>
+                        أكاديمية رزان للدراسات القرآنية
+                    </p>
+                    <p className={amiri.className}>
+                        RAZAN Academy for Teaching the Holy Quran
+                    </p>
                     <p className={amiri.className}>
                         RAZAN Qur{`'`}oni Karimni o{`'`}rgatish akademiyasi
                     </p>

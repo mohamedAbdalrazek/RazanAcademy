@@ -93,9 +93,9 @@
             "header": "Flexible Learning Options",
             "body": "With online learning available, you can choose the times and schedules that suit you"
         },
-        "subHeader": "Our Teachers",
+        "subHeaderTeachers": "Our Teachers",
         "teachers": {
-            "qualifications":"Qualifications",
+            "qualifications": "Qualifications",
             "hager": {
                 "name": "Hager Abderlazek",
                 "description": "A certified Quran educator with over 10 years of experience. Specializes in Tajweed and Quran memorization, providing tailored instruction for students of all ages.",
@@ -110,6 +110,21 @@
                 "name": "Fatima Ahmed",
                 "description": "An educator with 8 years of experience in Quran memorization for adults. Conducts courses tailored for both beginners and advanced students.",
                 "qualifications": "Teaching Certificate, Specialist in Quran Memorization and Tajweed"
+            }
+        },
+        "subHeaderCertifications": "Certifications",
+        "certifications": {
+            "imageOne": {
+                "src": "",
+                "title": ""
+            },
+            "imageTwo": {
+                "src": "",
+                "title": ""
+            },
+            "imageThree": {
+                "src": "",
+                "title": ""
             }
         }
     },

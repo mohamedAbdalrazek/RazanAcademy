@@ -12,7 +12,7 @@
     --box-shadow-four:0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 * {
-    font-family: var(--font-roboto-mono);
+    font-family:var(--font-roboto) var(--font-roboto-mono);
 }
 
 ::-webkit-scrollbar {

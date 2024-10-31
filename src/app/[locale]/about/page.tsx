@@ -6,6 +6,7 @@ import { getTranslations } from "next-intl/server";
 import AboutUsSections from "@/components/about-us/AboutUsSections";
 import SubHeading from "@/components/global/SubHeading";
 import TeachersCardList from "@/components/about-us/TeachersCardList";
+import CertificateSwiper from "@/components/about-us/CertificateSwiper";
 
 type Props = {
     params: { locale: string };
@@ -27,8 +28,11 @@ export default function About() {
         <div className={styles.aboutPage}>
             <Heading text={t("header")} />
             <AboutUsSections />
-            <SubHeading text={t("subHeader")} />
+            <SubHeading text={t("subHeaderTeachers")} />
             <TeachersCardList />
+            <SubHeading text={t("subHeaderCertifications")} />
+
+            <CertificateSwiper />
         </div>
     );
 }
