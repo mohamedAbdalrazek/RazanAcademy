@@ -1,0 +1,8 @@
+.teachersCardList{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    row-gap: 60px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}

@@ -4,6 +4,12 @@
     --sub-dark: #727171;
     --active-link: #e63946;
     --sub-text: #a8a8a8;
+    --light-gray-border:#ccc;
+    --subheader-color:#013042;
+    --box-shadow-one:0px 0px 4px rgba(0, 0, 0, 0.3);
+    --box-shadow-two: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --box-shadow-three:0px 2px 4px rgba(0, 0, 0, 0.3);
+    --box-shadow-four:0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 * {
     font-family: var(--font-roboto-mono);

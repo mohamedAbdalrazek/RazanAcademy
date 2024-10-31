@@ -4,7 +4,8 @@
     text-transform: uppercase;
     font-size: 3.2rem;
     letter-spacing: 1px;
-    margin: 0;
+    width: fit-content;
+    margin: auto;
     margin-bottom: 40px;
     color: var(--main-dark);
 }
@@ -14,14 +15,14 @@
     content: "";
     display: block;
     position: absolute;
-    width: 25%;
-    left: 12%;
+    width: 30%;
+    left: -35%;
     top: 50%;
     transform: translateY(-50%);
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--light-gray-border);
 }
 .header h1:after{
     left: auto;
-    right: 12%;
+    right: -35%;
 
 }

@@ -1,0 +1,23 @@
+.subHeader{
+    
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.subHeader h3{
+    margin: 0;
+    width: fit-content;
+    font-size: 2.4rem;
+    position: relative;
+    color: var(--subheader-color);
+}
+.subHeader h3:after{
+    content: "";
+    position: absolute;
+    width: calc(100vw - 100% - 110px);
+    right: calc(-100vw + 100% + 80px);
+    height: 3px;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--light-gray-border);
+}

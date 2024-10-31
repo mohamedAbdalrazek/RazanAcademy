@@ -58,6 +58,10 @@
                 "title": "Blog",
                 "href": "/blog"
             },
+            "teachers": {
+                "title": "O'qituvchilarimiz",
+                "href": "teachers"
+            },
             "contactUs": {
                 "title": "Biz bilan bog'lanish",
                 "href": "/contact"
@@ -88,6 +92,26 @@
         "flexibleLearning": {
             "header": "Moslashuvchan ta'lim imkoniyatlari",
             "body": "Onlayn ta'lim mavjud bo'lgani uchun sizga mos vaqt va jadvalni tanlash imkoniyati bor."
+        },
+        "subHeader": "O'qituvchilarimiz",
+        "teachers": {
+            "qualifications":"Malaka",
+
+            "hager": {
+                "name": "Hager Abderlazek",
+                "description": "10 yildan ortiq tajribaga ega, sertifikatlangan Qur'on o'qituvchisi. Tajweed va Qur'onni yodlash bo'yicha ixtisoslashgan, barcha yoshdagi talabalarga moslashtirilgan ta'lim berish.",
+                "qualifications": "Sertifikatlangan O'qituvchi, Tajweed va Qur'onni Yodlash bo'yicha Mutaxassis"
+            },
+            "khadija": {
+                "name": "Khadija Mohamed",
+                "description": "Yosh bolalarga Qur'onni o'qitish bo'yicha 5 yillik tajribaga ega. Kichik guruhlarda ishlashda ixtisoslashgan va bolalar bilan samarali o'qitish metodlarini qo'llaydi.",
+                "qualifications": "Bakalavr darajasi, Qur'on o'qitish bo'yicha Sertifikat"
+            },
+            "fatima": {
+                "name": "Fatima Ahmed",
+                "description": "Kattalar uchun Qur'on yodlash bo'yicha 8 yillik tajribaga ega. Yangi boshlovchilar va ilg'or talabalarga mo'ljallangan kurslarni o'tkazadi.",
+                "qualifications": "O'qituvchi Sertifikati, Qur'on Yodlash va Tajweedda Mutaxassis"
+            }
         }
     },
     "Footer": {

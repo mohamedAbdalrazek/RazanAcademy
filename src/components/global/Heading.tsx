@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/components/Headig.module.css";
+import styles from "@/styles/components/Heading.module.css";
 export default function Heading({ text }: { text: string }) {
     return (
         <div className={styles.header}>

@@ -8,6 +8,7 @@ export default function Nav() {
     const navKeys = [
         "home",
         "aboutUs",
+        "teachers",
         "courses",
         "quran",
         "pricing",
