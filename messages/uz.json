@@ -22,6 +22,10 @@
         "AboutPage": {
             "title": "Biz haqimizda - Qur'on ta'limi va moslashuvchan o'qish",
             "description": "Bizning o'ziga xos Qur'on ta'limi yondashuvimizni kashf eting, bu yondashuv malakali o'qituvchilar tomonidan qo'llab-quvvatlovchi muhitda olib boriladi. Hamma yoshdagilar uchun Qur'onni o'qish, Tajvid va yodlashni moslashuvchan onlayn dasturlar orqali o'rganing."
+        },
+        "CoursesPage": {
+            "title": "Bizning Qur’on kurslarimizni o‘rganing",
+            "description": "Har qanday darajadagi talabalar uchun mo‘ljallangan keng qamrovli Qur’on kurslarimizni kashf eting. Tajweed tamoyillarini o‘zlashtirishdan tortib Qur’on arabchasini tushunishga qadar, tajribali o‘qituvchilarimiz sizning o‘rganish yo‘lingizni yaxshilash uchun shaxsiy rahbarlik taqdim etadi."
         }
     },
     "Landing": {
@@ -125,6 +129,23 @@
             "imageThree": {
                 "src": "",
                 "title": ""
+            }
+        }
+    },
+    "Courses": {
+        "header": "Kurslar",
+        "courses": {
+            "noor": {
+                "name": "Noor Al Bayan",
+                "description": "Bizning Noor Al Bayan kursimiz Qur’on arabchasini chuqur o‘rganish uchun mo‘ljallangan keng qamrovli dastur taqdim etadi. Grammatikaga, lug‘atga va kontekstga e’tibor qaratib, talabalar Qur’on oyatlarini samarali o‘qish va tushunishni o‘rganadilar. Ushbu kurs barcha darajadagi talabalar uchun mos keladi, siz yo‘lingizni boshlayotgan bo‘lsangiz yoki mavjud bilimlaringizni oshirishni xohlasangiz."
+            },
+            "tajweed": {
+                "name": "Tajweed",
+                "description": "Bizning Tajweed kursimiz barcha darajadagi talabalar uchun Qur’onni go‘zal va aniq o‘qish uchun zarur bo‘lgan to‘g‘ri talaffuz va tovushni shakllantirish qoidalarini o‘rganishga yordam beradi. Tajribali o‘qituvchilar rahbarligida talabalar Tajweed tamoyillarini chuqur o‘rganadilar, oddiydan to advanced qoidalargacha hamma narsani amaliyotda sinab ko‘radilar. Siz yangi boshlovchi yoki ko‘nikmalaringizni rivojlantirishni istasangiz, ushbu kurs Qur’on o‘qishingizni yaxshilash uchun keng qamrovli va qo‘llab-quvvatlovchi muhitni taqdim etadi."
+            },
+            "quran": {
+                "name": "Quran with Tajweed",
+                "description": "Bizning Qur’on va Tajweed kursimiz til o‘qish san’atiga e’tibor beradi, talabalarni Tajweed qoidalarini qo‘llashni o‘rgatadi va Qur’on o‘qishini yaxshilaydi. Tajribali o‘qituvchilardan shaxsiy fikr-mulohazalar olib, talabalar go‘zal va aniq o‘qish uslubini rivojlantiradilar, shunda ular nafaqat o‘qish, balki Qur’onning go‘zalligi va mazmunini tushunishadi."
             }
         }
     },

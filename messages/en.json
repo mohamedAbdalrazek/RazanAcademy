@@ -22,6 +22,10 @@
         "AboutPage": {
             "title": "About Us - Quranic Education and Flexible Learning",
             "description": "Discover our unique Quranic education approach, led by certified teachers in a supportive environment. Learn Quran recitation, Tajweed, and memorization with flexible online programs for all ages."
+        },
+        "CoursesPage": {
+            "title": "Explore Our Quranic Courses",
+            "description": "Discover our comprehensive Quranic courses designed for students of all levels. From mastering the principles of Tajweed to understanding Quranic Arabic, our experienced instructors provide personalized guidance to enhance your learning journey."
         }
     },
     "Landing": {
@@ -125,6 +129,23 @@
             "imageThree": {
                 "src": "",
                 "title": ""
+            }
+        }
+    },
+    "Courses": {
+        "header": "Courses",
+        "courses": {
+            "noor": {
+                "name": "Noor Al Bayan",
+                "description": "Our Noor Al Bayan course offers a comprehensive curriculum designed to deepen your understanding of Quranic Arabic. With a focus on grammar, vocabulary, and context, students will learn to read and comprehend Quranic verses effectively. This course is suitable for all levels, whether you are starting your journey or looking to enhance your existing knowledge"
+            },
+            "tajweed": {
+                "name": "Tajweed",
+                "description": "Our Tajweed course is designed to help students of all levels learn the precise pronunciation and articulation rules essential to reciting the Quran beautifully and accurately. With the guidance of experienced teachers, students will gain a deep understanding of Tajweed principles, practicing everything from basic to advanced rules. Whether you're a beginner or looking to refine your skills, this course offers a comprehensive, supportive environment to enhance your Quran recitation."
+            },
+            "quran": {
+                "name": "Quran with Tajweed",
+                "description": "Our Quran with Tajweed course emphasizes the art of recitation, teaching students how to apply the rules of Tajweed to enhance their Quran reading. With personalized feedback from expert instructors, students will develop a beautiful and accurate recitation style, ensuring that they not only read but also understand the beauty and message of the Quran"
             }
         }
     },
