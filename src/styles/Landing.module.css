@@ -11,7 +11,6 @@
     color: var(--main-dark);
     font-size: 4.2rem;
     font-weight:bolder;
-    width: 80%;
     margin-bottom: 20px;
     line-height: 1;
 }
@@ -20,7 +19,8 @@
     font-weight: 400;
     line-height: 1.4;
     font-weight: 400;
-    color: var(--sub-text);
+    color: #757474;
+    /* color: var(); */
     margin-left: 20px;
 }
 

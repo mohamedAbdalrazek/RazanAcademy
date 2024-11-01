@@ -14,7 +14,7 @@
     position: relative;
     width: 320px;
     /* height: 480px; */
-    aspect-ratio: 3/4;
+    aspect-ratio: 2/3;
     border-radius: 14px;
     border: 1px solid rgba(177, 177, 177, 0.4);
 }
@@ -43,9 +43,7 @@
     -webkit-backdrop-filter:blur(10px) ;
     transition: all .3s linear;
 }
-.swiper-pagination{
-    /* --swiper-pagination-bottom:-6px;s */
-}
+
 .swiper-pagination-bullet{
     width: 14px;
     height: 14px;
@@ -59,8 +57,10 @@
     border-radius: 14px;
 }
 .swiper-button-prev{
-    left: 10%;
+    position: absolute;
+    left: 100px;
 }
-swiper-button-next{
-    right: 10%;
+.swiper-button-next{
+    position: absolute;
+    right: 100px;
 }

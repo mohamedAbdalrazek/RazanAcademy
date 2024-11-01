@@ -9,9 +9,10 @@ import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 
 import "@/styles/about-us/CertificateSwiper.css";
-import firstImage from "../../../public/images/mockBackground-one-1.jpg";
-import secondImage from "../../../public/images/mockBackground-one-2.jpg";
-import thirdImage from "../../../public/images/mockBackground-one-3.jpg";
+import firstImage from "../../../public/certificates/khadija1.jpg";
+import secondImage from "../../../public/certificates/khadija2.jpg";
+import thirdImage from "../../../public/certificates/khadija3.jpg";
+import fourthImage from "../../../public/certificates/khadija4.jpg";
 
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
@@ -23,9 +24,9 @@ export default function CertificateSwiper() {
                 effect="coverflow"
                 grabCursor
                 centeredSlides
-                initialSlide={1}
+                initialSlide={2}
                 speed={600}
-                preventClicks
+                zoom
                 slidesPerView={"auto"}
                 navigation = {true}
                 coverflowEffect={{
@@ -42,9 +43,8 @@ export default function CertificateSwiper() {
                     <Image
                         className="slideImage"
                         src={firstImage}
-                        // width={320}
-                        // height={480}
-                        fill
+                        width={320}
+                        height={480}
                         placeholder="blur"
                         alt="Certificate"
                     />
@@ -56,9 +56,8 @@ export default function CertificateSwiper() {
                     <Image
                         className="slideImage"
                         src={secondImage}
-                        // width={320}
-                        // height={480}
-                        fill
+                        width={320}
+                        height={480}
                         placeholder="blur"
                         alt="Certificate"
                     />
@@ -69,10 +68,9 @@ export default function CertificateSwiper() {
                 <SwiperSlide>
                     <Image
                         className="slideImage"
-                        fill
                         src={thirdImage}
-                        // width={320}
-                        // height={480}
+                        width={320}
+                        height={480}
                         placeholder="blur"
                         alt="Certificate"
                     />
@@ -83,10 +81,9 @@ export default function CertificateSwiper() {
                 <SwiperSlide>
                     <Image
                         className="slideImage"
-                        fill
-                        src={thirdImage}
-                        // width={320}
-                        // height={480}
+                        src={fourthImage}
+                        width={320}
+                        height={480}
                         placeholder="blur"
                         alt="Certificate"
                     />
