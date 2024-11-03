@@ -26,6 +26,10 @@
         "CoursesPage": {
             "title": "Explore Our Quranic Courses",
             "description": "Discover our comprehensive Quranic courses designed for students of all levels. From mastering the principles of Tajweed to understanding Quranic Arabic, our experienced instructors provide personalized guidance to enhance your learning journey."
+        },
+        "LibraryPage": {
+            "title": "Quranic Studies Library",
+            "description": "Explore our collection of PDFs for Quranic studies, including in-depth resources and the Holy Quran."
         }
     },
     "Landing": {
@@ -72,7 +76,7 @@
             }
         }
     },
-    "QuranList": {
+    "Quran": {
         "header": "Chapters of the Quran"
     },
     "AboutUs": {
@@ -148,6 +152,9 @@
                 "description": "Our Quran with Tajweed course emphasizes the art of recitation, teaching students how to apply the rules of Tajweed to enhance their Quran reading. With personalized feedback from expert instructors, students will develop a beautiful and accurate recitation style, ensuring that they not only read but also understand the beauty and message of the Quran"
             }
         }
+    },
+    "Library":{
+        "header":"Library"
     },
     "Footer": {
         "name": "RAZAN Academy",

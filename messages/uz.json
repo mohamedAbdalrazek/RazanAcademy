@@ -26,6 +26,10 @@
         "CoursesPage": {
             "title": "Bizning Qur’on kurslarimizni o‘rganing",
             "description": "Har qanday darajadagi talabalar uchun mo‘ljallangan keng qamrovli Qur’on kurslarimizni kashf eting. Tajweed tamoyillarini o‘zlashtirishdan tortib Qur’on arabchasini tushunishga qadar, tajribali o‘qituvchilarimiz sizning o‘rganish yo‘lingizni yaxshilash uchun shaxsiy rahbarlik taqdim etadi."
+        },
+        "LibraryPage": {
+            "title": "Qur'oniy O'qishlar Kutubxonasi",
+            "description": "Qur'oniy o'qishlar uchun chuqur bilim beruvchi resurslar va Muqaddas Qur'onni o'z ichiga olgan PDF fayllar to'plamimizni o'rganing."
         }
     },
     "Landing": {
@@ -72,9 +76,7 @@
             }
         }
     },
-    "QuranList": {
-        "header": "Qur'on suralari"
-    },
+    
     "AboutUs": {
         "header": "Biz haqimizda",
         "distinctiveEducational": {
@@ -148,6 +150,9 @@
                 "description": "Bizning Qur’on va Tajweed kursimiz til o‘qish san’atiga e’tibor beradi, talabalarni Tajweed qoidalarini qo‘llashni o‘rgatadi va Qur’on o‘qishini yaxshilaydi. Tajribali o‘qituvchilardan shaxsiy fikr-mulohazalar olib, talabalar go‘zal va aniq o‘qish uslubini rivojlantiradilar, shunda ular nafaqat o‘qish, balki Qur’onning go‘zalligi va mazmunini tushunishadi."
             }
         }
+    },
+    "Library": {
+        "header": "Kutubxona"
     },
     "Footer": {
         "name": "RAZAN Akademiyasi",

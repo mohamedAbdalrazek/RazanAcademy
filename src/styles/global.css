@@ -2,17 +2,18 @@
     --main-dark: #264653;
     --main-light: #ffffff;
     --sub-dark: #727171;
-    --active-link: #D62839 ;
+    --active-link: #d62839;
     --sub-text: #a8a8a8;
-    --light-gray-border:#ccc;
-    --subheader-color:#013042;
-    --box-shadow-one:0px 0px 4px rgba(0, 0, 0, 0.3);
+    --light-gray-border: #ccc;
+    --subheader-color: #013042;
+    --box-shadow-one: 0px 0px 4px rgba(0, 0, 0, 0.3);
     --box-shadow-two: 0 4px 15px rgba(0, 0, 0, 0.1);
-    --box-shadow-three:0px 2px 4px rgba(0, 0, 0, 0.3);
-    --box-shadow-four:0px 4px 8px rgba(0, 0, 0, 0.1);
+    --box-shadow-three: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    --box-shadow-four: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    --box-shadow-pop: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 * {
-    font-family:var(--font-roboto) var(--font-roboto-mono);
+    font-family: var(--font-roboto) var(--font-roboto-mono);
 }
 
 ::-webkit-scrollbar {
@@ -35,8 +36,7 @@
 a.active {
     color: var(--active-link);
 }
-.separationLine{
+.separationLine {
     height: 2px;
     background-color: #d8d3d3;
 }
-

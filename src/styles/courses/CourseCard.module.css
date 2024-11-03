@@ -20,7 +20,7 @@
 
 .courseCard:hover {
     z-index: 5;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Larger shadow for pop-out effect */
+    box-shadow: var(--box-shadow-pop); 
     transform: scale(1.05); /* Slightly scales up the card on hover */
 }
 

@@ -5,6 +5,8 @@ import Skeleton from "@/components/global/Skeleton";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { fetchChapters } from "@/lib/utils";
+import Heading from "@/components/global/Heading";
+
 type Chapter = {
     id: number;
     revelation_place: string;
@@ -31,12 +33,12 @@ export function generateStaticParams() {
 
 export default async function Quran({ params: { locale } }: Props) {
     setRequestLocale(locale);
+    const headerText = locale === "en" ? "Quran's Chapters" : "Qur'on suralari"
     const chapters: Chapter[] | null = await fetchChapters();
     return (
         <div className={styles.chapters}>
-            <h1 className={styles.header}>
-                {locale === "en" ? "Chapters of the Quran" : "Qur'on suralari"}
-            </h1>
+            <Heading  text={headerText} />
+         
 
             {chapters ? <ChapterList chapters={chapters} /> : <Skeleton />}
         </div>

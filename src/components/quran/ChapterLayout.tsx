@@ -5,6 +5,7 @@ import AudioPlayer from "../global/AudioPlayer";
 import VersesNumbersList from "./VersesNumbersList";
 import VersesList from "./VersesList";
 import styles from "@/styles/quran/ChapterLayout.module.css";
+import Heading from "../global/Heading";
 type Verse = {
     id: string;
     arabic_verse: string;
@@ -82,15 +83,17 @@ export default function ChapterLayout({ id }: { id: string }) {
                 setLoading(false);
             });
     }, [id]);
+    const header = `${chapter?.chapterInfo.name_english} / سورة ${chapter?.chapterInfo.name_arabic}`
     return loading ? (
         <Skeleton />
     ) : chapter && chapter.verses.length && chapter.fullAudio ? (
         <div>
             <div className={styles.chapterInfo}>
-                <div className={styles.chapterNames}>
+                <Heading text={header} />
+                {/* <div className={styles.chapterNames}>
                     <h1>{chapter.chapterInfo.name_english}</h1>
                     <h1>سورة {chapter.chapterInfo.name_arabic} </h1>
-                </div>
+                </div> */}
                 <AudioPlayer
                     handlePlayAudio={handlePlayAudio}
                     src={chapter.fullAudio}
