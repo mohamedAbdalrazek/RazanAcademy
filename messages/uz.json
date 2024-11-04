@@ -30,6 +30,10 @@
         "LibraryPage": {
             "title": "Qur'oniy O'qishlar Kutubxonasi",
             "description": "Qur'oniy o'qishlar uchun chuqur bilim beruvchi resurslar va Muqaddas Qur'onni o'z ichiga olgan PDF fayllar to'plamimizni o'rganing."
+        },
+        "BlogPage": {
+            "title": "Qur’on Tadqiqotlari Blogi",
+            "description": "ajvid, Qur’onni yodlash usullari, o‘qish rejalari va Qur’on oyatlari ma’nolarini chuqur tushunishga bag‘ishlangan maqolalarni o‘z ichiga olgan blogimizni o‘rganing."
         }
     },
     "Landing": {
@@ -76,7 +80,6 @@
             }
         }
     },
-    
     "AboutUs": {
         "header": "Biz haqimizda",
         "distinctiveEducational": {
@@ -148,6 +151,36 @@
             "quran": {
                 "name": "Quran with Tajweed",
                 "description": "Bizning Qur’on va Tajweed kursimiz til o‘qish san’atiga e’tibor beradi, talabalarni Tajweed qoidalarini qo‘llashni o‘rgatadi va Qur’on o‘qishini yaxshilaydi. Tajribali o‘qituvchilardan shaxsiy fikr-mulohazalar olib, talabalar go‘zal va aniq o‘qish uslubini rivojlantiradilar, shunda ular nafaqat o‘qish, balki Qur’onning go‘zalligi va mazmunini tushunishadi."
+            }
+        }
+    },
+    "Blog": {
+        "recent": "Oxirgi Post",
+        "discover": "Postlarni O‘rganing",
+        "recentPost": {
+            "src": "/images/mockBackground-one-1.jpg",
+            "title": "Qur’on Tilovatida Tajvidning Ahamiyati",
+            "description": "Tajvidni o‘rganish nima uchun Qur’onni to‘g‘ri va chiroyli tilovat qilish uchun muhimligini bilib oling. To‘g‘ri talaffuz Qur’oni Karimni o‘qishning ma’naviy va lingvistik tajribasini qanday boyitishini o‘rganing.",
+            "date": "2023-yil 24-iyun"
+        },
+        "posts": {
+            "first": {
+                "src": "/images/mockBackground-one-2.jpg",
+                "title": "Qur’onni Samarali Yodlash Bo‘yicha Maslahatlar",
+                "description": "Qur’onni oson yodlash va uni umrbod eslab qolish uchun tasdiqlangan usullarni o‘rganing. Yod olish safarining istalgan bosqichidagi talabalarga mos keladi.",
+                "date": "2023-yil 25-iyun"
+            },
+            "second": {
+                "src": "/images/mockBackground-one-3.jpg",
+                "title": "Barqaror Qur’on O‘qish Rejasini Qurish",
+                "description": "Turmush tarzingizga mos keladigan va tushunishingiz va tilovat ko‘nikmalaringizni chuqurlashtiradigan barqaror Qur’on o‘qish rejasini yaratish bo‘yicha amaliy maslahatlarni bilib oling.",
+                "date": "2023-yil 26-iyun"
+            },
+            "third": {
+                "src": "/images/quran.jpg",
+                "title": "Qur’on Oyatlari Ma’nolarini Anglash",
+                "description": "Qur’on oyatlari ma’nolarini tushunishning ahamiyatini va bu qanday qilib ma’naviy aloqani va kundalik amallarni boyitishini o‘rganing.",
+                "date": "2023-yil 28-iyun"
             }
         }
     },
