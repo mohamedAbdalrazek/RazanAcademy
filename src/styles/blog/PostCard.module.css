@@ -1,0 +1,42 @@
+.postCard {
+    width: calc((100% / 3) - 16px);
+    display: block;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid var(--light-gray-border);
+}
+.imageWrapper {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+}
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s all;
+    aspect-ratio: 1;
+}
+.postCard:hover .image {
+    transform: scale(1.05);
+}
+.infoWrapper {
+    padding: 20px;
+}
+.header {
+    color: var(--main-dark);
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+.description {
+    color: var(--sub-text);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.icon {
+    color: var(--main-dark);
+}
+.icon svg {
+    fill: var(--main-dark);
+}

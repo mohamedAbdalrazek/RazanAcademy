@@ -1,0 +1,21 @@
+.dateWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.iconWrapper {
+    border: 1px solid var(--light-gray-border);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.icon {
+    fill: var(--main-light);
+    width: 12px;
+}
+.date {
+    font-size: 14px;
+}

@@ -19,9 +19,6 @@ export async function generateMetadata({
 
 
 export default function IndexPage() {
-    // Enable static rendering
-
-    // const t = useTranslations("HomePage");
 
     return (
             <div>
