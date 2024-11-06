@@ -2,7 +2,7 @@
 import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import React from "react";
-import styles from "../styles/Navigaton.module.css"
+import styles from "@/styles/Navigaton.module.css"
 import SelectLanguage from "./SelectLanguage";
 export default function Nav() {
     const navKeys = [

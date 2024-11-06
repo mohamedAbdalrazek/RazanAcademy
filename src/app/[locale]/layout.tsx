@@ -1,25 +1,14 @@
-import { NextIntlClientProvider } from "next-intl";
 import {
-    getMessages,
     getTranslations,
     setRequestLocale,
 } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { Roboto_Mono, Roboto } from "next/font/google";
 import "../../styles/normalize.css";
 import "../../styles/global.css";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Nav from "@/components/Nav";
-import WhatsappButton from "@/components/WhatsappButton";
+import BaseLayout from "@/components/BaseLayout";
 
-const roboto = Roboto({
-    weight: ["900", "700", "500", "400", "300"],
-    subsets: ["latin"],
-    display: "swap",
-});
-const roboto_mono = Roboto_Mono({ subsets: ["latin"], display: "swap" });
+
 type Props = {
     params: { locale: string };
 };
@@ -51,26 +40,13 @@ export default async function LocaleLayout({
     params: { locale: string };
 }) {
     const { locale } = await params;
-    // Ensure that the incoming `locale` is valid
     if (!routing.locales.includes(locale as "uz" | "en")) {
         notFound();
     }
-
-    // Providing all messages to the client
-    // side is the easiest way to get started
-    const messages = await getMessages();
-
+    setRequestLocale(locale);
     return (
-        <html lang={locale}>
-            <body className={`${roboto_mono.className} ${roboto.className}`}>
-                <NextIntlClientProvider messages={messages}>
-                    <Header />
-                    <Nav />
-                    {children}
-                    <WhatsappButton />
-                    <Footer />
-                </NextIntlClientProvider>
-            </body>
-        </html>
+        <BaseLayout locale={locale} >
+            {children}
+        </BaseLayout>
     );
 }

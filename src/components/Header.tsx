@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import logo from "../../public/logo.png";
 import coverBackground from "../../public/cover-background.png";
-import styles from "../styles/Header.module.css";
+import styles from "@/styles/Header.module.css";
 import { Link } from "@/i18n/routing";
 import { Amiri, Noto_Nastaliq_Urdu } from "next/font/google";
 const amiri = Amiri({ subsets: ["latin"], weight: ["400"], style: ["italic"] });
