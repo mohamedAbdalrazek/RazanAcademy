@@ -27,19 +27,5 @@
     color: var(--sub-text);
     font-size: 14px;
 }
-.pdfDownload {
-    background-color: var(--main-dark);
-    padding: 10px 20px;
-    font-size: 14px;
-    color: var(--main-light);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: .3s all;
-}
-.pdfDownload:hover{
-    transform: scale(1.05);
-    border-radius: 0;
-    box-shadow: var(--box-shadow-pop); 
 
-}
 

@@ -40,3 +40,17 @@ a.active {
     height: 2px;
     background-color: #d8d3d3;
 }
+.small-button {
+    background-color: var(--main-dark);
+    padding: 10px 20px;
+    font-size: 14px;
+    color: var(--main-light);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s all;
+}
+.small-button:hover {
+    transform: scale(1.05);
+    border-radius: 0;
+    box-shadow: var(--box-shadow-pop);
+}

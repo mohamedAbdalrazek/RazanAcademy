@@ -28,7 +28,7 @@ export default function Pdf({name, size, pages, url}:Pdf) {
             </div>
 
             <a
-                className={styles.pdfDownload}
+                className="small-button"
                 href={url}
                 download
             >
