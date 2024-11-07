@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@tinymce/tinymce-react": "^5.1.1",
+    "@types/formidable": "^3.4.5",
     "@types/swiper": "^5.4.3",
     "cloudinary": "^2.5.1",
     "dompurify": "^3.1.7",
+    "formidable": "^3.5.2",
     "html-to-text": "^9.0.5",
     "next": "^14.2.16",
     "next-intl": "^3.23.5",
