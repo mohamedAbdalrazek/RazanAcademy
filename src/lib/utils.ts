@@ -8,3 +8,6 @@ export const fetchChapters = async () => {
     const chapters = await response.json();
     return chapters.formatedChapters;
 };
+
+
+

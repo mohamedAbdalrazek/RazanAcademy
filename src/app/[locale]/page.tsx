@@ -2,7 +2,6 @@
 import Landing from "@/components/Landing";
 import { getTranslations } from "next-intl/server";
 
-// import { useTranslations } from "next-intl";
 type Props = {
     params: { locale: string };
 };
