@@ -1,4 +1,3 @@
-"use client";
 import { Editor } from "@tinymce/tinymce-react";
 import React, { useState } from "react";
 
@@ -14,8 +13,9 @@ type Props = {
     >;
 };
 export default function TinyEditor({ setPost }: Props) {
-    const [loading] = useState(false);
+    const [isError, setIsError] = useState(false);
     const handleChange = (a: string) => {
+        setIsError(!a);
         setPost((prevPost) => ({
             ...prevPost,
             body: a,
@@ -24,8 +24,8 @@ export default function TinyEditor({ setPost }: Props) {
     return (
         <div>
             <Editor
+                id="test"
                 apiKey={process.env.NEXT_PUBLIC_Tiny_API_KEY}
-                disabled={loading}
                 initialValue={`What's in your mind`}
                 init={{
                     plugins: "emoticons| link | preview | image | media",
@@ -38,6 +38,9 @@ export default function TinyEditor({ setPost }: Props) {
                 }}
                 onEditorChange={handleChange}
             />
+            {isError && (
+                <span className="errorMessage">Post Body is required</span>
+            )}
         </div>
     );
 }

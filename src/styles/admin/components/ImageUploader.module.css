@@ -1,0 +1,48 @@
+.ImageUploader{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.UploaderLabel{
+    font-size: 1.3rem;
+}
+.UploaderButtonWrapper{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.imagePreviewWrapper{
+    
+    position: relative;
+    height: fit-content;
+    width: 600px;
+
+    
+}
+.imagePreview{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.deleteImageIcon{
+    box-sizing: content-box;
+    position: absolute;
+    fill: var(--light-text);
+    top: 8px;
+    right: 8px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-color: var(--dark-pink);
+    border-radius: 50%;
+    padding: 5px;
+    transition: all .3s;
+}
+.deleteImageIcon:hover{
+    background-color: var(--black-background);
+
+}

@@ -1,0 +1,22 @@
+.adminLabel{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+.adminInput{
+    width: 100%;
+    border: 1px solid var(--gray-background);
+    padding: 15px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.adminInput::placeholder{
+    font-size: 12px;
+    opacity: .6;
+}
+.adminInput:focus{
+    outline: 1px solid var(--dark-pink);
+}
+

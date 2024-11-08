@@ -23,3 +23,16 @@
 a.active{
     color: var(--dark-pink);
 }
+.adminButton{
+    background-color: var(--dark-pink);
+    color: var(--light-text);
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.errorMessage{
+    margin-top: 5px;
+    font-size: .9rem;
+    color: var(--dark-pink);
+    margin-left: 10px;
+}
