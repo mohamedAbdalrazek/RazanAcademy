@@ -1,0 +1,15 @@
+.adminHeader{
+    color: var(--dark-pink);
+    position: relative;
+    margin-bottom: 28px;
+    font-size: 2.4rem;
+}
+.adminHeader::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    background-color: var(--gray-background);
+    width: 100%;
+    left: 0;
+}

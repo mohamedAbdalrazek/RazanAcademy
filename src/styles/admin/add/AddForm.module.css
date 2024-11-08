@@ -1,0 +1,21 @@
+.addLabel{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+.addInput{
+    width: 80%;
+    border: 1px solid var(--gray-background);
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.addInput::placeholder{
+    font-size: 12px;
+    opacity: .6;
+}
+.addInput:focus{
+    outline: 1px solid var(--dark-pink);
+}

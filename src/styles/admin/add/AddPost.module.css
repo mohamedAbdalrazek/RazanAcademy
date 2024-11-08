@@ -1,0 +1,6 @@
+.addPage{
+    padding:20px;
+    height: 100vh;
+    overflow: auto;
+    width: 80%;
+}
