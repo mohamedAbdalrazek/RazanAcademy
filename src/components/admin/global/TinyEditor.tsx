@@ -1,17 +1,14 @@
-import { Editor } from "@tinymce/tinymce-react";
 import React, { useState } from "react";
+
+import { Editor } from "@tinymce/tinymce-react";
+import { Post } from "@/types/admin.types";
 
 type Props = {
     setPost: React.Dispatch<
-        React.SetStateAction<{
-            title: string;
-            description: string;
-            imageUrl: string;
-            imageAlt: string;
-            body: string;
-        }>
+        React.SetStateAction<Post>
     >;
 };
+
 export default function TinyEditor({ setPost }: Props) {
     const [isError, setIsError] = useState(false);
     const handleChange = (a: string) => {

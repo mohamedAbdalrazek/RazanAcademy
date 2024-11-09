@@ -1,23 +1,23 @@
 "use client";
 import React, { ChangeEvent, FormEvent, useState } from "react";
-import TinyEditor from "../TinyEditor";
-import styles from "@/styles/admin/add/AddForm.module.css";
-import ImageUploader from "../ImageUploader";
-import InputsList from "./InputsList";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { addPost, errorPopup, uploadImageAndGetUrl } from "@/lib/utils";
 import { useRouter } from "next/navigation";
-import AdminLoading from "../AdminLoading";
-type Post = {
-    title: string;
-    description: string;
-    imageUrl: string;
-    imageAlt: string;
-    body: string;
-};
-export default function AddForm() {
+
+import { addPost } from "@/lib/admin/adminAddPostUtils";
+
+import TinyEditor from "../global/TinyEditor";
+import ImageUploader from "../global/ImageUploader";
+import InputsList from "../add-post/InputsList";
+import AdminLoading from "../global/AdminLoading";
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+import styles from "@/styles/admin/add/AddForm.module.css";
+import { Post } from "@/types/admin.types";
+
+
+export default function AddFormLayout() {
     const router = useRouter();
+    
     const [post, setPost] = useState<Post>({
         title: "",
         description: "",
@@ -27,6 +27,7 @@ export default function AddForm() {
     });
     const [imageFile, setImageFile] = useState<File | null>(null);
     const [isLoading, setIsLoading] = useState(false);
+
     const handleChange = (
         e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
     ) => {
@@ -36,47 +37,14 @@ export default function AddForm() {
             [name]: value,
         }));
     };
+
     const handelSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setIsLoading(true);
-        for (const [key, value] of Object.entries(post)) {
-            if (key === "imageUrl") {
-                continue;
-            }
-            if (!value) {
-                console.log({ key });
-                setIsLoading(false);
-                errorPopup("Please fill the required data");
-                return;
-            }
-        }
-        if (!imageFile) {
-            errorPopup("Please upload a thumbnail Image");
-            setIsLoading(false);
 
-            return;
-        }
-        const result = await uploadImageAndGetUrl(imageFile);
-        if (!result.imageUrl) {
-            setIsLoading(false);
-            errorPopup(
-                result.error
-                    ? result.error
-                    : "Error uploading the Thumbnail, please try again"
-            );
-            return;
-        }
-        const formedPost = {
-            ...post,
-            imageUrl: result.imageUrl,
-        };
-        const addPostResult = await addPost(formedPost);
-        if (!addPostResult.ok) {
-            setIsLoading(false);
-            errorPopup(addPostResult.message);
-            return;
-        }
-        router.push("/admin/");
+        const addPostCheck = await addPost(post, imageFile);
+        if (addPostCheck.ok) router.push("/admin/");
+
         setIsLoading(false);
         return;
     };

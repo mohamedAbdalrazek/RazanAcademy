@@ -1,8 +1,12 @@
-import Image from "next/image";
 import React, { ChangeEvent, useState } from "react";
-import CloseIcon from "../icons/CloseIcon";
-import { getUriFromFile } from "@/lib/adminBlog";
+import Image from "next/image";
+
+import { getUriFromFile } from "@/lib/admin/adminUtils";
+
+import CloseIcon from "../../icons/CloseIcon";
+
 import styles from "@/styles/admin/components/ImageUploader.module.css";
+
 type Props = {
     setImageFile: React.Dispatch<React.SetStateAction<File | null>>;
 };

@@ -1,5 +1,7 @@
 import React, { ChangeEvent, useState } from "react";
+
 import styles from "@/styles/admin/components/AdminInput.module.css";
+
 type Props = {
     value: string;
     type?: string;
@@ -11,6 +13,7 @@ type Props = {
     placeholder: string;
     required: boolean;
 };
+
 export default function AdminInput({
     value,
     type,

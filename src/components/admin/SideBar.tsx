@@ -1,12 +1,15 @@
 "use client";
 import React from "react";
-import styles from "@/styles/admin/SideBar.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
+import styles from "@/styles/admin/SideBar.module.css";
+
 type Url = {
     url: string;
     text: string;
 };
+
 export default function SideBar() {
     const pathName = usePathname();
     const blogLinks: Url[] = [

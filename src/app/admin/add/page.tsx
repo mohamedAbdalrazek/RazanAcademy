@@ -1,12 +1,15 @@
 import React from "react";
+
+import AdminHeader from "@/components/admin/global/AdminHeader";
+import AddFormLayout from "@/components/admin/layouts/AddFormLayout";
+
 import styles from "@/styles/admin/add/AddPost.module.css";
-import AdminHeader from "@/components/admin/AdminHeader";
-import AddForm from "@/components/admin/add/AddForm";
+
 export default function Add() {
     return (
         <div className={styles.addPage}>
             <AdminHeader text="Add Post" />
-            <AddForm />
+            <AddFormLayout />
         </div>
     );
 }

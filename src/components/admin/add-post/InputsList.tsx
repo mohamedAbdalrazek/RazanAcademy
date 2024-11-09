@@ -1,5 +1,7 @@
 import React, { ChangeEvent } from "react";
-import AdminInput from "../AdminInput";
+
+import AdminInput from "../global/AdminInput";
+
 type Inputs = {
     text: string;
     placeholder: string;
