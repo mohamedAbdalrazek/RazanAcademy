@@ -7,7 +7,7 @@
 }
 .adminInput{
     width: 100%;
-    border: 1px solid var(--gray-background);
+    border: 1px solid #ccc;
     padding: 15px 8px;
     border-radius: 5px;
     margin-left: 10px;
@@ -17,6 +17,7 @@
     opacity: .6;
 }
 .adminInput:focus{
-    outline: 1px solid var(--dark-pink);
+    outline: none;
+    border-color: var(--dark-pink);
 }
 
