@@ -4,4 +4,5 @@ export type Post = {
     imageUrl: string;
     imageAlt: string;
     body: string;
+    issuedAt:string
 };

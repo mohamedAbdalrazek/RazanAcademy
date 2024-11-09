@@ -1,7 +1,6 @@
 import { Post } from "@/types/admin.types";
 import { errorPopup, uploadImageAndGetUrl } from "./adminUtils";
 
-
 export const UploadPostToFirestore = async (post: Post): Promise<{ ok: boolean, message: string }> => {
     const result = await fetch(`/api/admin/addPost`, {
         method: "POST",
@@ -23,15 +22,17 @@ export const isObjectValuesEmpty = (object: Post) => {
             continue;
         }
         if (!value) {
-
-            return false;
+            console.log({value}, "test")
+            return true;
         }
     }
-    return true
+    return false
 }
 
 export const addPost = async (post: Post, imageFile: File | null): Promise<{ ok: boolean }> => {
+    console.log(post)
     if (isObjectValuesEmpty(post)) {
+        console.log("first")
         errorPopup("Please fill the required data");
         return { ok: false };
     }

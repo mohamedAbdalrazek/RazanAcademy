@@ -10,20 +10,20 @@ import InputsList from "../add-post/InputsList";
 import AdminLoading from "../global/AdminLoading";
 import { ToastContainer } from "react-toastify";
 
-import "react-toastify/dist/ReactToastify.css";
 import styles from "@/styles/admin/add/AddForm.module.css";
 import { Post } from "@/types/admin.types";
-
+import "react-toastify/dist/ReactToastify.css";
 
 export default function AddFormLayout() {
     const router = useRouter();
-    
+
     const [post, setPost] = useState<Post>({
         title: "",
         description: "",
         imageUrl: "",
         imageAlt: "",
         body: "",
+        issuedAt: "",
     });
     const [imageFile, setImageFile] = useState<File | null>(null);
     const [isLoading, setIsLoading] = useState(false);
@@ -41,8 +41,12 @@ export default function AddFormLayout() {
     const handelSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setIsLoading(true);
-
-        const addPostCheck = await addPost(post, imageFile);
+        const currentTime = new Date().toISOString();
+        const formedPost = {
+            ...post,
+            issuedAt: currentTime,
+        };
+        const addPostCheck = await addPost(formedPost, imageFile);
         if (addPostCheck.ok) router.push("/admin/");
 
         setIsLoading(false);
