@@ -14,7 +14,12 @@
     --dark-text: #111111;
     --gray-text:#a8a8a8;
 }
-
+.mainPage{
+    padding:40px 20px;
+    height: 100vh;
+    overflow: auto;
+    width: 80%;
+}
 .layout{
     background-color: var(--light-background);
     display: flex;

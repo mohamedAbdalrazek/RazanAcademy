@@ -7,7 +7,7 @@
 .mainHeader{
     font-size: .8rem;
     color: var(--gray-text);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .linkList{
     margin-left: 20px;
@@ -18,7 +18,7 @@
 .link{
     color: var(--dark-text);
     text-decoration: none;
-    font-size: .9rem;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 .link:hover{

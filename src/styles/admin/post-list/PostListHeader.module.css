@@ -1,0 +1,28 @@
+.postListHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-bottom: 2px solid var(--dark-pink);
+    background-color: var(--dark-pink);
+    color: var(--light-text);
+}
+.postListTitle{
+    border-right: 2px solid var(--light-text);
+    width: 75%;
+    font-weight: 700;
+}
+.iconsHeaderWrapper{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+.iconsHeaderWrapper span{
+    text-align: center;
+    width: calc(100% / 3);
+    font-weight: 700;
+
+}
+.iconsHeaderWrapper span:not(:last-of-type){
+    border-right: 2px solid var(--light-text);
+
+}

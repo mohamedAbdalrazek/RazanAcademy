@@ -1,0 +1,49 @@
+.postCard {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid var(--gray-text);
+
+}
+
+.postTitle {
+    width: 73%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+}
+.iconsList {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+.iconWrapper {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    transition: .3s all;
+    opacity: .8;
+}
+.iconWrapper:hover{
+    opacity: 1;
+    transform: scale(1.05);
+}
+.editIcon {
+    fill: rgb(57, 43, 255);
+    width: 25px;
+    height: 25px;
+}
+.archiveIcon {
+    fill: rgb(184, 90, 3);
+    width: 30px;
+    height: 30px;
+}
+.deleteIcon{
+    fill: var(--dark-pink);
+    width: 25px;
+    height: 25px;
+}

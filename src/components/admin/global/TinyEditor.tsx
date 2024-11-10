@@ -23,7 +23,6 @@ export default function TinyEditor({ setPost }: Props) {
             <Editor
                 id="test"
                 apiKey={process.env.NEXT_PUBLIC_Tiny_API_KEY}
-                initialValue={`What's in your mind`}
                 init={{
                     plugins: "emoticons| link | preview | image | media",
                     automatic_uploads: true,
