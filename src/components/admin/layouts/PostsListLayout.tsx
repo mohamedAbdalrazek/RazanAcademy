@@ -6,28 +6,45 @@ import PostCard from "../post-list/PostCard";
 import styles from "@/styles/admin/post-list/PostListLayout.module.css";
 import PostListHeader from "../post-list/PostListHeader";
 import LoadMore from "../post-list/LoadMore";
+import AdminError from "../global/AdminError";
 
-const NUMBEROFPOSTS = 6;
+const NUMBER_OF_POSTS = 6;
 
 export default function PostsListLayout() {
-    const [posts, setPosts] = useState<RetrievedPost[] | null>(null);
-    const [lastVisibleId, setLastVisibleId] = useState<string|null>(null)
+    const [data, setData] = useState<GetPostResponse | null>(null);
+    const posts: RetrievedPost[] | null = data ? data.posts : null;
+    const lastVisibleId: string | null = data ? data.lastVisibleId : null;
+    const isPostsFinished = data?.count === posts?.length;
     const [loading, setLoading] = useState(true);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
+    console.log({ lastVisibleId });
     useEffect(() => {
         fetch(
-            `http://localhost:3000/api/admin/getFirstNPosts?numberOfPosts=${NUMBEROFPOSTS}`,
+            `http://localhost:3000/api/admin/getFirstNPosts?numberOfPosts=${NUMBER_OF_POSTS}`,
             { method: "GET" }
         )
             .then((result) => {
                 return result.json();
             })
+            .catch(() => {
+                console.error("Invalid JSON format");
+                setErrorMessage("Something went wrong please reload the page");
+            })
             .then((data: GetPostResponse) => {
-                setPosts(data.posts);
-                setLastVisibleId(data.lastVisibleId)
-                console.log(data);
+                if (!data.ok) {
+                    console.error(data.message);
+                    setErrorMessage(
+                        "Something went wrong in the server side please reload the page"
+                    );
+                    return;
+                }
+                setData(data);
             })
             .catch((error) => {
-                console.log(error);
+                console.error(error);
+                setErrorMessage(
+                    "Somthing went wrong check the internet and reload the page"
+                );
             })
             .finally(() => {
                 setLoading(false);
@@ -38,13 +55,21 @@ export default function PostsListLayout() {
     });
     return (
         <div className={styles.postListWrapper}>
-            {loading ? (
-                <PostListSkeleton numberOfPosts={NUMBEROFPOSTS} />
+            {errorMessage !== null ? (
+                <AdminError />
+            ) : loading ? (
+                <PostListSkeleton numberOfPosts={NUMBER_OF_POSTS} />
             ) : (
                 <div className={styles.postList}>
                     <PostListHeader />
                     {postsListElement}
-                    <LoadMore setLastVisibleId={setLastVisibleId} setPosts={setPosts} lastVisibleId={lastVisibleId} numberOfPosts={NUMBEROFPOSTS} />
+                    {!isPostsFinished && (
+                        <LoadMore
+                            setData={setData}
+                            lastVisibleId={lastVisibleId}
+                            numberOfPosts={NUMBER_OF_POSTS}
+                        />
+                    )}
                 </div>
             )}
         </div>

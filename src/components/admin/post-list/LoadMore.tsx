@@ -1,63 +1,45 @@
 import ArrowDown from "@/components/icons/ArrowDown";
 import React, { Dispatch, useState } from "react";
 import styles from "@/styles/admin/post-list/LoadMore.module.css";
-import { GetPostResponse, RetrievedPost } from "@/types/admin.types";
+import { GetPostResponse } from "@/types/admin.types";
 import AdminLoading from "../global/AdminLoading";
+import { getNextPosts } from "@/lib/admin/adminPostListUtils";
+import { errorPopup } from "@/lib/admin/adminUtils";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+
 export default function LoadMore({
+    setData,
     lastVisibleId,
-    setPosts,
     numberOfPosts,
-    setLastVisibleId,
 }: {
+    setData: Dispatch<React.SetStateAction<GetPostResponse | null>>;
     lastVisibleId: string | null;
-    setPosts: Dispatch<React.SetStateAction<RetrievedPost[] | null>>;
     numberOfPosts: number;
-    setLastVisibleId: Dispatch<React.SetStateAction<string | null>>;
 }) {
     const [loading, setLoading] = useState<boolean>(false);
-    const getNextPosts = async () => {
+    const handleClick = async () => {
         setLoading(true);
-        const requestBody = {
-            lastVisibleId,
-            numberOfPosts,
-        };
-        let result;
-        try {
-            result = await fetch(
-                "http://localhost:3000/api/admin/getNextPosts",
-                {
-                    method: "POST",
-                    body: JSON.stringify(requestBody),
-                    headers: { "Content-Type": "application/json" },
-                }
-            );
-        } catch (error) {
-            console.error("Error connecting with the server", error);
+        const request = await getNextPosts({ lastVisibleId, numberOfPosts });
+        if (!request.ok || !request.data) {
+            errorPopup(request.message);
             setLoading(false);
             return;
         }
-        let data: GetPostResponse;
-        try {
-            data = await result.json();
-        } catch (error) {
-            console.error("Invalid JSON form", error);
-            setLoading(false);
-            return;
-        }
-        if (!data.ok) {
-            console.error("Error in the server", data.message);
-            setLoading(false);
-            return;
-        }
-        setPosts((prevPosts) => [...(prevPosts || []), ...data.posts]);
-        setLastVisibleId(data.lastVisibleId);
+        const data = request.data;
+        setData((prevData) => ({
+            ...data,
+            count: prevData?.count,
+            posts: [...(prevData?.posts || []), ...data.posts],
+        }));
         setLoading(false);
     };
     return (
-        <div className={styles.loadMore} onClick={getNextPosts}>
+        <div className={styles.loadMore} onClick={handleClick}>
             <span className={styles.text}>Load More</span>
             <ArrowDown className={styles.icon} />
             {loading && <AdminLoading />}
+            <ToastContainer />
         </div>
     );
 }

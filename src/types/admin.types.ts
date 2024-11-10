@@ -16,6 +16,7 @@ export interface RetrievedPost extends Post {
 export type GetPostResponse = {
     ok: boolean;
     message: string;
+    count?:number;
     lastVisibleId:string ;
     posts: RetrievedPost[];
 };

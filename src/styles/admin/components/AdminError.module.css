@@ -1,0 +1,13 @@
+.adminError{
+    
+    width: 100%;
+    height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.errorMessage{
+    color: var(--dark-pink);
+    font-size: 1.2rem;
+}

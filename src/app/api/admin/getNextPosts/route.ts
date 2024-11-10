@@ -24,7 +24,6 @@ export async function POST(request: NextRequest) {
     try {
         const firstDocRef = doc(collection(db, "posts"), data.lastVisibleId);
         lastSnapshot = await getDoc(firstDocRef);
-        console.log(lastSnapshot)
     } catch (error) {
         console.error("Failed to get the last Post .", error);
         return Response.json({ ok: false, message: "Failed to get lastPost from the database" }, {
@@ -37,7 +36,7 @@ export async function POST(request: NextRequest) {
         const snapshot = await getDocs(q);
         const posts = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as RetrievedPost[];
         const newLastVisible = posts[snapshot.docs.length - 1].id;
-        return Response.json({ message: "new", posts, lastVisible: newLastVisible, ok: true }, {
+        return Response.json({ message: "new", posts, lastVisibleId: newLastVisible, ok: true }, {
             status: 200
         })
     } catch (error) {
