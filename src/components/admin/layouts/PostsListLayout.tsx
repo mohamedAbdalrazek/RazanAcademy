@@ -51,7 +51,14 @@ export default function PostsListLayout() {
             });
     }, []);
     const postsListElement = posts?.map((post) => {
-        return <PostCard key={post.id} title={post.title} id={post.id} />;
+        return (
+            <PostCard
+                setData={setData}
+                key={post.id}
+                title={post.title}
+                id={post.id}
+            />
+        );
     });
     return (
         <div className={styles.postListWrapper}>
