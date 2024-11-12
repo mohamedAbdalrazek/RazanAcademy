@@ -1,5 +1,4 @@
 "use client";
-import ArchiveIcon from "@/components/icons/ArchiveIcon";
 import DeleteIcon from "@/components/icons/DeleteIcon";
 import EditIcon from "@/components/icons/EditIcon";
 import React, { Dispatch, useState } from "react";
@@ -9,9 +8,10 @@ import AdminLoading from "../global/AdminLoading";
 
 import { GetPostResponse, RetrievedPost } from "@/types/admin.types";
 import { deletePost } from "@/lib/admin/adminPostListUtils";
+import PostIcon from "@/components/icons/PostIcon";
 import { movePost } from "@/lib/admin/adminUtils";
 
-export default function PostCard({
+export default function ArchivedPostCard({
     post,
 
     setData,
@@ -25,7 +25,7 @@ export default function PostCard({
     const handleDeletePost = async () => {
         if (!confirm(`are you sure you want to delete this post ?`)) return;
         setLoading(true);
-        const result = await deletePost(setData, id, "posts");
+        const result = await deletePost(setData, id, "archivedPosts");
         if (!result.ok) {
             console.error(result.message);
             setLoading(false);
@@ -34,16 +34,16 @@ export default function PostCard({
         setLoading(false);
     };
     const handleArchive = async () => {
-        if (!confirm(`are you sure you want to archive this post ?`)) return;
+        if (!confirm(`are you sure you want to post this post ?`)) return;
         setLoading(true);
-        const archiveResult = await movePost(post, "archivedPosts");
+        const archiveResult = await movePost(post, "posts");
         if (!archiveResult.ok) {
             console.error(archiveResult.message);
             setLoading(false);
             return;
         }
         setLoading(true);
-        const deleteResult = await deletePost(setData, id, "posts");
+        const deleteResult = await deletePost(setData, id, "archivedPosts");
         if (!deleteResult.ok) {
             console.error(deleteResult.message);
             setLoading(false);
@@ -60,7 +60,7 @@ export default function PostCard({
                     <EditIcon className={styles.editIcon} />
                 </Link>
                 <div className={styles.iconWrapper} onClick={handleArchive}>
-                    <ArchiveIcon className={styles.archiveIcon} />
+                    <PostIcon className={styles.postIcon} />
                 </div>
                 <div className={styles.iconWrapper} onClick={handleDeletePost}>
                     <DeleteIcon className={styles.deleteIcon} />

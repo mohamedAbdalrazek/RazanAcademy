@@ -7,6 +7,7 @@ import styles from "@/styles/admin/post-list/PostListLayout.module.css";
 import PostListHeader from "../global/PostListHeader";
 import LoadMore from "../global/LoadMore";
 import AdminError from "../global/AdminError";
+import ArchivedPostCard from "../archived-list/ArchivedPostCard";
 
 const NUMBER_OF_POSTS = 3;
 
@@ -51,7 +52,11 @@ export default function PostsListLayout({ route }: { route: string }) {
             });
     }, [route]);
     const postsListElement = posts?.map((post) => {
-        return <PostCard setData={setData} key={post.id} post={post} />;
+        return route === "posts" ? (
+            <PostCard setData={setData} key={post.id} post={post} />
+        ) : (
+            <ArchivedPostCard setData={setData} key={post.id} post={post} />
+        );
     });
     if (errorMessage !== null) {
         return (

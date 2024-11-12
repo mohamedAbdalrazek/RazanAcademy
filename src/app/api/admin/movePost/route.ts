@@ -13,8 +13,13 @@ export async function POST(request: NextRequest) {
             status: 400
         });
     }
-
-    for (const value of Object.values(data)) {
+    const { post, route } = data
+    if (!route || !post) {
+        return Response.json({ ok: false, message: "Provied a post object and a valid route" }, {
+            status: 400
+        });
+    }
+    for (const value of Object.values(post)) {
         if (!value) {
             return Response.json({ ok: false, message: "Some data is missing" }, {
                 status: 400
@@ -23,10 +28,10 @@ export async function POST(request: NextRequest) {
     }
 
     try {
-        const docRef = doc(collection(db, "archivedPosts"), data.id);
-        const result = await setDoc(docRef, data);
+        const docRef = doc(collection(db, route), post.id);
+        const result = await setDoc(docRef, post);
 
-        return Response.json({ ok: true, message: "Post was archived successfully", result }, {
+        return Response.json({ ok: true, message: "Post was moved successfully", result }, {
             status: 200
         });
     } catch (error) {

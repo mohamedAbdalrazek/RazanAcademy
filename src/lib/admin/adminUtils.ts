@@ -1,3 +1,4 @@
+import { RetrievedPost } from "@/types/admin.types";
 import { Bounce, toast } from "react-toastify";
 
 export const getUriFromFile = async (file: File) => {
@@ -46,4 +47,18 @@ export const errorPopup = (message: string) => {
         theme: "colored",
         transition: Bounce,
     });
+}
+
+export const movePost = async (post: RetrievedPost, route:string): Promise<{ ok: boolean, message: string }> => {
+    const result = await fetch(`/api/admin/movePost`, {
+        method: "POST",
+        body: JSON.stringify({post, route}),
+        headers: { "Content-Type": "application/json" }
+    });
+    const data = await result.json() as { ok: boolean, message: string }
+    if (!data.ok) {
+        console.error(data.message)
+    }
+    return { ok: data.ok, message: data.message }
+
 }

@@ -32,7 +32,6 @@ export const isObjectValuesEmpty = (object: Post) => {
 export const addPost = async (post: Post, imageFile: File | null): Promise<{ ok: boolean }> => {
     console.log(post)
     if (isObjectValuesEmpty(post)) {
-        console.log("first")
         errorPopup("Please fill the required data");
         return { ok: false };
     }

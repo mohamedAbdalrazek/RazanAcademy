@@ -58,22 +58,10 @@ export const getNPosts = async ({ numberOfPosts, route }: { numberOfPosts: numbe
 
 
 
-export const archivePost = async (post: RetrievedPost): Promise<{ ok: boolean, message: string }> => {
-    const result = await fetch(`/api/admin/archivePost`, {
-        method: "POST",
-        body: JSON.stringify(post),
-        headers: { "Content-Type": "application/json" }
-    });
-    const data = await result.json() as { ok: boolean, message: string }
-    if (!data.ok) {
-        console.error(data.message)
-    }
-    return { ok: data.ok, message: data.message }
 
-}
 
-export const deletePost = async (setData: Dispatch<React.SetStateAction<GetPostResponse | null>>, id: string) => {
-    const result = await fetch(`/api/admin/deletePost?postId=${id}`);
+export const deletePost = async (setData: Dispatch<React.SetStateAction<GetPostResponse | null>>, id: string, route:string) => {
+    const result = await fetch(`/api/admin/deletePost?postId=${id}&route=${route}`);
     let data;
     try {
         data = (await result.json()) as { ok: boolean; message: string };

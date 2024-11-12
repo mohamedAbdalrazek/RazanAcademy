@@ -42,6 +42,11 @@
     width: 30px;
     height: 30px;
 }
+.postIcon {
+    fill: rgb(3, 118, 184);
+    width: 28px;
+    height: 28px;
+}
 .deleteIcon{
     fill: var(--dark-pink);
     width: 25px;
