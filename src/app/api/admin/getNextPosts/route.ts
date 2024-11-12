@@ -1,4 +1,4 @@
-import { getNextPostsServer } from "@/lib/admin/adminPostListUtils";
+import { getNextPostsServer } from "@/lib/admin/adminServerUtils";
 import { NextRequest } from "next/server";
 
 export async function POST(request: NextRequest) {

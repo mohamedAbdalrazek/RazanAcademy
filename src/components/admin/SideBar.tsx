@@ -15,6 +15,7 @@ export default function SideBar() {
     const blogLinks: Url[] = [
         { url: "", text: "Posts" },
         { url: "add", text: "Add Post" },
+        {url:"archived", text:"Archived Posts"}
     ];
     const blogElements = blogLinks.map((link) => {
         const currentUrl = pathName.split("/")[2] ? pathName.split("/")[2] : "";

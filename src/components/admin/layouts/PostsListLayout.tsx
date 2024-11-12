@@ -4,13 +4,13 @@ import React, { useEffect, useState } from "react";
 import PostListSkeleton from "../loading/PostListSkeleton";
 import PostCard from "../post-list/PostCard";
 import styles from "@/styles/admin/post-list/PostListLayout.module.css";
-import PostListHeader from "../post-list/PostListHeader";
-import LoadMore from "../post-list/LoadMore";
+import PostListHeader from "../global/PostListHeader";
+import LoadMore from "../global/LoadMore";
 import AdminError from "../global/AdminError";
 
-const NUMBER_OF_POSTS = 6;
+const NUMBER_OF_POSTS = 3;
 
-export default function PostsListLayout() {
+export default function PostsListLayout({ route }: { route: string }) {
     const [data, setData] = useState<GetPostResponse | null>(null);
     const posts: RetrievedPost[] | null = data ? data.posts : null;
     const lastVisibleId: string | null = data ? data.lastVisibleId : null;
@@ -20,7 +20,7 @@ export default function PostsListLayout() {
     console.log({ lastVisibleId });
     useEffect(() => {
         fetch(
-            `http://localhost:3000/api/admin/getFirstNPosts?numberOfPosts=${NUMBER_OF_POSTS}`,
+            `http://localhost:3000/api/admin/getFirstNPosts?numberOfPosts=${NUMBER_OF_POSTS}&route=${route}`,
             { method: "GET" }
         )
             .then((result) => {
@@ -49,7 +49,7 @@ export default function PostsListLayout() {
             .finally(() => {
                 setLoading(false);
             });
-    }, []);
+    }, [route]);
     const postsListElement = posts?.map((post) => {
         return <PostCard setData={setData} key={post.id} post={post} />;
     });
@@ -60,20 +60,25 @@ export default function PostsListLayout() {
             </div>
         );
     }
-
+    const headerTitles = [
+        "Edit",
+        route === "posts" ? "Archive" : "Post",
+        "Delete",
+    ];
     return (
         <div className={styles.postListWrapper}>
             {loading ? (
                 <PostListSkeleton numberOfPosts={NUMBER_OF_POSTS} />
             ) : (
                 <div className={styles.postList}>
-                    <PostListHeader />
+                    <PostListHeader headerTitles={headerTitles} />
                     {postsListElement}
                     {!isPostsFinished && (
                         <LoadMore
                             setData={setData}
                             lastVisibleId={lastVisibleId}
                             numberOfPosts={NUMBER_OF_POSTS}
+                            route={route}
                         />
                     )}
                     {data?.count === 0 && (

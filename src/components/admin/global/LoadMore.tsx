@@ -2,7 +2,7 @@ import ArrowDown from "@/components/icons/ArrowDown";
 import React, { Dispatch, useState } from "react";
 import styles from "@/styles/admin/post-list/LoadMore.module.css";
 import { GetPostResponse } from "@/types/admin.types";
-import AdminLoading from "../global/AdminLoading";
+import AdminLoading from "./AdminLoading";
 import { getNextPosts } from "@/lib/admin/adminPostListUtils";
 import { errorPopup } from "@/lib/admin/adminUtils";
 import "react-toastify/dist/ReactToastify.css";
@@ -12,15 +12,18 @@ export default function LoadMore({
     setData,
     lastVisibleId,
     numberOfPosts,
+    route
 }: {
     setData: Dispatch<React.SetStateAction<GetPostResponse | null>>;
     lastVisibleId: string | null;
     numberOfPosts: number;
+    route:string;
 }) {
     const [loading, setLoading] = useState<boolean>(false);
     const handleClick = async () => {
         setLoading(true);
-        const request = await getNextPosts({ lastVisibleId, numberOfPosts });
+        const requestBody = { lastVisibleId, numberOfPosts, route }
+        const request = await getNextPosts(requestBody);
         if (!request.ok || !request.data) {
             errorPopup(request.message);
             setLoading(false);
