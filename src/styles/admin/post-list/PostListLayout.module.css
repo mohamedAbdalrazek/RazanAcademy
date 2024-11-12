@@ -5,3 +5,9 @@
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
     color: var(--dark-text);
 }
+.noPosts{
+    font-size: 1.1rem;
+    padding: 10px;
+    display: block;
+    text-align: center;
+}

@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "@/styles/about-us/AboutUsSections.module.css";
-import BookOpenIcon from "@/components/icons/BookOpenIcon";
+// import BookOpenIcon from "@/components/icons/BookOpenIcon"
 import CertificateIcon from "@/components/icons/CertificateIcon";
-import ClockIcon from "@/components/icons/ClockIcon";
+// import ClockIcon from "@/components/icons/ClockIcon";
 import LightBulbIcon from "@/components/icons/LightBulbIcon";
-import UsersIcon from "@/components/icons/UsersIcon";
+// import UsersIcon from "@/components/icons/UsersIcon";
 import { useTranslations } from "next-intl";
 export default function AboutUsSections() {
     const t = useTranslations("AboutUs");
@@ -36,7 +36,7 @@ export default function AboutUsSections() {
                     </p>
                 </div>
             </div>
-            <div className={styles.section}>
+            {/* <div className={styles.section}>
                 <div className={styles.icon}>
                     <UsersIcon />
                 </div>
@@ -72,7 +72,7 @@ export default function AboutUsSections() {
                         {t("flexibleLearning.body")}
                     </p>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

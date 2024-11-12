@@ -14,7 +14,7 @@ export default function PostsListLayout() {
     const [data, setData] = useState<GetPostResponse | null>(null);
     const posts: RetrievedPost[] | null = data ? data.posts : null;
     const lastVisibleId: string | null = data ? data.lastVisibleId : null;
-    const isPostsFinished = data?.count === posts?.length;
+    const isPostsFinished = data?.count === posts?.length || data?.count == 0;
     const [loading, setLoading] = useState(true);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
     console.log({ lastVisibleId });
@@ -51,20 +51,19 @@ export default function PostsListLayout() {
             });
     }, []);
     const postsListElement = posts?.map((post) => {
-        return (
-            <PostCard
-                setData={setData}
-                key={post.id}
-                title={post.title}
-                id={post.id}
-            />
-        );
+        return <PostCard setData={setData} key={post.id} post={post} />;
     });
+    if (errorMessage !== null) {
+        return (
+            <div className={styles.postListWrapper}>
+                <AdminError />
+            </div>
+        );
+    }
+
     return (
         <div className={styles.postListWrapper}>
-            {errorMessage !== null ? (
-                <AdminError />
-            ) : loading ? (
+            {loading ? (
                 <PostListSkeleton numberOfPosts={NUMBER_OF_POSTS} />
             ) : (
                 <div className={styles.postList}>
@@ -76,6 +75,11 @@ export default function PostsListLayout() {
                             lastVisibleId={lastVisibleId}
                             numberOfPosts={NUMBER_OF_POSTS}
                         />
+                    )}
+                    {data?.count === 0 && (
+                        <span
+                            className={styles.noPosts}
+                        >{`There's no Posts`}</span>
                     )}
                 </div>
             )}

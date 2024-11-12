@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import ArchiveIcon from "@/components/icons/ArchiveIcon";
 import DeleteIcon from "@/components/icons/DeleteIcon";
 import EditIcon from "@/components/icons/EditIcon";
@@ -7,41 +7,50 @@ import styles from "@/styles/admin/post-list/PostCard.module.css";
 import Link from "next/link";
 import AdminLoading from "../global/AdminLoading";
 
-import { GetPostResponse } from "@/types/admin.types";
+import { GetPostResponse, RetrievedPost } from "@/types/admin.types";
+import { archivePost, deletePost } from "@/lib/admin/adminPostListUtils";
 
 export default function PostCard({
-    title,
-    id,
+    post,
+
     setData,
 }: {
-    title: string;
-    id: string;
+    post: RetrievedPost;
+
     setData: Dispatch<React.SetStateAction<GetPostResponse | null>>;
 }) {
+    const { title, id } = post;
     const [loading, setLoading] = useState(false);
     const handleDeletePost = async () => {
         if (!confirm(`are you sure you want to delete this post ?`)) return;
         setLoading(true);
-        const result = await fetch(`/api/admin/deletePost?postId=${id}`);
-        const data = (await result.json()) as { ok: boolean; message: string };
-        if (!data.ok) {
-            console.log(data.message);
+        const result = await deletePost(setData, id);
+        if (!result.ok) {
+            console.error(result.message);
             setLoading(false);
             return;
         }
-        setData((prevData) => {
-            if (!prevData) return null;
-            const filteredPosts = prevData.posts.filter(
-                (post) => post.id !== id
-            );
-            return {
-                ...prevData,
-                count: prevData.count && prevData.count - 1,
-                posts: filteredPosts,
-            };
-        });
         setLoading(false);
     };
+    const handleArchive = async () => {
+        if (!confirm(`are you sure you want to archive this post ?`)) return;
+        setLoading(true);
+        const archiveResult = await archivePost(post);
+        if (!archiveResult.ok) {
+            console.error(archiveResult.message);
+            setLoading(false);
+            return;
+        }
+        setLoading(true);
+        const deleteResult = await deletePost(setData, id);
+        if (!deleteResult.ok) {
+            console.error(deleteResult.message);
+            setLoading(false);
+            return;
+        }
+        setLoading(false);
+    };
+
     return (
         <div className={styles.postCard}>
             <h2 className={styles.postTitle}>{title}</h2>
@@ -49,7 +58,7 @@ export default function PostCard({
                 <Link href={`/admin/edit/${id}`} className={styles.iconWrapper}>
                     <EditIcon className={styles.editIcon} />
                 </Link>
-                <div className={styles.iconWrapper}>
+                <div className={styles.iconWrapper} onClick={handleArchive}>
                     <ArchiveIcon className={styles.archiveIcon} />
                 </div>
                 <div className={styles.iconWrapper} onClick={handleDeletePost}>

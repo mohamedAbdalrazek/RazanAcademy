@@ -1,4 +1,5 @@
 
+import SubHeading from "@/components/global/SubHeading";
 import Landing from "@/components/Landing";
 import { getTranslations } from "next-intl/server";
 
@@ -22,6 +23,7 @@ export default function IndexPage() {
     return (
             <div>
                 <Landing />
+                <SubHeading text="What We Offer" /> 
             </div>
     );
 }

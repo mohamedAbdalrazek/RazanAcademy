@@ -1,8 +1,8 @@
 import { GetPostResponse, RetrievedPost } from "@/types/admin.types";
 import { collection, doc, getCountFromServer, getDoc, getDocs, limit, orderBy, query, startAfter } from "firebase/firestore";
-import { Dispatch } from "react";
 import { db } from "../firebase";
 import { NextRequest } from "next/server";
+import { Dispatch } from "react";
 
 export const getNextPosts = async ({
     lastVisibleId,
@@ -94,4 +94,43 @@ export const getNextPostsServer = async (request: NextRequest): Promise<{ ok: bo
         console.error("Failed to get the next posts .", error);
         return { ok: false, message: "Failed to get next posts from the database" }
     }
+}
+
+export const archivePost = async (post: RetrievedPost): Promise<{ ok: boolean, message: string }> => {
+    const result = await fetch(`/api/admin/archivePost`, {
+        method: "POST",
+        body: JSON.stringify(post),
+        headers: { "Content-Type": "application/json" }
+    });
+    const data = await result.json() as { ok: boolean, message: string }
+    if (!data.ok) {
+        console.error(data.message)
+    }
+    return { ok: data.ok, message: data.message }
+
+}
+
+export const deletePost = async (setData: Dispatch<React.SetStateAction<GetPostResponse | null>>, id: string) => {
+    const result = await fetch(`/api/admin/deletePost?postId=${id}`);
+    let data;
+    try {
+        data = (await result.json()) as { ok: boolean; message: string };
+    } catch (error) {
+        return { ok: false, message: `Invalid JSON form. ${error}` }
+    }
+    if (!data.ok) {
+        return data;
+    }
+    setData((prevData) => {
+        if (!prevData) return null;
+        const filteredPosts = prevData.posts.filter(
+            (post) => post.id !== id
+        );
+        return {
+            ...prevData,
+            count: prevData.count && prevData.count - 1,
+            posts: filteredPosts,
+        };
+    });
+    return data
 }
