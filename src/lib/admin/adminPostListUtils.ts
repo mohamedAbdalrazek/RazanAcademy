@@ -84,3 +84,18 @@ export const deletePost = async (setData: Dispatch<React.SetStateAction<GetPostR
     });
     return data
 }
+export const movePost = async (post: RetrievedPost, route: string): Promise<{ ok: boolean, message: string }> => {
+    const result = await fetch(`/api/admin/movePost`, {
+        method: "POST",
+        body: JSON.stringify({ post, route }),
+        headers: { "Content-Type": "application/json" }
+    });
+    let data;
+    try {
+        data = await result.json() as { ok: boolean, message: string }
+    } catch (error) {
+        return { ok: false, message: `Invalid JSON form ${error}` }
+    }
+    return { ok: data.ok, message: data.message }
+
+}

@@ -60,16 +60,15 @@ export const getNPosts = async ({ numberOfPosts, route }: { numberOfPosts: numbe
     try {
         const q = query(colRef, orderBy("issuedAt", "desc"), limit(numberOfPosts));
         const snapshot = await getDocs(q);
-        posts = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as RetrievedPost[];
+        posts = snapshot.docs.map(doc => {
+            return ({ id: doc.id, ...doc.data() })
+        }) as RetrievedPost[];
     } catch (error) {
         console.error("Error getting posts from the database", error)
         return { ok: false, posts: [], lastVisibleId: "" }
     }
-
-    if (!posts || posts.length === 0) {
-        return { ok: false, posts: [], lastVisibleId: "" }
-    }
-    const lastVisibleId = posts[posts.length - 1].id;
+    const lastVisibleId = posts.length ? posts[posts.length - 1].id : "";
+    console.log(lastVisibleId, count)
     return { ok: true, posts, lastVisibleId, count }
 }
 

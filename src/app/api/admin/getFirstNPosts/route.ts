@@ -12,6 +12,7 @@ export async function GET(request: NextRequest) {
     const numberOfPosts = Number(param)
     try {
         const { ok, posts, lastVisibleId, count } = await getNPosts({ numberOfPosts, route })
+        console.log(ok)
         if (!ok) {
             return Response.json({ "message": `Somthing went wrong getting the in getting data from firestore .`, ok: false }, {
                 status: 500
