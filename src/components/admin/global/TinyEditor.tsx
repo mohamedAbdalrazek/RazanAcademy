@@ -7,9 +7,10 @@ type Props = {
     setPost: React.Dispatch<
         React.SetStateAction<Post>
     >;
+    body?:string
 };
 
-export default function TinyEditor({ setPost }: Props) {
+export default function TinyEditor({ setPost, body }: Props) {
     const [isError, setIsError] = useState(false);
     const handleChange = (a: string) => {
         setIsError(!a);
@@ -21,9 +22,11 @@ export default function TinyEditor({ setPost }: Props) {
     return (
         <div>
             <Editor
-                id="test"
+            id="Razan Tiny editor"
+                value={body}
                 apiKey={process.env.NEXT_PUBLIC_Tiny_API_KEY}
                 init={{
+                    
                     plugins: "emoticons| link | preview | image | media",
                     automatic_uploads: true,
                     toolbar_mode: "sliding",

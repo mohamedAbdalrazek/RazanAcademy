@@ -1,3 +1,4 @@
+"use client"
 import React, { ChangeEvent, useState } from "react";
 import Image from "next/image";
 
@@ -9,9 +10,11 @@ import styles from "@/styles/admin/components/ImageUploader.module.css";
 
 type Props = {
     setImageFile: React.Dispatch<React.SetStateAction<File | null>>;
+    initialUri?:string
 };
-export default function ImageUploader({ setImageFile }: Props) {
-    const [imageUri, setImageUri] = useState<string>();
+export default function ImageUploader({ setImageFile, initialUri }: Props) {
+    const [imageUri, setImageUri] = useState<string>(initialUri);
+    console.log({imageUri})
     const [isError, setIsError] = useState(false);
     const handleSelectImage = async (e: ChangeEvent<HTMLInputElement>) => {
         if (!e.target.files) return;

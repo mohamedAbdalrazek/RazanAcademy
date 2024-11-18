@@ -9,16 +9,18 @@ import LoadMore from "../global/LoadMore";
 import AdminError from "../global/AdminError";
 import ArchivedPostCard from "../archived-list/ArchivedPostCard";
 
-const NUMBER_OF_POSTS = 3;
+const NUMBER_OF_POSTS = 6;
 
 export default function PostsListLayout({ route }: { route: string }) {
     const [data, setData] = useState<GetPostResponse | null>(null);
+
     const posts: RetrievedPost[] | null = data ? data.posts : null;
     const lastVisibleId: string | null = data ? data.lastVisibleId : null;
     const isPostsFinished = data?.count === posts?.length || data?.count == 0;
+
     const [loading, setLoading] = useState(true);
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
-    console.log({ lastVisibleId });
+
     useEffect(() => {
         fetch(
             `http://localhost:3000/api/admin/getFirstNPosts?numberOfPosts=${NUMBER_OF_POSTS}&route=${route}`,
@@ -51,6 +53,7 @@ export default function PostsListLayout({ route }: { route: string }) {
                 setLoading(false);
             });
     }, [route]);
+    
     const postsListElement = posts?.map((post) => {
         return route === "posts" ? (
             <PostCard setData={setData} key={post.id} post={post} />

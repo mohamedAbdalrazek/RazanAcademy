@@ -21,9 +21,11 @@ export default function PostCard({
 }) {
     const { title, id } = post;
     const [loading, setLoading] = useState(false);
+
     const handleDeletePost = async () => {
         if (!confirm(`Are you sure you want to delete this post ?`)) return;
         setLoading(true);
+
         const result = await deletePost(setData, id, "posts");
         if (!result.ok) {
             console.error(result.message);
@@ -33,17 +35,22 @@ export default function PostCard({
         }
         setLoading(false);
     };
+
     const handleArchive = async () => {
         if (!confirm(`Are you sure you want to archive this post ?`)) return;
         setLoading(true);
+
         const archiveResult = await movePost(post, "archivedPosts");
+
         if (!archiveResult.ok) {
             console.error(archiveResult.message);
             errorPopup("Somthing went wrong try again later");
             setLoading(false);
             return;
         }
+
         const deleteResult = await deletePost(setData, id, "posts");
+        
         if (!deleteResult.ok) {
             console.error(deleteResult.message);
             errorPopup("Somthing went wrong try again later");
