@@ -13,7 +13,7 @@ type Props = {
     initialUri?:string
 };
 export default function ImageUploader({ setImageFile, initialUri }: Props) {
-    const [imageUri, setImageUri] = useState<string>(initialUri);
+    const [imageUri, setImageUri] = useState<string>(initialUri??"");
     console.log({imageUri})
     const [isError, setIsError] = useState(false);
     const handleSelectImage = async (e: ChangeEvent<HTMLInputElement>) => {

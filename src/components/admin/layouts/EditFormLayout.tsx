@@ -1,8 +1,8 @@
 "use client";
-import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { addPost } from "@/lib/admin/adminAddPostUtils";
+import { editPost } from "@/lib/admin/adminAddPostUtils";
 
 import TinyEditor from "../global/TinyEditor";
 import ImageUploader from "../global/ImageUploader";
@@ -11,11 +11,17 @@ import AdminLoading from "../global/AdminLoading";
 import { ToastContainer } from "react-toastify";
 
 import styles from "@/styles/admin/add/AddForm.module.css";
-import {Post, RetrievedPost } from "@/types/admin.types";
+import { Post, RetrievedPost } from "@/types/admin.types";
 import "react-toastify/dist/ReactToastify.css";
 import PostListSkeleton from "../loading/PostListSkeleton";
 
-export default function EditFormLayout({ id }: { id: string }) {
+export default function EditFormLayout({
+    id,
+    route,
+}: {
+    id: string;
+    route: string;
+}) {
     const router = useRouter();
     const [post, setPost] = useState<Post>({
         title: "",
@@ -26,11 +32,13 @@ export default function EditFormLayout({ id }: { id: string }) {
         issuedAt: "",
     });
     const [imageFile, setImageFile] = useState<File | null>(null);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     useEffect(() => {
-        setIsLoading(true);
         fetch(
-            `http://localhost:3000/api/admin/getPostById?postsId=${id}&route=posts`,
+            `http://localhost:3000/api/admin/getPostById?postsId=${id}&route=${route}`,
             { method: "GET" }
         )
             .then((result) => {
@@ -58,7 +66,7 @@ export default function EditFormLayout({ id }: { id: string }) {
             .finally(() => {
                 setIsLoading(false);
             });
-    }, [id]);
+    }, [id, route]);
     const handleChange = (
         e: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
     ) => {
@@ -69,25 +77,24 @@ export default function EditFormLayout({ id }: { id: string }) {
         }));
     };
 
-    const handelSubmit = async (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        setIsLoading(true);
-        const currentTime = new Date().toISOString();
-        const formedPost = {
-            ...post,
-            issuedAt: currentTime,
-        };
-        const addPostCheck = await addPost(formedPost, imageFile);
-        if (addPostCheck.ok) router.push("/admin/");
+    const handelSubmit = async (submitRoute: string) => {
+        setIsSubmitting(true);
+        const addPostCheck = await editPost(
+            post,
+            imageFile,
+            id,
+            submitRoute
+        );
+        if (addPostCheck.ok) router.back();
 
-        setIsLoading(false);
+        setIsSubmitting(false);
         return;
     };
-    if(isLoading){
-        return <PostListSkeleton numberOfPosts={10} />
+    if (isLoading) {
+        return <PostListSkeleton numberOfPosts={10} />;
     }
     return (
-        <form className={styles.addForm} onSubmit={handelSubmit}>
+        <form className={styles.addForm} onSubmit={(e) => e.preventDefault()}>
             <InputsList
                 title={post.title}
                 description={post.description}
@@ -95,13 +102,21 @@ export default function EditFormLayout({ id }: { id: string }) {
                 handleChange={handleChange}
             />
             <span className={styles.adminLabelAlt}>Upload Thumbnail</span>
-            <ImageUploader setImageFile={setImageFile} initialUri={post.imageUrl} />
+            <ImageUploader
+                setImageFile={setImageFile}
+                initialUri={post.imageUrl}
+            />
             <span className={styles.adminLabelAlt}>Post Body</span>
             <TinyEditor body={post.body} setPost={setPost} />
-            <button className={`adminButton ${styles.submitButton}`}>
-                Add Post
-            </button>
-            {isLoading && <AdminLoading />}
+            <div className={styles.buttonsWrapper}>
+                <button
+                    className={`adminButton ${styles.submitButton}`}
+                    onClick={() => handelSubmit(route)}
+                >
+                    Edit
+                </button>
+            </div>
+            {isSubmitting && <AdminLoading />}
             <ToastContainer />
         </form>
     );

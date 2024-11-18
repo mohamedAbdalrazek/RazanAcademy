@@ -9,7 +9,8 @@ import PostIcon from "@/components/icons/PostIcon";
 import { errorPopup } from "@/lib/admin/adminUtils";
 
 import PostCardLayout from "../layouts/PostCardLayout";
-
+import Link from "next/link";
+import EditIcon from "@/components/icons/EditIcon";
 
 export default function ArchivedPostCard({
     post,
@@ -66,6 +67,12 @@ export default function ArchivedPostCard({
 
     return (
         <PostCardLayout title={title} id={id} loading={loading}>
+            <Link
+                href={`/admin/archivedPosts/${id}`}
+                className={styles.iconWrapper}
+            >
+                <EditIcon className={styles.editIcon} />
+            </Link>
             <div className={styles.iconWrapper} onClick={handleArchive}>
                 <PostIcon className={styles.postIcon} />
             </div>

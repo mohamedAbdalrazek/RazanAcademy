@@ -9,6 +9,8 @@ import { deletePost, movePost } from "@/lib/admin/adminPostListUtils";
 import { errorPopup } from "@/lib/admin/adminUtils";
 
 import PostCardLayout from "../layouts/PostCardLayout";
+import Link from "next/link";
+import EditIcon from "@/components/icons/EditIcon";
 
 export default function PostCard({
     post,
@@ -50,7 +52,7 @@ export default function PostCard({
         }
 
         const deleteResult = await deletePost(setData, id, "posts");
-        
+
         if (!deleteResult.ok) {
             console.error(deleteResult.message);
             errorPopup("Somthing went wrong try again later");
@@ -62,6 +64,9 @@ export default function PostCard({
 
     return (
         <PostCardLayout title={title} id={id} loading={loading}>
+            <Link href={`/admin/posts/${id}`} className={styles.iconWrapper}>
+                <EditIcon className={styles.editIcon} />
+            </Link>
             <div className={styles.iconWrapper} onClick={handleArchive}>
                 <ArchiveIcon className={styles.archiveIcon} />
             </div>

@@ -4,8 +4,12 @@
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
+.buttonsWrapper{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 .submitButton{
     display: block;
-    margin: auto;
     margin-top: 20px;
 }

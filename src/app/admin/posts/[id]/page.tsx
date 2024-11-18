@@ -12,7 +12,7 @@ export default function EditPost({
     return (
         <div className="mainPage">
             <AdminHeader text="Edit Post" />
-            <EditFormLayout id={id} />
+            <EditFormLayout route="posts" id={id} />
         </div>
     );
 }
