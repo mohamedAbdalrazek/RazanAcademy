@@ -1,5 +1,5 @@
 "use client";
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { addPost } from "@/lib/admin/adminAddPostUtils";
@@ -38,22 +38,22 @@ export default function AddFormLayout() {
         }));
     };
 
-    const handelSubmit = async (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
+    const handleSubmit = async (route: string) => {
         setIsLoading(true);
         const currentTime = new Date().toISOString();
         const formedPost = {
             ...post,
             issuedAt: currentTime,
         };
-        const addPostCheck = await addPost(formedPost, imageFile);
-        if (addPostCheck.ok) router.push("/admin/");
+        const addPostCheck = await addPost(formedPost, imageFile, route);
+        if (addPostCheck.ok)
+            router.push(`/admin/${route === "archivedPosts" && "archived"}`);
 
         setIsLoading(false);
         return;
     };
     return (
-        <form className={styles.addForm} onSubmit={handelSubmit}>
+        <form className={styles.addForm} onSubmit={(e) => e.preventDefault()}>
             <InputsList
                 title={post.title}
                 description={post.description}
@@ -64,9 +64,20 @@ export default function AddFormLayout() {
             <ImageUploader setImageFile={setImageFile} />
             <span className={styles.adminLabelAlt}>Post Body</span>
             <TinyEditor setPost={setPost} />
-            <button className={`adminButton ${styles.submitButton}`}>
-                Add Post
-            </button>
+            <div className={styles.buttonsWrapper}>
+                <button
+                    className={`adminButton ${styles.submitButton}`}
+                    onClick={() => handleSubmit("posts")}
+                >
+                    Add Post
+                </button>
+                <button
+                    className={`adminButton ${styles.submitButton}`}
+                    onClick={() => handleSubmit("archivedPosts")}
+                >
+                    Archive Post
+                </button>
+            </div>
             {isLoading && <AdminLoading />}
             <ToastContainer />
         </form>

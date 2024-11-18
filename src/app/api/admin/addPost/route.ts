@@ -13,8 +13,12 @@ export async function POST(request: NextRequest) {
             status: 400
         });
     }
-
-    for (const value of Object.values(data)) {
+    if(!data.post || !data.route){
+        return Response.json({ ok: false, message: "Please provide and id and a post" }, {
+            status: 400
+        });
+    }
+    for (const value of Object.values(data.post)) {
         if (!value) {
             return Response.json({ ok: false, message: "Some data is missing" }, {
                 status: 400
@@ -23,8 +27,8 @@ export async function POST(request: NextRequest) {
     }
 
     try {
-        const docRef = collection(db, "posts");
-        const result = await addDoc(docRef, data);
+        const docRef = collection(db, data.route);
+        const result = await addDoc(docRef, data.post);
     
         return Response.json({ ok: true, message: "Document added successfully",result }, {
             status: 200

@@ -2,7 +2,7 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { editPost } from "@/lib/admin/adminAddPostUtils";
+import { editPost } from "@/lib/admin/adminEditPostUtils";
 
 import TinyEditor from "../global/TinyEditor";
 import ImageUploader from "../global/ImageUploader";

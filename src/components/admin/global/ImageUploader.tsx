@@ -4,8 +4,6 @@ import Image from "next/image";
 
 import { getUriFromFile } from "@/lib/admin/adminUtils";
 
-import CloseIcon from "../../icons/CloseIcon";
-
 import styles from "@/styles/admin/components/ImageUploader.module.css";
 
 type Props = {
@@ -23,11 +21,6 @@ export default function ImageUploader({ setImageFile, initialUri }: Props) {
         const uri = await getUriFromFile(file);
         setImageUri(uri);
         setIsError(false);
-    };
-    const handleDeletePreview = () => {
-        setIsError(true);
-        setImageUri("");
-        setImageFile(null);
     };
     return (
         <div className={styles.ImageUploader}>
@@ -56,10 +49,6 @@ export default function ImageUploader({ setImageFile, initialUri }: Props) {
                         width={400}
                         height={400}
                         className={styles.imagePreview}
-                    />
-                    <CloseIcon
-                        onClick={handleDeletePreview}
-                        className={styles.deleteImageIcon}
                     />
                 </div>
             )}

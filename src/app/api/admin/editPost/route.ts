@@ -21,7 +21,13 @@ export async function POST(request: NextRequest) {
             });
         }
     }
-
+    for (const value of Object.values(data.post)) {
+        if (!value) {
+            return Response.json({ ok: false, message: "Some data is missing" }, {
+                status: 400
+            });
+        }
+    }
     try {
         const docRef = doc(collection(db, data.route), data.id);
         const result = await setDoc(docRef, data.post);

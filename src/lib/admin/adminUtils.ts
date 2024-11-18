@@ -1,6 +1,19 @@
 
+import { Post } from "@/types/admin.types";
 import { Bounce, toast } from "react-toastify";
 
+export const isObjectValuesEmpty = (object: Post) => {
+    for (const [key, value] of Object.entries(object)) {
+        if (key === "imageUrl") {
+            continue;
+        }
+        if (!value) {
+            console.log({ value }, "test")
+            return true;
+        }
+    }
+    return false
+}
 export const getUriFromFile = async (file: File) => {
     const fileBuffer = await file.arrayBuffer();
     const mimeType = file.type;
