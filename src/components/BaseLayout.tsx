@@ -1,7 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import React, { ReactNode } from "react";
-import Header from "./Header";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "../styles/normalize.css";
 import "../styles/global.css";
@@ -25,7 +24,6 @@ export default async function BaseLayout({ children, locale }: Props) {
         <html lang={locale}>
             <body className={`${roboto_mono.className} ${roboto.className}`}>
                 <NextIntlClientProvider messages={messages}>
-                    <Header />
                     <Nav />
                     {children}
                     <WhatsappButton />

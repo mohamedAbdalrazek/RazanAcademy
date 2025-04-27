@@ -1,19 +1,29 @@
 .nav{
     display: flex;
-    padding-left: 20%;
     justify-content: space-between;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 30px;
     padding-right: 30px;
     align-items: center;
+    border-bottom: 1px solid var(--light-gray-border);
+}
+.logo{
+    width: 60px;
+    height: auto;
+}
+.navLinkWrapper{
+    display: flex;
+    gap: 25px;
 }
 .navLink{
     text-decoration: none;
     font-weight: 600;
     color: var(--main-dark);
     transition: all .3s ease-in-out;
+    font-size: 17px;
 
 }
 .navLink:hover{
-    transform: scale(1.1);
+    text-decoration: underline;
 }

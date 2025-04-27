@@ -13,7 +13,7 @@ export default function CourseCard({
     description,
 }: CourseCard) {
     return (
-        <Link href={"/pricing"} className={styles.courseCard}>
+        <Link href={"/"} className={styles.courseCard}>
             <div className={styles.imageWrapper}>
                 <Image
                     className={styles.image}

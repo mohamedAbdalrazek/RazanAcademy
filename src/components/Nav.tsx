@@ -4,13 +4,13 @@ import { useTranslations } from "next-intl";
 import React from "react";
 import styles from "@/styles/Navigaton.module.css"
 import SelectLanguage from "./SelectLanguage";
+import Image from "next/image";
 export default function Nav() {
     const navKeys = [
         "home",
         "aboutUs",
         "courses",
         "quran",
-        "pricing",
         "library",
         "blog",
     ];
@@ -27,7 +27,11 @@ export default function Nav() {
     });
     return (
         <nav className={styles.nav}>
-            {linksElement}
+            <Image className={styles.logo} src={"/logo.png"} alt="Razan Academy" width={100} height={150}/>
+            <div className={styles.navLinkWrapper}>
+
+                {linksElement}  
+            </div>
             <SelectLanguage />
         </nav>
     );
