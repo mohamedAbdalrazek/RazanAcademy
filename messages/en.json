@@ -160,6 +160,64 @@
     "Library": {
         "header": "Library"
     },
+    "pricingPage": {
+        "heading": "Our Learning Plans",
+        "subtitle": "Choose the perfect plan for your Quran learning journey",
+        "plans": {
+            "starter": {
+                "name": "Starter",
+                "audience": "Beginners & Kids",
+                "features": [
+                    "2 sessions/week",
+                    "30 mins/session",
+                    "Basic Quran reading & Tajweed"
+                ],
+                "price": "500 EGP"
+            },
+            "standard": {
+                "name": "Standard",
+                "audience": "Consistent Learners",
+                "features": [
+                    "3 sessions/week",
+                    "45 mins/session",
+                    "Tajweed + Memorization"
+                ],
+                "price": "750 EGP"
+            },
+            "intensive": {
+                "name": "Intensive",
+                "audience": "Fast-track Memorization",
+                "features": [
+                    "5 sessions/week",
+                    "60 mins/session",
+                    "Hifz-focused with Tajweed"
+                ],
+                "price": "1200 EGP"
+            },
+            "group": {
+                "name": "Group Plan",
+                "audience": "Siblings / Friends",
+                "features": [
+                    "Up to 3 students",
+                    "3 sessions/week",
+                    "Shared 60 min class"
+                ],
+                "price": "1000 EGP"
+            },
+            "trial": {
+                "name": "Trial Class",
+                "audience": "First-time students",
+                "features": [
+                    "1 free 30-min class",
+                    "No commitment"
+                ],
+                "price": "Free"
+            }
+        },
+        "mostPopular": "Most Popular",
+        "getTrial": "Get Free Trial",
+        "enroll": "Enroll Now"
+    },
     "Blog": {
         "recent": "Recent Post",
         "discover": "Discover Posts",
@@ -191,8 +249,34 @@
         }
     },
     "Footer": {
-        "name": "RAZAN Academy",
-        "customer": "Customer Support"
+        "about": {
+            "title": "About Us",
+            "description": "Razan Academy is dedicated to teaching Quran and Tajweed to non-Arabic speakers with authentic methodology and qualified teachers."
+        },
+        "quickLinks": {
+            "title": "Quick Links"
+        },
+        "contact": {
+            "title": "Contact Us",
+            "address": "123 Quran Street, Cairo, Egypt",
+            "phone": "+20 123 456 7890",
+            "email": "info@razanacademy.com"
+        },
+        "copyright": {
+            "arabic": "أكاديمية رزان للدراسات القرآنية",
+            "english": "Razan Academy for Quranic Studies",
+            "rights": "All Rights Reserved"
+        },
+        "links": {
+            "home": "Home",
+            "about": "About Us",
+            "courses": "Courses",
+            "quran": "Quran",
+            "pricing": "Pricing",
+            "library": "Library",
+            "blog": "Blog",
+            "contact": "Contact"
+        }
     },
     "WhatsappButton": {
         "text": "Contact Us on Whatsapp"

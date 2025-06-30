@@ -1,28 +1,154 @@
-.footer{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 30px;
-    align-items: center;
+.footer {
+    background-color: var(--main-dark);
+    color: var(--main-light);
+    padding: 3rem 2rem 1rem;
 }
-.footer::before{
+
+.footerTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr .6fr;
+    gap: 2rem;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+}
+
+.footerSection {
+    margin-bottom: 10px;
+}
+
+.footerTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-light);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footerTitle::after {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color:#c7c5c5;
-    top: 0;
     left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--active-link);
 }
-.left{
+
+.footerText {
+    color: #eeeeee;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.footerLinks {
+    list-style: none;
+    padding: 0;
+}
+
+.footerLinks li {
+    margin-bottom: 0.8rem;
+}
+
+.footerLink {
+    color: #eeeeee;
+
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.footerLink:hover {
+    color: var(--active-link);
+    padding-left: 5px;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.socialLink {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 30px;
-    color: var(--sub-dark);
+    justify-content: center;
+    transition: all 0.3s ease;
 }
-.left h4{
-    margin: 0;
-    margin-bottom: 4px;
-    font-weight: 400;
-    font-size: 1.4rem;
+.socialIcon{
+    fill: var(--main-light);
+    width: 25px;
+    height: 25px;
+
+}
+.socialLink:hover {
+    background-color: var(--active-link);
+    transform: translateY(-3px);
+}
+
+.contactInfo {
+    list-style: none;
+    padding: 0;
+    color: #eeeeee;
+}
+
+.contactInfo li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.contactIcon {
+    fill: var(--main-light);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.footerBottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.copyright {
+    padding-top: 1rem;
+        color: #eeeeee;
+
+    font-size: 0.9rem;
+}
+
+.copyright p {
+    margin: 0.5rem 0;
+}
+
+/* Font Awesome icons (you can use actual Font Awesome or any other icon library) */
+.fab,
+.fas {
+    font-family: "Font Awesome";
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footerTop {
+        grid-template-columns: 1fr;
+    }
+
+    .footerSection {
+        text-align: center;
+    }
+
+    .footerTitle::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .socialLinks {
+        justify-content: center;
+    }
 }

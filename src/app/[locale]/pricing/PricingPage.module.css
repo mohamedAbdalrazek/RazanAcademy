@@ -1,0 +1,145 @@
+.pricing {
+    padding: 4rem 1rem;
+    background-color: var(--main-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    color: var(--subheader-color);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--sub-dark);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.plansContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.planCard {
+    background: var(--main-light);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow-two);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid var(--light-gray-border);
+    display: flex;
+    flex-direction: column;
+}
+
+.planCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-pop);
+}
+
+.featured {
+    border: 2px solid var(--active-link);
+    transform: scale(1.02);
+}
+
+.featuredBadge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: var(--active-link);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.planName {
+    font-size: 1.8rem;
+    color: var(--main-dark);
+    margin-bottom: 0.5rem;
+}
+
+.planAudience {
+    color: var(--sub-dark);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.separationLine {
+    height: 2px;
+    background-color: var(--light-gray-border);
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.featuresList {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+    list-style: none;
+}
+
+.featureItem {
+    margin-bottom: 0.8rem;
+    color: var(--sub-dark);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.featureItem::before {
+    content: "•";
+    color: var(--main-dark);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -0.3rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--main-dark);
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.ctaButton {
+    background-color: var(--main-dark);
+    color: var(--main-light);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.ctaButton:hover {
+    background-color: var(--subheader-color);
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .plansContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+}

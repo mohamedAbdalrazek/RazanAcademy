@@ -15,6 +15,7 @@ export async function GET() {
             },
         })
         const data = await response.json()
+        console.log(data)
         const chapters = data.chapters
         if (!chapters || chapters.length < 1) {
             return Response.json({ error: "Error in the api" }, {
@@ -33,6 +34,7 @@ export async function GET() {
             status: 200
         })
     } catch (error) {
+        console.error(error)
         return Response.json({ error }, {
             status: 500
         })

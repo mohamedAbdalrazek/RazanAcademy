@@ -187,9 +187,93 @@
     "Library": {
         "header": "Kutubxona"
     },
+    "pricingPage": {
+        "heading": "Bizning Qur'on o‘rganish rejalari",
+        "subtitle": "Sizning Qur'on o‘rganish sayohatingiz uchun eng yaxshi reja tanlang",
+        "plans": {
+            "starter": {
+                "name": "Boshlang'ich",
+                "audience": "Yangi boshlovchilar va bolalar",
+                "features": [
+                    "Haftasiga 2 ta dars",
+                    "Har biri 30 daqiqa",
+                    "Qur'on o‘qish va tajvid asoslari"
+                ],
+                "price": "500 EGP"
+            },
+            "standard": {
+                "name": "Standart",
+                "audience": "Doimiy o‘quvchilar",
+                "features": [
+                    "Haftasiga 3 ta dars",
+                    "Har biri 45 daqiqa",
+                    "Tajvid va yodlash"
+                ],
+                "price": "750 EGP"
+            },
+            "intensive": {
+                "name": "Intensiv",
+                "audience": "Tezlashtirilgan yodlash",
+                "features": [
+                    "Haftasiga 5 ta dars",
+                    "Har biri 60 daqiqa",
+                    "Tajvid bilan Hifz"
+                ],
+                "price": "1200 EGP"
+            },
+            "group": {
+                "name": "Guruh rejasi",
+                "audience": "Oila a'zolari / Do‘stlar",
+                "features": [
+                    "3 tagacha o‘quvchi",
+                    "Haftasiga 3 ta dars",
+                    "60 daqiqalik umumiy dars"
+                ],
+                "price": "1000 EGP"
+            },
+            "trial": {
+                "name": "Sinov darsi",
+                "audience": "Yangi o‘quvchilar",
+                "features": [
+                    "1 bepul 30 daqiqalik dars",
+                    "Majburiyatsiz"
+                ],
+                "price": "Bepul"
+            }
+        },
+        "mostPopular": "Eng mashhur",
+        "getTrial": "Bepul sinov olish",
+        "enroll": "Ro'yxatdan o'tish"
+    },
     "Footer": {
-        "name": "RAZAN Akademiyasi",
-        "customer": "Mijozlarni qo'llab-quvvatlash"
+        "about": {
+            "title": "Biz haqimizda",
+            "description": "Razan Akademiyasi arab bo'lmaganlarga Qur'on va tajvidni ishonchli metodologiya va malakali o'qituvchilar yordamida o'rgatishga bag'ishlangan."
+        },
+        "quickLinks": {
+            "title": "Tezkor havolalar"
+        },
+        "contact": {
+            "title": "Biz bilan bog'laning",
+            "address": "123 Qur'on ko'chasi, Qohira, Misr",
+            "phone": "+20 123 456 7890",
+            "email": "info@razanacademy.com"
+        },
+        "copyright": {
+            "arabic": "أكاديمية رزان للدراسات القرآنية",
+            "english": "Razan Akademiyasi Qur'on tadqiqotlari uchun",
+            "rights": "Barcha huquqlar himoyalangan"
+        },
+        "links": {
+            "home": "Bosh sahifa",
+            "about": "Biz haqimizda",
+            "courses": "Kurslar",
+            "quran": "Qur'on",
+            "pricing": "Narxlar",
+            "library": "Kutubxona",
+            "blog": "Blog",
+            "contact": "Aloqa"
+        }
     },
     "WhatsappButton": {
         "text": "Biz bilan WhatsApp orqali bog'laning"

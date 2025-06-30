@@ -28,7 +28,7 @@ export default function About() {
         <div className={styles.aboutPage}>
             <Heading text={t("header")} />
             <AboutUsSections />
-            <SubHeading text="Our Story" />
+            {/* <SubHeading text="Our Story" /> */}
             <SubHeading text={t("subHeaderTeachers")} />
             <TeachersCardList />
             <SubHeading text={t("subHeaderCertifications")} />

@@ -1,4 +1,9 @@
 .library{
+    min-height: 56vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding-top: 40px;
     padding-bottom: 40px;
 }

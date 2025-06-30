@@ -33,12 +33,11 @@ export function generateStaticParams() {
 
 export default async function Quran({ params: { locale } }: Props) {
     setRequestLocale(locale);
-    const headerText = locale === "en" ? "Quran's Chapters" : "Qur'on suralari"
+    const headerText = locale === "en" ? "Quran's Chapters" : "Qur'on suralari";
     const chapters: Chapter[] | null = await fetchChapters();
     return (
         <div className={styles.chapters}>
-            <Heading  text={headerText} />
-         
+            <Heading text={headerText} />
 
             {chapters ? <ChapterList chapters={chapters} /> : <Skeleton />}
         </div>

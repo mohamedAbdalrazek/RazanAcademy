@@ -12,7 +12,7 @@ export default function Landing() {
                 <p className={styles.subHeader}>{t(`subHeader`)}</p>
             </div>
             <div className={styles.right}>
-                <Image
+                <Image  
                     src={landing}
                     width={450}
                     height={369}

@@ -59,7 +59,7 @@ export default function ChapterLayout({ id }: { id: string }) {
         audio.onended = () => setPlayingSrc(null);
     };
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_CLIENT_URL}/api/chapters/${id}`, {
+        fetch(`/api/chapters/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
