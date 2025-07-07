@@ -29,7 +29,7 @@ export default function ChapterLayout({ id }: { id: string }) {
     const [errorMsg, setErrorMessage] = useState("");
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [playingSrc, setPlayingSrc] = useState<string | null>(null);
-    
+
     const handlePlayAudio = (
         src: string,
         ref: MutableRefObject<HTMLAudioElement | null> | null
@@ -83,7 +83,7 @@ export default function ChapterLayout({ id }: { id: string }) {
                 setLoading(false);
             });
     }, [id]);
-    const header = `${chapter?.chapterInfo.name_english} / سورة ${chapter?.chapterInfo.name_arabic}`
+    const header = `${chapter?.chapterInfo.name_english} / سورة ${chapter?.chapterInfo.name_arabic}`;
     return loading ? (
         <Skeleton />
     ) : chapter && chapter.verses.length && chapter.fullAudio ? (
@@ -95,6 +95,7 @@ export default function ChapterLayout({ id }: { id: string }) {
                     <h1>سورة {chapter.chapterInfo.name_arabic} </h1>
                 </div> */}
                 <AudioPlayer
+                    className={styles.audioPlayer}
                     handlePlayAudio={handlePlayAudio}
                     src={chapter.fullAudio}
                 />

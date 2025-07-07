@@ -50,3 +50,17 @@
 .dropdownOption:hover {
     background-color: #f1f1f1;
 }
+
+@media (max-width: 968px) {
+    .dropdownBtn {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+    .arrowDown {
+        width: 12px;
+        height: 12px;
+    }
+    .dropdownOption {
+        padding: 5px 10px;
+    }
+}

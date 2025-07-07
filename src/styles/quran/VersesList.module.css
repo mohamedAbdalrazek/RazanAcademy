@@ -8,7 +8,17 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    box-sizing: border-box;
 }
-.bismallah{
+.bismallah {
     height: auto;
+}
+@media (max-width: 768px) {
+    .versesList {
+        width: 100%;
+    }
+    .bismallah {
+        width: 90%;
+        margin: auto;
+    }
 }

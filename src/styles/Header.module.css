@@ -11,6 +11,8 @@
     height: 100%;
 }
 .logo{
+   height: 90%;
+    width: auto;
 }
 .cover{
     background-color: var(--main-dark);
@@ -47,4 +49,46 @@
     width: 400px;
     height: 190%;
     transform: scaleX(-1);
+}
+
+@media (max-width: 968px) {
+    .header{
+        height: 150px;
+    }
+    .coverTextWrapper p:first-of-type{
+        font-size: 2rem;
+    }
+    .coverTextWrapper p{
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 768px) {
+    
+    .logoWrapper{
+        display: none;
+    }
+    .cover{
+        width: 100%;
+    }
+    
+}
+@media (max-width: 500px) {
+    .header{
+        height: 120px;
+    }
+    .coverTextWrapper p:first-of-type{
+        font-size: 1.5rem;
+    }
+    .coverTextWrapper p{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 380px) {
+    
+    .coverTextWrapper p:first-of-type{
+        font-size: 1.2rem;
+    }
+    .coverTextWrapper p{
+        font-size: 0.9rem;
+    }
 }

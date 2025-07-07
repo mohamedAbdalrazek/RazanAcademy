@@ -22,7 +22,6 @@ export default function IndexPage() {
     return (
             <div>
                 <Landing />
-                {/* <SubHeading text="What We Offer" />  */}
             </div>
     );
 }

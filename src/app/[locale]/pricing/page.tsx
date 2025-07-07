@@ -1,4 +1,5 @@
 
+import Heading from "@/components/global/Heading";
 import styles from "./PricingPage.module.css";
 import { useTranslations } from "next-intl";
 
@@ -12,7 +13,7 @@ export default function PricingPage() {
     return (
         <section className={styles.pricing}>
             <div className={styles.container}>
-                <h1 className={styles.title}>{t("heading")}</h1>
+                <Heading text={t("heading")} />
                 <p className={styles.subtitle}>{t("subtitle")}</p>
 
                 <div className={styles.plansContainer}>

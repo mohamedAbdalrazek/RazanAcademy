@@ -1,6 +1,6 @@
 .chapterCard {
     display: flex;
-    width: calc(30% - 2px);
+    width: calc((100% / 3) - 44px);
     align-items: center;
     justify-content: end;
     padding: 20px 5px 20px 30px;
@@ -69,14 +69,82 @@
 .chapterCard:hover .chapterNumberWrapper {
     background: var(--main-dark);
     border-color: var(--main-dark);
-    
 }
-.chapterCard:hover .chapterNumberWrapper::before{
+.chapterCard:hover .chapterNumberWrapper::before {
     border-color: var(--main-dark);
 }
-.chapterCard:hover{
+.chapterCard:hover {
     border: 1px solid var(--main-dark);
 }
 .chapterCard:hover .chapterNumber {
     color: var(--main-light);
+}
+@media (max-width: 1360px) {
+    .chapterCard {
+        width: calc((100% / 2) - 42px);
+    }
+}
+@media (max-width: 930px) {
+    .chapterCard {
+        width: 100%;
+    }
+}
+@media (max-width: 520px) {
+    .chapterNumberWrapper{
+        width: 7%;
+    }
+    .chapterCard {
+        padding: 20px 10px;
+    }
+    
+    .arabicName,
+    .englishName {
+        font-size: 1rem;
+    }
+    .chapterPlace {
+        font-size: 0.9rem;
+    }
+    .chapterInfo {
+        width: 85%;
+    }
+}
+@media (max-width: 400px) {
+    .chapterNumberWrapper {
+        width: fit-content;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+
+    }
+    .chapterNumberWrapper::before{
+        display: none;
+    
+    }
+    .chapterCard {
+        padding: 20px 5px;
+    }
+    
+    .arabicName,
+    .englishName {
+        font-size: 0.9rem;
+    }
+    .chapterPlace {
+        font-size: 0.8rem;
+    }
+    .chapterNumber{
+        font-size: 1.2rem;
+    }
+    .chapterCard:hover .chapterNumberWrapper {
+    background: none;
+    border-color: none;
+}
+.chapterCard:hover .chapterNumberWrapper::before {
+    border-color: none;
+}
+.chapterCard:hover {
+    border: 1px solid none;
+}
+.chapterCard:hover .chapterNumber {
+    color: var(--main-dark);
+}
 }

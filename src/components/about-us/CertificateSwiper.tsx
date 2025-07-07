@@ -9,14 +9,17 @@ import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 
 import "@/styles/about-us/CertificateSwiper.css";
-import firstImage from "../../../public/certificates/khadija1.jpg";
-import secondImage from "../../../public/certificates/khadija2.jpg";
-import thirdImage from "../../../public/certificates/khadija3.jpg";
-import fourthImage from "../../../public/certificates/khadija4.jpg";
-
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
 export default function CertificateSwiper() {
+    const certificateImages = [
+        "/certificates/certificate-1.jpeg",
+        "/certificates/certificate-2.jpeg",
+        "/certificates/certificate-3.jpeg",
+        "/certificates/certificate-4.jpeg",
+        "/certificates/certificate-5.jpeg",
+        "/certificates/certificate-6.jpeg",
+    ];
     return (
         <div className="certificate">
             <Swiper
@@ -28,7 +31,7 @@ export default function CertificateSwiper() {
                 speed={600}
                 zoom
                 slidesPerView={"auto"}
-                navigation = {true}
+                navigation={true}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 80,
@@ -36,61 +39,20 @@ export default function CertificateSwiper() {
                     modifier: 1,
                     slideShadows: true,
                 }}
-                
                 pagination={{ clickable: true }} // Enable pagination here
             >
-                <SwiperSlide>
-                    <Image
-                        className="slideImage"
-                        src={firstImage}
-                        width={320}
-                        height={480}
-                        placeholder="blur"
-                        alt="Certificate"
-                    />
-                    <div className="title">
-                        <span>Certificate title</span>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        className="slideImage"
-                        src={secondImage}
-                        width={320}
-                        height={480}
-                        placeholder="blur"
-                        alt="Certificate"
-                    />
-                    <div className="title">
-                        <span>Certificate title</span>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        className="slideImage"
-                        src={thirdImage}
-                        width={320}
-                        height={480}
-                        placeholder="blur"
-                        alt="Certificate"
-                    />
-                    <div className="title">
-                        <span>Certificate title</span>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image
-                        className="slideImage"
-                        src={fourthImage}
-                        width={320}
-                        height={480}
-                        placeholder="blur"
-                        alt="Certificate"
-                    />
-                    <div className="title">
-                        <span>Certificate title</span>
-                    </div>
-                </SwiperSlide>
+                {certificateImages.map((image, index) => (
+                    <SwiperSlide key={index}>
+                        <Image
+                            className="slideImage"
+                            src={image}
+                            width={320}
+                            height={480}
+                            alt={`Certificate ${index + 1}`}
+                        />
+                       
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );

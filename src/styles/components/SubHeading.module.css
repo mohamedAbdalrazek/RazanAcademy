@@ -1,23 +1,54 @@
-.subHeader{
-    
-    margin-top: 40px;
-    margin-bottom: 20px;
+.subHeader {
+    margin-top: 20px; /* Reduced for mobile */
+    margin-bottom: 15px; /* Reduced for mobile */
+    overflow: hidden; /* Ensures the line doesn't cause horizontal scroll */
 }
-.subHeader h2{
+
+.subHeader h2 {
     margin: 0;
     width: fit-content;
-    font-size: 2.4rem;
+    font-size: clamp(1.4rem, 5vw, 2.4rem); /* Responsive font size */
     position: relative;
     color: var(--subheader-color);
+    padding-right: 15px; /* Space between text and line on mobile */
+    background: white; /* Or your background color - prevents line from showing behind text */
+    z-index: 1; /* Ensures text stays above the line */
 }
-.subHeader h2:after{
+
+.subHeader h2:after {
     content: "";
     position: absolute;
     width: calc(100vw - 100% - 110px);
     right: calc(-100vw + 100% + 80px);
-    height: 3px;
+    height: 2px; /* Thinner line on mobile */
     border-radius: 10px;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--light-gray-border);
+    z-index: 0; /* Places line behind text */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .subHeader {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .subHeader h2 {
+        padding-right: 30px;
+    }
+
+    .subHeader h2:after {
+        height: 3px; /* Thicker line on larger screens */
+        width: calc(100vw - 100% - 110px);
+        right: calc(-100vw + 100% + 80px);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .subHeader {
+        margin-top: 40px;
+    }
 }

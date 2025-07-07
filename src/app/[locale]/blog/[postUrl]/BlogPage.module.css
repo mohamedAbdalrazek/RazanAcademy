@@ -141,6 +141,33 @@
     }
 
     .imageContainer {
-        height: 200px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blogContainer {
+        padding: 0.5rem;
+    }
+
+    .postTitle {
+        font-size: 1.4rem;
+    }
+    .postExcerpt {
+        font-size: 1rem;
+    }
+    .imageContainer {
+        height: 180px;
+    }
+
+    .postContent h2 {
+        font-size: 1.4rem;
+    }
+
+    .postContent h3 {
+        font-size: 1.2rem;
+    }
+    .postContent p{
+        font-size: .9rem;    
     }
 }

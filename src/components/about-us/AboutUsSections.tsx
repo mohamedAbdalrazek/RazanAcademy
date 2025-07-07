@@ -6,6 +6,9 @@ import CertificateIcon from "@/components/icons/CertificateIcon";
 import LightBulbIcon from "@/components/icons/LightBulbIcon";
 // import UsersIcon from "@/components/icons/UsersIcon";
 import { useTranslations } from "next-intl";
+import UsersIcon from "../icons/UsersIcon";
+import BookOpenIcon from "../icons/BookOpenIcon";
+import ClockIcon from "../icons/ClockIcon";
 export default function AboutUsSections() {
     const t = useTranslations("AboutUs");
     return (
@@ -36,7 +39,7 @@ export default function AboutUsSections() {
                     </p>
                 </div>
             </div>
-            {/* <div className={styles.section}>
+            <div className={styles.section}>
                 <div className={styles.icon}>
                     <UsersIcon />
                 </div>
@@ -72,7 +75,7 @@ export default function AboutUsSections() {
                         {t("flexibleLearning.body")}
                     </p>
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 }

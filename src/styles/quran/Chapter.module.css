@@ -1,3 +1,8 @@
 .chapter{
     padding: 40px;
 }
+@media (max-width: 768px) {
+    .chapter{
+        padding: 40px 20px;
+    }
+}

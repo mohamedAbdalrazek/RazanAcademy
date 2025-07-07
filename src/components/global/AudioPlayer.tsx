@@ -3,8 +3,10 @@ import { MutableRefObject, useRef } from "react";
 export default function AudioPlayer({
     src,
     handlePlayAudio,
+    className
 }: {
     src: string;
+    className?: string;
     handlePlayAudio: (
         arg0: string,
         ref: MutableRefObject<HTMLAudioElement | null> | null
@@ -13,10 +15,11 @@ export default function AudioPlayer({
     const audioRef = useRef<HTMLAudioElement | null>(null);
 
     return (
-        <div>
+        <div className={className}>
             <audio
                 ref={audioRef}
                 controls
+                
                 onPlay={() => {
                     handlePlayAudio(src, audioRef)
                 }}

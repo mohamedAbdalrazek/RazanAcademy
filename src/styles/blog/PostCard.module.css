@@ -33,10 +33,38 @@
     color: var(--sub-text);
     line-height: 1.5;
     margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
 }
 .icon {
     color: var(--main-dark);
 }
 .icon svg {
     fill: var(--main-dark);
+}
+
+@media screen and (max-width:1080px){
+    .postCard {
+        width: calc((100% / 2) - 12px);
+    }
+    
+
+}
+
+@media screen and (max-width:720px){
+    .postCard {
+        width: 100%;
+    }
+
+}
+@media screen and (max-width:480px){
+    .header{
+        font-size: 1.4rem;
+    }
+    .description{
+        font-size: 14px;
+    }
 }

@@ -8,6 +8,8 @@ import PhoneIcon from "./icons/PhoneIcon";
 import EnvelopeIcon from "./icons/EnvelopeIcon";
 import FacebookIcon from "./icons/FacebookIcon";
 import WhatsappIcon from "./icons/WhatsappIcon";
+import InstagramIcon from "./icons/InstagramIcon";
+import TelegramIcon from "./icons/TelegramIcon";
 
 const amiri = Amiri({ subsets: ["latin"], weight: ["400"], style: ["italic"] });
 const noto_nastaliq_urdu = Noto_Nastaliq_Urdu({
@@ -27,12 +29,13 @@ export default function Footer() {
         { title: t("links.pricing"), href: "/pricing" },
         { title: t("links.library"), href: "/library" },
         { title: t("links.blog"), href: "/blog" },
-        { title: t("links.contact"), href: "/contact" },
     ];
 
     const socialLinks = [
         { name: "Facebook", icon: <FacebookIcon className={styles.socialIcon} />, href: "#" },
         { name: "WhatsApp", icon: <WhatsappIcon className={styles.socialIcon}  />, href: "#" },
+        { name: "Instagram", icon: <InstagramIcon className={styles.socialIcon}  />, href: "#" },
+        { name: "Telegram", icon: <TelegramIcon className={styles.socialIcon}  />, href: "#" },
         // { name: "YouTube", icon: "fa-youtube", href: "#" },
         // { name: "Instagram", icon: "fa-instagram", href: "#" },
     ];

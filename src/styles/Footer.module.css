@@ -6,7 +6,7 @@
 
 .footerTop {
     display: grid;
-    grid-template-columns: 1fr 1fr .6fr;
+    grid-template-columns: 1fr 1fr 0.6fr;
     gap: 2rem;
     /* max-width: 1200px; */
     margin: 0 auto;
@@ -78,11 +78,10 @@
     justify-content: center;
     transition: all 0.3s ease;
 }
-.socialIcon{
+.socialIcon {
     fill: var(--main-light);
     width: 25px;
     height: 25px;
-
 }
 .socialLink:hover {
     background-color: var(--active-link);
@@ -118,7 +117,7 @@
 
 .copyright {
     padding-top: 1rem;
-        color: #eeeeee;
+    color: #eeeeee;
 
     font-size: 0.9rem;
 }
@@ -127,28 +126,15 @@
     margin: 0.5rem 0;
 }
 
-/* Font Awesome icons (you can use actual Font Awesome or any other icon library) */
-.fab,
-.fas {
-    font-family: "Font Awesome";
-}
-
 /* Responsive adjustments */
+@media (max-width: 930px) {
+    .footerTop {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 @media (max-width: 768px) {
     .footerTop {
         grid-template-columns: 1fr;
     }
 
-    .footerSection {
-        text-align: center;
-    }
-
-    .footerTitle::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .socialLinks {
-        justify-content: center;
-    }
 }

@@ -57,3 +57,25 @@
     font-size: 0.8rem;
 
 }
+@media (max-width: 968px) {
+    .card {
+        width: calc((100% / 2) - 45px);
+    }
+    .imageWrapper {
+        width: 80px;
+        height: 80px;
+    }
+    .teacherName {
+        font-size: 1.3rem;
+    }
+    
+}
+@media (max-width: 570px) {
+    .card {
+        width: 100%;
+    }
+    
+    .teacherName {
+        font-size: 1.2rem;
+    }
+}

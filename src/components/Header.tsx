@@ -22,7 +22,6 @@ export default function Header() {
                     height={180}
                     src={logo}
                     alt="Razan Academy"
-                    placeholder="blur"
                 />
             </Link>
             <div className={styles.cover}>
@@ -32,7 +31,7 @@ export default function Header() {
                         src={coverBackground}
                         fill
                         alt="Razan Academy Cover"
-                        placeholder="blur"
+                        
                     />
                 </div>
                 <div className={styles.coverTextWrapper}>
