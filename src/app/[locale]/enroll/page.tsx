@@ -9,7 +9,8 @@ type FormValues = {
     age: number;
     phone: string;
     email: string;
-    teachingLanguage: "arabic" | "english";
+    country: string;
+    teachingLanguage: "arabic" | "english" | "uzbek";
     // Arabic-specific fields
     submissionPurpose?: "memorizing" | "improving-recitation" | "ijazah ";
     quranMemorization?: "one" | "two" | "five" | "completed";
@@ -97,10 +98,12 @@ export default function FormComponent() {
                         id="phone"
                         className={styles.formInput}
                         {...register("phone", {
-                            required: `${t("phone")} ${t("Error.required")}`,
+                            required: `${t("phoneNumber")} ${t("Error.required")}`,
                             pattern: {
                                 value: /^[0-9]{10,15}$/,
-                                message: `${t("phone")} ${t("Error.invalidPhone")}`,
+                                message: `${t("phoneNumber")} ${t(
+                                    "Error.invalidPhone"
+                                )}`,
                             },
                         })}
                     />
@@ -123,7 +126,9 @@ export default function FormComponent() {
                             required: `${t("email")} ${t("Error.required")}`,
                             pattern: {
                                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                message: `${t("email")} ${t("Error.invalidEmail")}`,
+                                message: `${t("email")} ${t(
+                                    "Error.invalidEmail"
+                                )}`,
                             },
                         })}
                     />
@@ -133,7 +138,23 @@ export default function FormComponent() {
                         </span>
                     )}
                 </div>
-
+                <div className={styles.formGroup}>
+                    <label htmlFor="country" className={styles.formLabel}>
+                        {t("country")}
+                    </label>
+                    <input
+                        id="country"
+                        className={styles.formInput}
+                        {...register("country", {
+                            required: `${t("country")} ${t("Error.required")}`,
+                        })}
+                    />
+                    {errors.country && (
+                        <span className={styles.errorMessage}>
+                            {errors.country.message}
+                        </span>
+                    )}
+                </div>
                 {/* Language Selection */}
                 <div className={styles.formGroup}>
                     <label className={styles.formLabel}>
@@ -158,6 +179,14 @@ export default function FormComponent() {
                             />
                             {t("arabic")}
                         </label>
+                        <label className={styles.radioLabel}>
+                            <input
+                                type="radio"
+                                value="uzbek"
+                                {...register("teachingLanguage")}
+                            />
+                            {t("uzbek")}
+                        </label>
                     </div>
                     {errors.teachingLanguage && (
                         <span className={styles.errorMessage}>
@@ -181,7 +210,9 @@ export default function FormComponent() {
                                         {...register("submissionPurpose", {
                                             required:
                                                 teachingLanguage === "arabic"
-                                                    ? `${t("Error.purposeRequired")}`
+                                                    ? `${t(
+                                                          "Error.purposeRequired"
+                                                      )}`
                                                     : false,
                                         })}
                                     />
@@ -223,7 +254,9 @@ export default function FormComponent() {
                                         {...register("quranMemorization", {
                                             required:
                                                 teachingLanguage === "arabic"
-                                                    ? `${t("Error.memorizationRequired")}`
+                                                    ? `${t(
+                                                          "Error.memorizationRequired"
+                                                      )}`
                                                     : false,
                                         })}
                                     />
@@ -273,7 +306,9 @@ export default function FormComponent() {
                                         {...register("lessonsPerWeek", {
                                             required:
                                                 teachingLanguage === "arabic"
-                                                    ? `${t("Error.lessonsRequired")}`
+                                                    ? `${t(
+                                                          "Error.lessonsRequired"
+                                                      )}`
                                                     : false,
                                         })}
                                     />
@@ -314,7 +349,7 @@ export default function FormComponent() {
                 )}
 
                 {/* English-specific fields */}
-                {teachingLanguage === "english" && (
+                {teachingLanguage !== "arabic" && (
                     <>
                         <div className={styles.formGroup}>
                             <label
@@ -327,10 +362,9 @@ export default function FormComponent() {
                                 id="motherTongue"
                                 className={styles.formInput}
                                 {...register("motherTongue", {
-                                    required:
-                                        teachingLanguage === "english"
-                                            ? `${t("Error.motherTongueRequired")}`
-                                            : false,
+                                    required: `${t(
+                                        "Error.motherTongueRequired"
+                                    )}`,
                                 })}
                             />
                             {errors.motherTongue && (
@@ -350,10 +384,9 @@ export default function FormComponent() {
                                         type="radio"
                                         value="noor-albayan"
                                         {...register("interestedCourse", {
-                                            required:
-                                                teachingLanguage === "english"
-                                                    ? `${t("Error.courseRequired")}`
-                                                    : false,
+                                            required: `${t(
+                                                "Error.courseRequired"
+                                            )}`,
                                         })}
                                     />
                                     {t("noor-albayan")}

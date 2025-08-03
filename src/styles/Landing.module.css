@@ -8,6 +8,7 @@
 }
 .left {
     width: 55%;
+    margin-bottom: 20px;
 }
 .landingHeader {
     color: var(--main-dark);
@@ -108,7 +109,11 @@
         margin-left: 0;
     }
     .right {
-        display: none;
+       max-width: 100%;
+    }
+    .landingImage {
+        /* width: 100%; */
+        max-width: 300px;
     }
 }
 @media (max-width: 530px) {
@@ -118,7 +123,5 @@
     .subHeader {
         font-size: 1rem;
     }
-    .landingImage {
-        max-width: 300px;
-    }
+   
 }

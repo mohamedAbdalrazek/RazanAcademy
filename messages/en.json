@@ -38,7 +38,10 @@
     },
     "Landing": {
         "header": "Welcome to Razan Academy for Quranic Studies",
-        "subHeader": "At Razan Academy, we believe the Quran helps build a strong heart and a peaceful soul. We offer a special learning experience with trusted methods and qualified female teachers, in a calm and caring environment. Our programs teach Quran and Tajweed to children and women, in Arabic and for non-Arabic speakers. We respect each learner’s needs and learning style. Our goal is to fill hearts with love for the Quran and help every student recite it clearly and correctly—just as it was revealed to the Prophet Muhammad (peace be upon him). Join us and start your beautiful journey with the Quran."
+        "subHeaderOne": "At Razan Academy, we believe the Quran helps build a strong heart and a peaceful soul. We offer a special learning experience with trusted methods and qualified female teachers, in a calm and caring environment."
+        ,"subHeaderTwo":"Our programs teach Quran and Tajweed to children and women, in Arabic and for non-Arabic speakers. We respect each learner’s needs and learning style."
+        ,"subHeaderThree":"Our goal is to fill hearts with love for the Quran and help every student recite it clearly and correctly—just as it was revealed to the Prophet Muhammad (peace be upon him)."
+        ,"subHeaderFour":"Join us and start your beautiful journey with the Quran."
     },
     "Nav": {
         "links": {
@@ -155,7 +158,7 @@
                 "description": "In this course, you will learn how to pronounce Arabic letters correctly and follow the rules of Quran recitation. You will also learn the difference between heavy and light letters, and all Tajweed rules in a clear and simple way. The course is perfect for beginners and for those who want to improve their recitation. With the help of expert teachers and lots of practice, you will learn to recite the Quran correctly and beautifully."
             },
             "quran": {
-                "name": "Quran with Tajweed",
+                "name": "Quran Recitation Improvement Course",
                 "description": "This specialized course focuses on reciting the Holy Quran correctly and accurately, with proper understanding and application of Tajweed rules. It places great emphasis on practical training and aims to help students recite the entire Quran as it was recited by the Prophet Muhammad ﷺ, following the authentic, transmitted way. By the grace of Allah, the course also prepares students to receive Ijazah (certification) in Quran recitation and Ijazah in teaching (Iqra’) under the supervision of qualified female instructors."
             }
         }
@@ -164,7 +167,9 @@
         "header": "Library",
         "Books": {
             "noor-albayan": "Noor Al-Bayan: Learning to Read and Recite the Quran",
-            "advanced-tajweed": "Advanced Tajweed for Non-Arabic Speakers"
+            "advanced-tajweed": "Advanced Tajweed for Non-Arabic Speakers",
+            "basic-tajweed":"Basic Tajweed for Non-Arabic Speakers",
+            "quran":"Color-Coded Tajweed Mushaf"
         }
     },
     "pricingPage": {
@@ -259,7 +264,7 @@
     "Footer": {
         "about": {
             "title": "About Us",
-            "description": "Our main goal is to help Arabic and non-Arabic speakers learn the Holy Quran with proper Tajweed. We use trusted methods and qualified teachers to make Quran learning clear, authentic, and meaningful for"
+            "description": "Our main goal is to help Arabic and non-Arabic speakers learn the Holy Quran with proper Tajweed. We use trusted methods and qualified teachers to make Quran learning clear, authentic, and meaningful"
         },
         "quickLinks": {
             "title": "Quick Links"
@@ -305,9 +310,11 @@
         },
         "phoneNumber": "Phone Number",
         "email": "Email",
+        "country":"Country of residence",
         "teachingLanguage": "Preferred Learning Language",
         "arabic": "Arabic",
         "english": "English",
+        "uzbek":"Uzbek (Chatting only)",
         "submissionPurpose": "Purpose of Submission",
         "memorizing": "Memorizing the Quran and strengthening it",
         "improving": "Improving recitation",

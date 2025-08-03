@@ -10,7 +10,10 @@ export default function Landing() {
         <main className={`${styles.landing} ${locale === "ar" ? styles.arLanding:"" }`}>
             <div className={styles.left}>
                 <h1 className={styles.landingHeader}>{t(`header`)}</h1>
-                <p className={styles.subHeader}>{t(`subHeader`)}</p>
+                <p className={styles.subHeader}>{t(`subHeaderOne`)}</p>
+                <p className={styles.subHeader}>{t(`subHeaderTwo`)}</p>
+                <p className={styles.subHeader}>{t(`subHeaderThree`)}</p>
+                <p className={styles.subHeader}>{t(`subHeaderFour`)}</p>
             </div>
             <div className={styles.right}>
                 <Image  

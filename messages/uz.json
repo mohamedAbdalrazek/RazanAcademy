@@ -38,7 +38,10 @@
     },
     "Landing": {
         "header": "Razon Qur'on Ta’lim Akademiyasiga xush kelibsiz",
-        "subHeader": "Razon Akademiyasida biz Qur’on qalbni mustahkamlaydi va qalbga osoyishtalik olib keladi, deb hisoblaymiz. Biz ishonchli usullar va malakali ayol o‘qituvchilar yordamida o‘zgacha ta’lim tajribasini taklif qilamiz — sokin va g‘amxo‘r muhitda. Dasturlarimiz bolalar va ayollar uchun Qur’on va tajvidni o‘rgatadi — arab tilida va arab tilini bilmaydiganlar uchun. Har bir o‘quvchining ehtiyojlari va o‘rganish uslublariga hurmat bilan yondashamiz. Maqsadimiz — qalblarga Qur’on sevgisini singdirish va har bir talabaga uni aniq va to‘g‘ri o‘qishni o‘rgatish, xuddi Payg‘ambar Muhammadga (sollallohu alayhi va sallam) nozil qilingandek. Qur’on bilan go‘zal safaringizni biz bilan boshlang!"
+        "subHeaderOne": "Razon Akademiyasida biz Qur'on kuchli yurak va sokin qalb tarbiyalaydi, deb hisoblaymiz. Biz ishonchli uslublar va malakali ayol o‘qituvchilar bilan tinch va mehribon muhitda o‘ziga xos ta’lim tajribasini taklif qilamiz.",
+        "subHeaderTwo": "Dasturlarimiz bolalar va ayollar uchun, arab tilida va arab tilini bilmaydiganlar uchun Qur’on va Tajvid o‘rgatadi. Biz har bir o‘quvchining ehtiyojlari va o‘rganish uslubiga hurmat bilan yondashamiz.",
+        "subHeaderThree": "Maqsadimiz — qalblarni Qur’on sevgisi bilan to‘ldirish va har bir talabaning Qur’onni aniq va to‘g‘ri tilovat qilishiga yordam berish — aynan Payg‘ambar Muhammad ﷺ ga qanday nozil bo‘lgan bo‘lsa shunday qilib.",
+        "subHeaderFour": "Bizga qo‘shiling va Qur’on bilan go‘zal sayohatingizni boshlang."
     },
     "Nav": {
         "links": {
@@ -150,7 +153,7 @@
                 "description": "Ushbu kursda siz arab harflarini to‘g‘ri talaffuz qilish va Qur’on o‘qish qoidalariga amal qilishni o‘rganasiz. Siz og‘ir va yengil harflar o‘rtasidagi farqni, shuningdek, barcha tajvid qoidalarini oddiy va tushunarli tarzda o‘rganasiz. Kurs boshlovchilar va o‘qishini yanada yaxshilamoqchi bo‘lganlar uchun mos keladi. Tajribali o‘qituvchilar va amaliy mashg‘ulotlar orqali siz Qur’onni chiroyli va to‘g‘ri o‘qishni o‘rganasiz."
             },
             "quran": {
-                "name": "Qur’on tajvid bilan",
+                "name": "Qur’on tilovatini yaxshilash kursi",
                 "description": "Ushbu maxsus kurs Qur’onni to‘g‘ri va aniq o‘qishga, tajvid qoidalarini tushunish va qo‘llashga qaratilgan. U amaliy mashg‘ulotlarga katta e’tibor beradi va talabalarga Qur’onni Payg‘ambar Muhammad ﷺ tilovat qilganidek, an’anaviy va ishonchli usulda o‘qishni o‘rgatishni maqsad qiladi. Allohning fazli bilan, kurs talabalarni tajvid bilan Qur’on tilovati va dars berish bo‘yicha ijaza (guvohnoma) olishga ham tayyorlaydi — malakali ayol ustozlar rahbarligida."
             }
         }
@@ -195,7 +198,9 @@
         "header": "Kutubxona",
         "Books": {
             "noor-albayan": "Nur al-Bayan – Qur’onni o‘qish va tartil bilan o‘rganish usuli",
-            "advanced-tajweed": "Arab bo‘lmaganlar uchun ilg‘or tajvid kitobi"
+            "advanced-tajweed": "Arab bo‘lmaganlar uchun ilg‘or tajvid kitobi",
+            "basic-tajweed": "Arab tilida so‘zlashmaydiganlar uchun asosiy tajvid",
+            "quran": "Rangli tajvid Mus’hafi"
         }
     },
     "pricingPage": {
@@ -305,9 +310,11 @@
         },
         "phoneNumber": "Telefon raqami",
         "email": "Email",
+        "country": "Yashash davlati",
         "teachingLanguage": "O‘rganish uchun afzal til",
         "arabic": "Arab tili",
         "english": "Ingliz tili",
+        "uzbek": "O‘zbekcha (faqat suhbat uchun)",
         "submissionPurpose": "Ariza berish maqsadi",
         "memorizing": "Qur’onni yod olish va mustahkamlash",
         "improving": "Qiroatni yaxshilash",

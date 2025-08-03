@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    width: 50%;
 
 }
 .name{
@@ -51,12 +52,15 @@
         align-items: center;
         padding: 10px 20px;
         gap: 10px;
+
     }
     .nameWrapper {
         margin-bottom: 5px;
+        width: auto;
+        text-align: center;
     }
     .pdfIcon {
-        width: 25px;
+        min-width: 25px;
     }
     .pdfSize,
     .pdfPages {
