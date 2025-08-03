@@ -22,7 +22,7 @@ const roboto_mono = Roboto_Mono({ subsets: ["latin"], display: "swap" });
 export default async function BaseLayout({ children, locale }: Props) {
     const messages = await getMessages();
     return (
-        <html lang={locale}>
+        <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
             <body className={`${roboto_mono.className} ${roboto.className}`}>
                 <NextIntlClientProvider messages={messages}>
                     <Header />

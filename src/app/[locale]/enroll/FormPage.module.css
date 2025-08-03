@@ -1,0 +1,75 @@
+.formContainer {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-two);
+    background-color: var(--main-light);
+}
+
+.formTitle {
+    color: var(--subheader-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formLabel {
+    font-weight: 500;
+    color: var(--sub-dark);
+}
+
+.formInput {
+    padding: 0.75rem;
+    border: 1px solid var(--light-gray-border);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: var(--main-dark);
+    box-shadow: var(--box-shadow-four);
+}
+
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.errorMessage {
+    color: var(--active-link);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.submitButton {
+    align-self: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.submitButton:hover {
+    background-color: var(--subheader-color);
+}

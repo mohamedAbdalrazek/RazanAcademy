@@ -29,8 +29,13 @@
 }
 .optionImage {
     margin-right: 10px;
+    width: 25px;
+    height: auto;
 }
-
+.arDropdown .optionImage{
+    margin-right: 0;
+    margin-left: 10px;
+}
 .dropdownOptions {
     position: absolute;
     background-color: #ffffff;
@@ -41,6 +46,7 @@
 .dropdownOption {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     padding: 7px 15px;
     cursor: pointer;
     border: 1px solid #ccc;

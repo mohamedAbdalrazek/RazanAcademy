@@ -24,7 +24,7 @@ export default function Blog(){
     const t= useTranslations("Blog")
     return (
         <div className={styles.blog}>
-            <Heading text="Blog" />
+            <Heading text={t("header")} />
             <SubHeading text={t(`recent`)} />
             <RecentPost />
             <SubHeading text={t(`discover`)} />

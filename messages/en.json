@@ -81,7 +81,9 @@
         }
     },
     "Quran": {
-        "header": "Chapters of the Quran"
+        "header": "All Surahs of the Quran",
+        "madinah": "Madinan",
+        "makkah": "Meccan"
     },
     "AboutUs": {
         "header": "About Us",
@@ -142,6 +144,7 @@
     },
     "Courses": {
         "header": "Courses",
+        "startLearning": "Start Learning",
         "courses": {
             "noor": {
                 "name": "Noor Al Bayan",
@@ -158,7 +161,11 @@
         }
     },
     "Library": {
-        "header": "Library"
+        "header": "Library",
+        "Books": {
+            "noor-albayan": "Noor Al-Bayan: Learning to Read and Recite the Quran",
+            "advanced-tajweed": "Advanced Tajweed for Non-Arabic Speakers"
+        }
     },
     "pricingPage": {
         "heading": "Our Learning Plans",
@@ -219,6 +226,7 @@
         "enroll": "Enroll Now"
     },
     "Blog": {
+        "header": "Blog",
         "recent": "Recent Post",
         "discover": "Discover Posts",
         "recentPost": {
@@ -277,6 +285,56 @@
             "blog": "Blog",
             "contact": "Contact"
         }
+    },
+    "EnrollForm": {
+        "formTitle": "Registration Form",
+        "fullName": "Full Name",
+        "age": "Age",
+        "Error":{
+
+            "required":"is required",
+            "minAge":"Age must be at least 5",
+            "maxAge":"Age must be less than 100",
+            "invalidEmail":"Please enter a valid email address",
+            "invalidPhone":"Please enter a valid phone number",
+            "languageRequired":"Please select a language",
+            "purposeRequired":"Please select a purpose of submission",
+            "memorizationRequired":"Please select how much you memorize from Quran",
+            "lessonsRequired":"Please select how many lessons per week",
+            "motherTongueRequired":"Please select your mother tongue",
+            "courseRequired":"Please select a course"
+        },
+        "phoneNumber": "Phone Number",
+        "email": "Email",
+        "teachingLanguage": "Preferred Learning Language",
+        "arabic": "Arabic",
+        "english": "English",
+        "submissionPurpose": "Purpose of Submission",
+        "memorizing": "Memorizing the Quran and strengthening it",
+        "improving": "Improving recitation",
+        "ijazah": "Obtaining an Ijazah (certification)",
+        "quranMemorization": "How much do you memorize from Quran?",
+        "one": "Less than one Juz",
+        "two": "More than two Juz",
+        "five": "More than five Juz",
+        "completed": "Completed the Quran, by the grace of Allah",
+        "lessonsPerWeek": "How many times per week?",
+        "once": "Once Special session",
+        "twice": "Twice Special session",
+        "three": "Three times Special sessions",
+        "group": "Two group sessions per week",
+        "motherTongue": "Mother Tongue",
+        "interestedCourse": "Which course are you interested in?",
+        "noor-albayan": "Noor Al Bayan",
+        "tajweed": "Tajweed",
+        "quran-with-tajweed": "Quran with Tajweed",
+        "howDidYouKnowUs": "How did you know us?",
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "friend": "Friend",
+        "family": "Family",
+        "other": "Other",
+        "pleaseSpecify": "Please specify"
     },
     "WhatsappButton": {
         "text": "Contact Us on Whatsapp"

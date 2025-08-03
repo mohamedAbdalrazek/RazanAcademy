@@ -2,7 +2,7 @@ import ChapterList from "@/components/quran/ChapterList";
 import React from "react";
 import styles from "@/styles/quran/ChapterPage.module.css";
 import Skeleton from "@/components/global/Skeleton";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { fetchChapters } from "@/lib/utils";
 import Heading from "@/components/global/Heading";
@@ -32,12 +32,11 @@ export function generateStaticParams() {
 }
 
 export default async function Quran({ params: { locale } }: Props) {
-    setRequestLocale(locale);
-    const headerText = locale === "en" ? "Quran's Chapters" : "Qur'on suralari";
+    const t = await getTranslations({ locale, namespace: "Quran" });
     const chapters: Chapter[] | null = await fetchChapters();
     return (
         <div className={styles.chapters}>
-            <Heading text={headerText} />
+            <Heading text={t("header")} />
 
             {chapters ? <ChapterList chapters={chapters} /> : <Skeleton />}
         </div>

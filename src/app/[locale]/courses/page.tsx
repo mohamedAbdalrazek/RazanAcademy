@@ -3,7 +3,8 @@ import React from "react";
 import styles from "@/styles/courses/Courses.module.css"
 import Heading from "@/components/global/Heading";
 import { getTranslations } from "next-intl/server";
-type Props = {
+import { useTranslations } from "next-intl";
+ type Props = {
     params: { locale: string };
 };
 
@@ -17,10 +18,11 @@ export async function generateMetadata({
         description: t("CoursesPage.description"),
     };
 }
-export default function courses() {
+export default function Courses() {
+    const t = useTranslations("Courses")
     return (
         <div className={styles.courses}>
-            <Heading text="Courses" />
+            <Heading text={t("header")} />
             <CoursesList />
         </div>
     );

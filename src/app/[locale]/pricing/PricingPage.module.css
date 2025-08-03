@@ -121,7 +121,9 @@
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
+    text-decoration: none;
+    text-align: center;
+
 }
 
 .ctaButton:hover {

@@ -139,6 +139,7 @@
     },
     "Courses": {
         "header": "Kurslar",
+        "startLearning": "O‘rganishni boshlang",
         "courses": {
             "noor": {
                 "name": "Noor Al Bayan",
@@ -154,7 +155,13 @@
             }
         }
     },
+    "Quran": {
+        "header": "Qur’onning barcha suralari",
+        "madinah": "Madina",
+        "makkah": "Makka"
+    },
     "Blog": {
+        "header": "Blog",
         "recent": "Oxirgi Post",
         "discover": "Postlarni O‘rganing",
         "recentPost": {
@@ -185,7 +192,11 @@
         }
     },
     "Library": {
-        "header": "Kutubxona"
+        "header": "Kutubxona",
+        "Books": {
+            "noor-albayan": "Nur al-Bayan – Qur’onni o‘qish va tartil bilan o‘rganish usuli",
+            "advanced-tajweed": "Arab bo‘lmaganlar uchun ilg‘or tajvid kitobi"
+        }
     },
     "pricingPage": {
         "heading": "Bizning Qur'on o‘rganish rejalari",
@@ -274,6 +285,55 @@
             "blog": "Blog",
             "contact": "Aloqa"
         }
+    },
+    "EnrollForm": {
+        "formTitle": "Ro‘yxatdan o‘tish shakli",
+        "fullName": "To‘liq ismi",
+        "age": "Yosh",
+        "Error": {
+            "required": "to‘ldirilishi shart",
+            "minAge": "Yosh kamida 5 bo‘lishi kerak",
+            "maxAge": "Yosh 100 dan kichik bo‘lishi kerak",
+            "invalidEmail": "Iltimos, to‘g‘ri email kiriting",
+            "invalidPhone": "Iltimos, to‘g‘ri telefon raqam kiriting",
+            "languageRequired": "Iltimos, tilni tanlang",
+            "purposeRequired": "Iltimos, maqsadni tanlang",
+            "memorizationRequired": "Iltimos, Qur’onni qay darajada yod olganingizni tanlang",
+            "lessonsRequired": "Iltimos, haftasiga nechta dars tanlang",
+            "motherTongueRequired": "Iltimos, ona tilingizni tanlang",
+            "courseRequired": "Iltimos, kursni tanlang"
+        },
+        "phoneNumber": "Telefon raqami",
+        "email": "Email",
+        "teachingLanguage": "O‘rganish uchun afzal til",
+        "arabic": "Arab tili",
+        "english": "Ingliz tili",
+        "submissionPurpose": "Ariza berish maqsadi",
+        "memorizing": "Qur’onni yod olish va mustahkamlash",
+        "improving": "Qiroatni yaxshilash",
+        "ijazah": "Ijaza olish",
+        "quranMemorization": "Qur’ondan qancha yod olgansiz?",
+        "one": "Bir juzdan kam",
+        "two": "Ikki juzdan ko‘p",
+        "five": "Besh juzdan ko‘p",
+        "completed": "Butun Qur’onni yod olgan (Allohning fazli bilan)",
+        "lessonsPerWeek": "Haftasiga nechta dars?",
+        "once": "Bir marta - maxsus dars",
+        "twice": "Ikki marta - maxsus darslar",
+        "three": "Uch marta - maxsus darslar",
+        "group": "Haftasiga ikki marta guruh darsi",
+        "motherTongue": "Ona tili",
+        "interestedCourse": "Qaysi kursga qiziqasiz?",
+        "noor-albayan": "Nurul Bayon",
+        "tajweed": "Tajvid",
+        "quran-with-tajweed": "Qur’on va tajvid bilan",
+        "howDidYouKnowUs": "Biz haqimizda qayerdan bildingiz?",
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "friend": "Do‘st",
+        "family": "Oila",
+        "other": "Boshqa",
+        "pleaseSpecify": "Iltimos, aniqlashtiring"
     },
     "WhatsappButton": {
         "text": "Biz bilan WhatsApp orqali bog'laning"

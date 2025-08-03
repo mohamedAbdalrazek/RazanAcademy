@@ -2,11 +2,12 @@ import React from "react";
 import landing from "../../public/landing.png";
 import Image from "next/image";
 import styles from "../styles/Landing.module.css";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 export default function Landing() {
     const t = useTranslations("Landing");
+    const locale = useLocale()
     return (
-        <main className={styles.landing}>
+        <main className={`${styles.landing} ${locale === "ar" ? styles.arLanding:"" }`}>
             <div className={styles.left}>
                 <h1 className={styles.landingHeader}>{t(`header`)}</h1>
                 <p className={styles.subHeader}>{t(`subHeader`)}</p>

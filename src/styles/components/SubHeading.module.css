@@ -13,6 +13,7 @@
     padding-right: 15px; /* Space between text and line on mobile */
     background: white; /* Or your background color - prevents line from showing behind text */
     z-index: 1; /* Ensures text stays above the line */
+    padding-top: 10px;
 }
 
 .subHeader h2:after {

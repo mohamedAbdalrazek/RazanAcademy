@@ -2,6 +2,7 @@
 import Heading from "@/components/global/Heading";
 import styles from "./PricingPage.module.css";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function PricingPage() {
     const t = useTranslations("pricingPage");
@@ -48,11 +49,11 @@ export default function PricingPage() {
                                     ))}
                                 </ul>
                                 <div className={styles.price}>{plan.price}</div>
-                                <button className={styles.ctaButton}>
+                                <Link href={"enroll"} className={styles.ctaButton}>
                                     {key === "trial"
                                         ? t("getTrial")
                                         : t("enroll")}
-                                </button>
+                                </Link>
                             </div>
                         );
                     })}

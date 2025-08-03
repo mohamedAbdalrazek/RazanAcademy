@@ -7,7 +7,7 @@ import React, { useState, useTransition } from "react";
 import styles from "../styles/Select.module.css";
 import ArrowDown from "./icons/ArrowDown";
 type Option = {
-    value: "en" | "uz";
+    value: "en" | "uz" | "ar";
     label: string;
     imgSrc: string;
 };
@@ -21,11 +21,12 @@ export default function SelectLanguage() {
     const options: Option[] = [
         { value: "en", label: "En", imgSrc: "/en.png" },
         { value: "uz", label: "Uz", imgSrc: "/uz.png" },
+        { value: "ar", label: "Ar", imgSrc: "/ar.png" },
     ];
     const selected = options.filter((option) => {
         return option.value === locale;
     })[0];
-    const changeLanguage = (nextLocale: "uz" | "en") => {
+    const changeLanguage = (nextLocale: "uz" | "en"|"ar") => {
         startTransition(() => {
             router.replace(
                 // @ts-expect-error -- TypeScript will validate that only known `params`
@@ -40,7 +41,7 @@ export default function SelectLanguage() {
         setShowDropdown(!showDropdown);
     };
     return (
-        <div className={styles.dropdown}>
+        <div className={`${styles.dropdown} ${locale === "ar"?styles.arDropdown:""}`}>
             <button
                 className={`${styles.dropdownBtn} ${
                     showDropdown && styles.activeBtn
@@ -48,8 +49,9 @@ export default function SelectLanguage() {
                 onClick={handleClick}
             >
                 <Image
-                    width={20}
-                    height={25}
+
+                    width={100}
+                    height={60}
                     src={selected.imgSrc}
                     alt={selected.label}
                     className={styles.optionImage}
