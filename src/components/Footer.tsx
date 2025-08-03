@@ -2,10 +2,8 @@ import React from "react";
 import styles from "@/styles/Footer.module.css";
 import { Amiri, Noto_Nastaliq_Urdu } from "next/font/google";
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
-import MapMarkerIcon from "./icons/MapMarkerIcon";
+import { useLocale, useTranslations } from "next-intl";
 import PhoneIcon from "./icons/PhoneIcon";
-import EnvelopeIcon from "./icons/EnvelopeIcon";
 import FacebookIcon from "./icons/FacebookIcon";
 import WhatsappIcon from "./icons/WhatsappIcon";
 import InstagramIcon from "./icons/InstagramIcon";
@@ -20,10 +18,10 @@ const noto_nastaliq_urdu = Noto_Nastaliq_Urdu({
 
 export default function Footer() {
     const t = useTranslations("Footer");
-
+    const locale = useLocale();
     const footerLinks = [
         { title: t("links.home"), href: "/" },
-        { title: t("links.about"), href: "/about-us" }, 
+        { title: t("links.about"), href: "/about-us" },
         { title: t("links.courses"), href: "/courses" },
         { title: t("links.quran"), href: "/quran" },
         { title: t("links.pricing"), href: "/pricing" },
@@ -32,16 +30,36 @@ export default function Footer() {
     ];
 
     const socialLinks = [
-        { name: "Facebook", icon: <FacebookIcon className={styles.socialIcon} />, href: "#" },
-        { name: "WhatsApp", icon: <WhatsappIcon className={styles.socialIcon}  />, href: "#" },
-        { name: "Instagram", icon: <InstagramIcon className={styles.socialIcon}  />, href: "#" },
-        { name: "Telegram", icon: <TelegramIcon className={styles.socialIcon}  />, href: "#" },
+        {
+            name: "Facebook",
+            icon: <FacebookIcon className={styles.socialIcon} />,
+            href: "https://www.facebook.com/share/1BCBcSXUVJ/",
+        },
+        {
+            name: "WhatsApp",
+            icon: <WhatsappIcon className={styles.socialIcon} />,
+            href: "https://chat.whatsapp.com/LcptojNhzIwEnSVrI8FJeb?mode=ac_t",
+        },
+        {
+            name: "Instagram",
+            icon: <InstagramIcon className={styles.socialIcon} />,
+            href: "https://www.instagram.com/razan_academy1?igsh=NmZzNGdqMzk5aTls",
+        },
+        {
+            name: "Telegram",
+            icon: <TelegramIcon className={styles.socialIcon} />,
+            href: "https://t.me/RazanAcademy1",
+        },
         // { name: "YouTube", icon: "fa-youtube", href: "#" },
         // { name: "Instagram", icon: "fa-instagram", href: "#" },
     ];
 
     return (
-        <footer className={styles.footer}>
+        <footer
+            className={`${styles.footer} ${
+                locale === "ar" ? styles.arFooter : ""
+            }`}
+        >
             <div className={styles.footerTop}>
                 <div className={styles.footerSection}>
                     <h3 className={styles.footerTitle}>{t("about.title")}</h3>
@@ -64,22 +82,22 @@ export default function Footer() {
                     </div>
                 </div>
 
-                
                 <div className={styles.footerSection}>
                     <h3 className={styles.footerTitle}>{t("contact.title")}</h3>
                     <ul className={styles.contactInfo}>
                         <li>
-                            <MapMarkerIcon className={styles.contactIcon} />
-                            {t("contact.address")}
-                        </li>
-                        <li>
                             <PhoneIcon className={styles.contactIcon} />
-                            {t("contact.phone")}
+                            <a
+                                href="tel:+201005478226"
+                                className={styles.contactLink}
+                            >
+                                201005478226
+                            </a>
                         </li>
-                        <li>
+                        {/* <li>
                             <EnvelopeIcon className={styles.contactIcon} />
                             {t("contact.email")}
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <div className={styles.footerSection}>
@@ -99,7 +117,6 @@ export default function Footer() {
                         ))}
                     </ul>
                 </div>
-
             </div>
 
             <div className={styles.footerBottom}>

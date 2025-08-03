@@ -37,8 +37,8 @@
         }
     },
     "Landing": {
-        "header": "Razan Academy for Quranic Studies",
-        "subHeader": "we are committed to providing a unique and inspiring Quranic learning experience. Our academy is founded on the principles of faith and determination, creating a space where both children and women can learn the Quran in a way that blends tradition with modernity."
+        "header": "Welcome to Razan Academy for Quranic Studies",
+        "subHeader": "At Razan Academy, we believe the Quran helps build a strong heart and a peaceful soul. We offer a special learning experience with trusted methods and qualified female teachers, in a calm and caring environment. Our programs teach Quran and Tajweed to children and women, in Arabic and for non-Arabic speakers. We respect each learner’s needs and learning style. Our goal is to fill hearts with love for the Quran and help every student recite it clearly and correctly—just as it was revealed to the Prophet Muhammad (peace be upon him). Join us and start your beautiful journey with the Quran."
     },
     "Nav": {
         "links": {
@@ -148,15 +148,15 @@
         "courses": {
             "noor": {
                 "name": "Noor Al Bayan",
-                "description": "Our Noor Al Bayan course offers a comprehensive curriculum designed to deepen your understanding of Quranic Arabic. With a focus on grammar, vocabulary, and context, students will learn to read and comprehend Quranic verses effectively. This course is suitable for all levels, whether you are starting your journey or looking to enhance your existing knowledge"
+                "description": "Our Noor Al Bayan course is specially designed for beginners who want to learn how to read the Quran correctly, even if they have no background in Arabic. The course focuses on teaching Arabic letters, vowels, and pronunciation rules to help students recite the Quran clearly and confidently from the very basics."
             },
             "tajweed": {
                 "name": "Tajweed",
-                "description": "Our Tajweed course is designed to help students of all levels learn the precise pronunciation and articulation rules essential to reciting the Quran beautifully and accurately. With the guidance of experienced teachers, students will gain a deep understanding of Tajweed principles, practicing everything from basic to advanced rules. Whether you're a beginner or looking to refine your skills, this course offers a comprehensive, supportive environment to enhance your Quran recitation."
+                "description": "In this course, you will learn how to pronounce Arabic letters correctly and follow the rules of Quran recitation. You will also learn the difference between heavy and light letters, and all Tajweed rules in a clear and simple way. The course is perfect for beginners and for those who want to improve their recitation. With the help of expert teachers and lots of practice, you will learn to recite the Quran correctly and beautifully."
             },
             "quran": {
                 "name": "Quran with Tajweed",
-                "description": "Our Quran with Tajweed course emphasizes the art of recitation, teaching students how to apply the rules of Tajweed to enhance their Quran reading. With personalized feedback from expert instructors, students will develop a beautiful and accurate recitation style, ensuring that they not only read but also understand the beauty and message of the Quran"
+                "description": "This specialized course focuses on reciting the Holy Quran correctly and accurately, with proper understanding and application of Tajweed rules. It places great emphasis on practical training and aims to help students recite the entire Quran as it was recited by the Prophet Muhammad ﷺ, following the authentic, transmitted way. By the grace of Allah, the course also prepares students to receive Ijazah (certification) in Quran recitation and Ijazah in teaching (Iqra’) under the supervision of qualified female instructors."
             }
         }
     },
@@ -259,7 +259,7 @@
     "Footer": {
         "about": {
             "title": "About Us",
-            "description": "Razan Academy is dedicated to teaching Quran and Tajweed to non-Arabic speakers with authentic methodology and qualified teachers."
+            "description": "Our main goal is to help Arabic and non-Arabic speakers learn the Holy Quran with proper Tajweed. We use trusted methods and qualified teachers to make Quran learning clear, authentic, and meaningful for"
         },
         "quickLinks": {
             "title": "Quick Links"
@@ -290,19 +290,18 @@
         "formTitle": "Registration Form",
         "fullName": "Full Name",
         "age": "Age",
-        "Error":{
-
-            "required":"is required",
-            "minAge":"Age must be at least 5",
-            "maxAge":"Age must be less than 100",
-            "invalidEmail":"Please enter a valid email address",
-            "invalidPhone":"Please enter a valid phone number",
-            "languageRequired":"Please select a language",
-            "purposeRequired":"Please select a purpose of submission",
-            "memorizationRequired":"Please select how much you memorize from Quran",
-            "lessonsRequired":"Please select how many lessons per week",
-            "motherTongueRequired":"Please select your mother tongue",
-            "courseRequired":"Please select a course"
+        "Error": {
+            "required": "is required",
+            "minAge": "Age must be at least 5",
+            "maxAge": "Age must be less than 100",
+            "invalidEmail": "Please enter a valid email address",
+            "invalidPhone": "Please enter a valid phone number",
+            "languageRequired": "Please select a language",
+            "purposeRequired": "Please select a purpose of submission",
+            "memorizationRequired": "Please select how much you memorize from Quran",
+            "lessonsRequired": "Please select how many lessons per week",
+            "motherTongueRequired": "Please select your mother tongue",
+            "courseRequired": "Please select a course"
         },
         "phoneNumber": "Phone Number",
         "email": "Email",

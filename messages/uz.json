@@ -37,8 +37,8 @@
         }
     },
     "Landing": {
-        "header": "Razan Akademiyasi Qur'on o'qishlari uchun",
-        "subHeader": "Biz noyob va ilhomlantiruvchi Qur'on o'rganish tajribasini taqdim etishga intilamiz. Bizning akademiyamiz ishonch va qat'iyat tamoyillari asosida tashkil etilgan, bu yerda bolalar va ayollar Qur'onni an'anani zamonaviylik bilan birlashtirib o'rganishlari uchun joy yaratilgan."
+        "header": "Razon Qur'on Ta’lim Akademiyasiga xush kelibsiz",
+        "subHeader": "Razon Akademiyasida biz Qur’on qalbni mustahkamlaydi va qalbga osoyishtalik olib keladi, deb hisoblaymiz. Biz ishonchli usullar va malakali ayol o‘qituvchilar yordamida o‘zgacha ta’lim tajribasini taklif qilamiz — sokin va g‘amxo‘r muhitda. Dasturlarimiz bolalar va ayollar uchun Qur’on va tajvidni o‘rgatadi — arab tilida va arab tilini bilmaydiganlar uchun. Har bir o‘quvchining ehtiyojlari va o‘rganish uslublariga hurmat bilan yondashamiz. Maqsadimiz — qalblarga Qur’on sevgisini singdirish va har bir talabaga uni aniq va to‘g‘ri o‘qishni o‘rgatish, xuddi Payg‘ambar Muhammadga (sollallohu alayhi va sallam) nozil qilingandek. Qur’on bilan go‘zal safaringizni biz bilan boshlang!"
     },
     "Nav": {
         "links": {
@@ -142,16 +142,16 @@
         "startLearning": "O‘rganishni boshlang",
         "courses": {
             "noor": {
-                "name": "Noor Al Bayan",
-                "description": "Bizning Noor Al Bayan kursimiz Qur’on arabchasini chuqur o‘rganish uchun mo‘ljallangan keng qamrovli dastur taqdim etadi. Grammatikaga, lug‘atga va kontekstga e’tibor qaratib, talabalar Qur’on oyatlarini samarali o‘qish va tushunishni o‘rganadilar. Ushbu kurs barcha darajadagi talabalar uchun mos keladi, siz yo‘lingizni boshlayotgan bo‘lsangiz yoki mavjud bilimlaringizni oshirishni xohlasangiz."
+                "name": "Nur al-Bayon",
+                "description": "Nur al-Bayon kursi Qur’onni to‘g‘ri o‘qishni istagan, lekin arab tilida hech qanday tayanchga ega bo‘lmagan boshlovchilar uchun maxsus ishlab chiqilgan. Bu kurs arabcha harflar, harakatlar va talaffuz qoidalarini o‘rgatishga e’tibor qaratadi, shuningdek, Qur’onni aniq va ishonch bilan o‘qishni o‘rgatadi."
             },
             "tajweed": {
-                "name": "Tajweed",
-                "description": "Bizning Tajweed kursimiz barcha darajadagi talabalar uchun Qur’onni go‘zal va aniq o‘qish uchun zarur bo‘lgan to‘g‘ri talaffuz va tovushni shakllantirish qoidalarini o‘rganishga yordam beradi. Tajribali o‘qituvchilar rahbarligida talabalar Tajweed tamoyillarini chuqur o‘rganadilar, oddiydan to advanced qoidalargacha hamma narsani amaliyotda sinab ko‘radilar. Siz yangi boshlovchi yoki ko‘nikmalaringizni rivojlantirishni istasangiz, ushbu kurs Qur’on o‘qishingizni yaxshilash uchun keng qamrovli va qo‘llab-quvvatlovchi muhitni taqdim etadi."
+                "name": "Tajvid",
+                "description": "Ushbu kursda siz arab harflarini to‘g‘ri talaffuz qilish va Qur’on o‘qish qoidalariga amal qilishni o‘rganasiz. Siz og‘ir va yengil harflar o‘rtasidagi farqni, shuningdek, barcha tajvid qoidalarini oddiy va tushunarli tarzda o‘rganasiz. Kurs boshlovchilar va o‘qishini yanada yaxshilamoqchi bo‘lganlar uchun mos keladi. Tajribali o‘qituvchilar va amaliy mashg‘ulotlar orqali siz Qur’onni chiroyli va to‘g‘ri o‘qishni o‘rganasiz."
             },
             "quran": {
-                "name": "Quran with Tajweed",
-                "description": "Bizning Qur’on va Tajweed kursimiz til o‘qish san’atiga e’tibor beradi, talabalarni Tajweed qoidalarini qo‘llashni o‘rgatadi va Qur’on o‘qishini yaxshilaydi. Tajribali o‘qituvchilardan shaxsiy fikr-mulohazalar olib, talabalar go‘zal va aniq o‘qish uslubini rivojlantiradilar, shunda ular nafaqat o‘qish, balki Qur’onning go‘zalligi va mazmunini tushunishadi."
+                "name": "Qur’on tajvid bilan",
+                "description": "Ushbu maxsus kurs Qur’onni to‘g‘ri va aniq o‘qishga, tajvid qoidalarini tushunish va qo‘llashga qaratilgan. U amaliy mashg‘ulotlarga katta e’tibor beradi va talabalarga Qur’onni Payg‘ambar Muhammad ﷺ tilovat qilganidek, an’anaviy va ishonchli usulda o‘qishni o‘rgatishni maqsad qiladi. Allohning fazli bilan, kurs talabalarni tajvid bilan Qur’on tilovati va dars berish bo‘yicha ijaza (guvohnoma) olishga ham tayyorlaydi — malakali ayol ustozlar rahbarligida."
             }
         }
     },
@@ -259,7 +259,7 @@
     "Footer": {
         "about": {
             "title": "Biz haqimizda",
-            "description": "Razan Akademiyasi arab bo'lmaganlarga Qur'on va tajvidni ishonchli metodologiya va malakali o'qituvchilar yordamida o'rgatishga bag'ishlangan."
+            "description": "Bizning asosiy maqsadimiz — arab tilida so‘zlovchilar va so‘zlamaydiganlarga Qur’oni Karimni to‘g‘ri tajvid bilan o‘rganishga yordam berishdir. Qur’on ta’limini aniq, ishonchli va mazmunli qilish uchun tajribali o‘qituvchilar va ishonchli usullardan foydalanamiz."
         },
         "quickLinks": {
             "title": "Tezkor havolalar"

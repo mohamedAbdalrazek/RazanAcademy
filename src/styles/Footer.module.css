@@ -33,7 +33,10 @@
     height: 2px;
     background-color: var(--active-link);
 }
-
+.arFooter .footerTitle::after{
+    right: 0;
+    left: auto;
+}
 .footerText {
     color: #eeeeee;
     line-height: 1.6;
@@ -48,7 +51,11 @@
 .footerLinks li {
     margin-bottom: 0.8rem;
 }
-
+.contactLink {
+     color: #eeeeee;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 .footerLink {
     color: #eeeeee;
 
