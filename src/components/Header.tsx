@@ -5,6 +5,7 @@ import coverBackground from "../../public/cover-background.png";
 import styles from "@/styles/Header.module.css";
 import { Link } from "@/i18n/routing";
 import { Amiri, Noto_Nastaliq_Urdu } from "next/font/google";
+import { useLocale } from "next-intl";
 const amiri = Amiri({ subsets: ["latin"], weight: ["400"], style: ["italic"] });
 const noto_nastaliq_urdu = Noto_Nastaliq_Urdu({
     subsets: ["arabic", "latin", "latin-ext"],
@@ -13,8 +14,9 @@ const noto_nastaliq_urdu = Noto_Nastaliq_Urdu({
 });
 
 export default function Header() {
+    const locale = useLocale();
     return (
-        <div className={styles.header}>
+        <div className={`${styles.header} ${locale === "ar" ? styles.arHeader : ""}`}>
             <Link href={"/"} className={styles.logoWrapper}>
                 <Image
                     className={styles.logo}

@@ -17,7 +17,7 @@ type FormValues = {
     lessonsPerWeek?: "once" | "twice" | "three" | "group";
     // English-specific fields
     motherTongue?: string;
-    interestedCourse?: "noor-albayan" | "tajweed" | "quran-with-tajweed";
+    interestedCourse?: "noor-albayan-tajweed" | "quran-memorization" | "quran-improvment";
     // Common fields
     howDidYouKnowUs?: "facebook" | "instagram" | "friend" | "family" | "other";
     otherSource?: string;
@@ -382,6 +382,22 @@ export default function FormComponent() {
                                 <label className={styles.radioLabel}>
                                     <input
                                         type="radio"
+                                        value="quran-improvment"
+                                        {...register("interestedCourse")}
+                                    />
+                                    {t("quran-improvment")}
+                                </label>
+                                <label className={styles.radioLabel}>
+                                    <input
+                                        type="radio"
+                                        value="quran-memorization"
+                                        {...register("interestedCourse")}
+                                    />
+                                    {t("quran-memorization")}
+                                </label>
+                                <label className={styles.radioLabel}>
+                                    <input
+                                        type="radio"
                                         value="noor-albayan"
                                         {...register("interestedCourse", {
                                             required: `${t(
@@ -389,24 +405,10 @@ export default function FormComponent() {
                                             )}`,
                                         })}
                                     />
-                                    {t("noor-albayan")}
+                                    {t("noor-albayan-tajweed")}
                                 </label>
-                                <label className={styles.radioLabel}>
-                                    <input
-                                        type="radio"
-                                        value="tajweed"
-                                        {...register("interestedCourse")}
-                                    />
-                                    {t("tajweed")}
-                                </label>
-                                <label className={styles.radioLabel}>
-                                    <input
-                                        type="radio"
-                                        value="quran-with-tajweed"
-                                        {...register("interestedCourse")}
-                                    />
-                                    {t("quran-with-tajweed")}
-                                </label>
+                                
+                                
                             </div>
                             {errors.interestedCourse && (
                                 <span className={styles.errorMessage}>

@@ -8,6 +8,7 @@ import FacebookIcon from "./icons/FacebookIcon";
 import WhatsappIcon from "./icons/WhatsappIcon";
 import InstagramIcon from "./icons/InstagramIcon";
 import TelegramIcon from "./icons/TelegramIcon";
+import EnvelopeIcon from "./icons/EnvelopeIcon";
 
 const amiri = Amiri({ subsets: ["latin"], weight: ["400"], style: ["italic"] });
 const noto_nastaliq_urdu = Noto_Nastaliq_Urdu({
@@ -88,16 +89,21 @@ export default function Footer() {
                         <li>
                             <PhoneIcon className={styles.contactIcon} />
                             <a
-                                href="tel:+201005478226"
+                                href="tel:+201557967776"
                                 className={styles.contactLink}
                             >
-                                201005478226
+                                201557967776+
                             </a>
                         </li>
-                        {/* <li>
+                        <li>
                             <EnvelopeIcon className={styles.contactIcon} />
-                            {t("contact.email")}
-                        </li> */}
+                            <a
+                                href="mailto:razanacademy1@gmail.com"
+                                className={styles.contactLink}
+                            >
+                                razanacademy1@gmail.com
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div className={styles.footerSection}>

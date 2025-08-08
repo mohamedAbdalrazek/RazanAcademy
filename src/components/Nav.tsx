@@ -17,7 +17,7 @@ export default function Nav() {
         "quran",
         "pricing",
         "library",
-        "blog",
+        // "blog",
     ];
     const t = useTranslations("Nav");
     const pathname = usePathname();

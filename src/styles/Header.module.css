@@ -50,7 +50,9 @@
     height: 190%;
     transform: scaleX(-1);
 }
-
+.arHeader .coverBackgroundWrapper{
+    left: 0;
+}
 @media (max-width: 968px) {
     .header{
         height: 150px;

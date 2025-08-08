@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 export default function TeachersCardList() {
     const t = useTranslations("AboutUs.teachers");
-    const teachersKey = ["hager", "khadija", "sara"];
+    const teachersKey = ["hager", "khadija", "salwa"];
     return (
         <div className={styles.teachersCardList}>
             {teachersKey.map((teacherKey) => {

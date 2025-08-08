@@ -38,10 +38,10 @@
     },
     "Landing": {
         "header": "Welcome to Razan Academy for Quranic Studies",
-        "subHeaderOne": "At Razan Academy, we believe the Quran helps build a strong heart and a peaceful soul. We offer a special learning experience with trusted methods and qualified female teachers, in a calm and caring environment."
-        ,"subHeaderTwo":"Our programs teach Quran and Tajweed to children and women, in Arabic and for non-Arabic speakers. We respect each learner’s needs and learning style."
-        ,"subHeaderThree":"Our goal is to fill hearts with love for the Quran and help every student recite it clearly and correctly—just as it was revealed to the Prophet Muhammad (peace be upon him)."
-        ,"subHeaderFour":"Join us and start your beautiful journey with the Quran."
+        "subHeaderOne": "At Razan Academy, we believe the Quran helps build a strong heart and a peaceful soul. We offer a special learning experience with trusted methods and qualified female teachers, in a calm and caring environment.",
+        "subHeaderTwo": "Our programs teach Quran and Tajweed to children and women, in Arabic and for non-Arabic speakers. We respect each learner’s needs and learning style.",
+        "subHeaderThree": "Our goal is to fill hearts with love for the Quran and help every student recite it clearly and correctly—just as it was revealed to the Prophet Muhammad (peace be upon him).",
+        "subHeaderFour": "Join us and start your beautiful journey with the Quran."
     },
     "Nav": {
         "links": {
@@ -115,17 +115,17 @@
             "qualifications": "Qualifications",
             "hager": {
                 "name": "Hager Abderlazek",
-                "description": "A certified Quran educator with over 10 years of experience. Specializes in Tajweed and Quran memorization, providing tailored instruction for students of all ages.",
+                "description": "Graduate of the Faculty of Engineering Al Azhar University, She has more than five years of experience in Quran memorization and teaching, She has worked with children youth and women using an approach tailored to every age group, She holds an ijazah in the narration of Hafs from Asim through the Shatibiyyah method, She is known for her precision and structured teaching style which makes learning enjoyable and supports students in achieving mastery step by step",
                 "qualifications": "Certified Teacher, Expert in Tajweed and Quran Memorization"
             },
             "khadija": {
                 "name": "Khadija Mohamed",
-                "description": "A certified Quran educator with 5 years of experience teaching young children. Specializes in effective teaching methods for small groups.",
+                "description": "A graduate of the Faculty of Dar Al-Uloom Cairo University She has over ten years of experience in Quran memorization and teaching She has worked with children and women using a teaching style suited for all age groups She holds ijazahs in the narrations of Qalun Ibn Kathir Abu Jaafar Ibn Aamir and Hamzah She is well-versed in all ten minor Qira’at Her lessons combine linguistic and Qira’at scholarship with educational skill offering a holistic Quranic learning experience that nurtures both heart and mind",
                 "qualifications": "Bachelor's degree, Certification in Quran Teaching"
             },
-            "sara": {
-                "name": "Sara Mohamed",
-                "description": "An educator with 8 years of experience in Quran memorization for adults. Conducts courses tailored for both beginners and advanced students.",
+            "salwa": {
+                "name": "Salwa Yahia",
+                "description": "She has over thirty years of experience in Quran memorization and teachingShe holds an ijazah in the narration of Hafs from Asim through the Shatibiyyah method, She has mastered the texts of Tuhfat al Atfal and Al JazariyyahHer deep experience and steady methodology reflect in a teaching style that balances structure and compassion She is dedicated to nurturing a love for the Quran while respecting each student's individual learning pace",
                 "qualifications": "Teaching Certificate, Specialist in Quran Memorization and Tajweed"
             }
         },
@@ -168,63 +168,87 @@
         "Books": {
             "noor-albayan": "Noor Al-Bayan: Learning to Read and Recite the Quran",
             "advanced-tajweed": "Advanced Tajweed for Non-Arabic Speakers",
-            "basic-tajweed":"Basic Tajweed for Non-Arabic Speakers",
-            "quran":"Color-Coded Tajweed Mushaf"
-        }
+            "basic-tajweed": "Basic Tajweed for Non-Arabic Speakers",
+            "quran": "Color-Coded Tajweed Mushaf"
+        },
+        "download": "Download",
+        "pages": "Pages"
     },
     "pricingPage": {
         "heading": "Our Learning Plans",
         "subtitle": "Choose the perfect plan for your Quran learning journey",
         "plans": {
-            "starter": {
-                "name": "Starter",
+            "once": {
+                "name": "Light Path",
                 "audience": "Beginners & Kids",
                 "features": [
-                    "2 sessions/week",
-                    "30 mins/session",
-                    "Basic Quran reading & Tajweed"
+                    "1 session/week",
+                    "30,60 mins/session",
+                    "Quran recitation improvement or Quran memorization",
+                    "The first lesson is a free trial"
+
                 ],
                 "price": "500 EGP"
             },
-            "standard": {
-                "name": "Standard",
+            "twice": {
+                "name": "Steady Growth",
                 "audience": "Consistent Learners",
                 "features": [
-                    "3 sessions/week",
-                    "45 mins/session",
-                    "Tajweed + Memorization"
+                    "2 sessions/week",
+                    "30,60 mins/session",
+                    "Quran recitation improvement or Quran memorization",
+                    "The first lesson is a free trial"
+
                 ],
                 "price": "750 EGP"
             },
-            "intensive": {
-                "name": "Intensive",
-                "audience": "Fast-track Memorization",
+            "three": {
+                "name": "Focused Journey",
+                "audience": "Fast-track",
                 "features": [
-                    "5 sessions/week",
-                    "60 mins/session",
-                    "Hifz-focused with Tajweed"
+                    "3 sessions/week",
+                    "30,60 mins/session",
+                    "Quran recitation improvement or Quran memorization",
+                    "The first lesson is a free trial"
+
                 ],
                 "price": "1200 EGP"
             },
-            "group": {
-                "name": "Group Plan",
-                "audience": "Siblings / Friends",
+            "four": {
+                "name": "Intensive Plan",
+                "audience": "Dedicated learners",
                 "features": [
-                    "Up to 3 students",
-                    "3 sessions/week",
-                    "Shared 60 min class"
+                    "5 sessions/week",
+                    "30,60 mins/session",
+                    "Quran recitation improvement or Quran memorization",
+                    "The first lesson is a free trial"
+
                 ],
                 "price": "1000 EGP"
             },
-            "trial": {
-                "name": "Trial Class",
-                "audience": "First-time students",
+            "group1": {
+                "name": "Group Plan One",
+                "audience": "Everyone",
                 "features": [
-                    "1 free 30-min class",
-                    "No commitment"
+                    "2 sessions/week",
+                    "Shared 60 min class"
+                    ,"Quran recitation improvement, Quran memorization, Tajweed lessons or Noor Al Bayan.",
+                    "The first lesson is a free trial"
                 ],
-                "price": "Free"
+                "price": "1000 EGP"
+            },
+             "group2": {
+                "name": "Group Plan Two",
+                "audience": "Everyone",
+                "features": [
+                    "3 sessions/week",
+                    "Shared 60 min class"
+                    ,"Quran recitation improvement, Quran memorization, Tajweed lessons or Noor Al Bayan.",
+                    "The first lesson is a free trial"
+                ],
+                "price": "1000 EGP"
             }
+            
         },
         "mostPopular": "Most Popular",
         "getTrial": "Get Free Trial",
@@ -310,11 +334,11 @@
         },
         "phoneNumber": "Phone Number",
         "email": "Email",
-        "country":"Country of residence",
+        "country": "Country of residence",
         "teachingLanguage": "Preferred Learning Language",
         "arabic": "Arabic",
         "english": "English",
-        "uzbek":"Uzbek (Chatting only)",
+        "uzbek": "Uzbek (Chatting only)",
         "submissionPurpose": "Purpose of Submission",
         "memorizing": "Memorizing the Quran and strengthening it",
         "improving": "Improving recitation",
@@ -331,9 +355,9 @@
         "group": "Two group sessions per week",
         "motherTongue": "Mother Tongue",
         "interestedCourse": "Which course are you interested in?",
-        "noor-albayan": "Noor Al Bayan",
-        "tajweed": "Tajweed",
-        "quran-with-tajweed": "Quran with Tajweed",
+        "noor-albayan-tajweed": "Noor Al Bayan or Tajweed",
+        "quran-memorization": "Quran memorization",
+        "quran-improvment": "Quran recitation improvement",
         "howDidYouKnowUs": "How did you know us?",
         "facebook": "Facebook",
         "instagram": "Instagram",

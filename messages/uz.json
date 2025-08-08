@@ -110,17 +110,17 @@
             "qualifications": "Malaka",
             "hager": {
                 "name": "Hager Abderlazek",
-                "description": "10 yildan ortiq tajribaga ega, sertifikatlangan Qur'on o'qituvchisi. Tajweed va Qur'onni yodlash bo'yicha ixtisoslashgan, barcha yoshdagi talabalarga moslashtirilgan ta'lim berish.",
+                "description": "Al Azhar universiteti muhandislik fakultetini tamomlagan Qur’on yodlash va o‘qitish sohasida besh yildan ortiq tajribaga ega U bolalar o‘smirlar va ayollar bilan ishlagan hamda har bir yosh guruhiga mos o‘qitish yondashuviga ega U Hafs Asim qiroatining Shotibiy yo‘li bo‘yicha sanadli ijozaga ega Aniq ilmiy yondashuvi va tuzilgan metodikasi bilan ajralib turadi va o‘quvchilarning bosqichma bosqich mukammallikka erishishlariga yordam beradi",
                 "qualifications": "Sertifikatlangan O'qituvchi, Tajweed va Qur'onni Yodlash bo'yicha Mutaxassis"
             },
             "khadija": {
                 "name": "Khadija Mohamed",
-                "description": "Yosh bolalarga Qur'onni o'qitish bo'yicha 5 yillik tajribaga ega. Kichik guruhlarda ishlashda ixtisoslashgan va bolalar bilan samarali o'qitish metodlarini qo'llaydi.",
+                "description": "Qohira Universiteti Dar al-Ulum fakultetini tamomlagan Qur’on yod olish va o‘qitish sohasida o‘n yildan ortiq tajribaga ega U bolalar va ayollar bilan ishlagan hamda barcha yosh guruhlari uchun mos tarbiyaviy uslubga ega Qolun Ibn Kasir Abu Ja’far Ibn O‘mir va Hamza qiroatlarida ijozalarga ega Kichik o‘n qiroatning barchasini yaxshi biladi Darslari tilshunoslik va qiroat ilmidagi bilimni pedagogik mahorat bilan uyg‘unlashtirib yurak va aqlni birdek o‘stiradigan Qur’on o‘rganish tajribasini taqdim etadi",
                 "qualifications": "Bakalavr darajasi, Qur'on o'qitish bo'yicha Sertifikat"
             },
-            "sara": {
-                "name": "Sara Mohamed",
-                "description": "Kattalar uchun Qur'on yodlash bo'yicha 8 yillik tajribaga ega. Yangi boshlovchilar va ilg'or talabalarga mo'ljallangan kurslarni o'tkazadi.",
+            "salwa": {
+                "name": "Salwa Yahia",
+                "description": "Qur’on yod olish va o‘qitish sohasida o‘ttiz yildan ortiq tajribaga ega Hafs Asim qiroatining Shotibiy yo‘li bo‘yicha ijozaga ega Tuhfatul Atfol va Jazariy matnlarini mukammal o‘zlashtirgan Keng tajribasi va barqaror metodikasi uning o‘qitish uslubida qat’iyat va mehribonlik uyg‘unligini namoyon qiladi Har bir o‘quvchining shaxsiy o‘sish tezligini inobatga olib Qur’onga bo‘lgan muhabbatni shakllantirishga e’tibor qaratadi",
                 "qualifications": "O'qituvchi Sertifikati, Qur'on Yodlash va Tajweedda Mutaxassis"
             }
         },
@@ -201,13 +201,15 @@
             "advanced-tajweed": "Arab bo‘lmaganlar uchun ilg‘or tajvid kitobi",
             "basic-tajweed": "Arab tilida so‘zlashmaydiganlar uchun asosiy tajvid",
             "quran": "Rangli tajvid Mus’hafi"
-        }
+        },
+        "download": "Yuklab olish",
+        "pages": "Sahifalar"
     },
     "pricingPage": {
         "heading": "Bizning Qur'on o‘rganish rejalari",
         "subtitle": "Sizning Qur'on o‘rganish sayohatingiz uchun eng yaxshi reja tanlang",
         "plans": {
-            "starter": {
+            "once": {
                 "name": "Boshlang'ich",
                 "audience": "Yangi boshlovchilar va bolalar",
                 "features": [
@@ -217,7 +219,7 @@
                 ],
                 "price": "500 EGP"
             },
-            "standard": {
+            "twice": {
                 "name": "Standart",
                 "audience": "Doimiy o‘quvchilar",
                 "features": [
@@ -227,7 +229,7 @@
                 ],
                 "price": "750 EGP"
             },
-            "intensive": {
+            "three": {
                 "name": "Intensiv",
                 "audience": "Tezlashtirilgan yodlash",
                 "features": [
@@ -237,7 +239,7 @@
                 ],
                 "price": "1200 EGP"
             },
-            "group": {
+            "four": {
                 "name": "Guruh rejasi",
                 "audience": "Oila a'zolari / Do‘stlar",
                 "features": [
@@ -331,9 +333,9 @@
         "group": "Haftasiga ikki marta guruh darsi",
         "motherTongue": "Ona tili",
         "interestedCourse": "Qaysi kursga qiziqasiz?",
-        "noor-albayan": "Nurul Bayon",
-        "tajweed": "Tajvid",
-        "quran-with-tajweed": "Qur’on va tajvid bilan",
+        "noor-albayan-tajweed": "Noor Al Bayan yoki Tajvid",
+        "quran-memorization": "Qur’on yodlash",
+        "quran-improvment": "Qur’on tilovatini yaxshilash",
         "howDidYouKnowUs": "Biz haqimizda qayerdan bildingiz?",
         "facebook": "Facebook",
         "instagram": "Instagram",

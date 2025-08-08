@@ -2,7 +2,7 @@ import React from "react";
 import styles from "@/styles/about-us/TeacherCard.module.css";
 import Image from "next/image";
 import profilePicture from "../../../public/icons/hijabIcon.png";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 type Teacher = {
     name: string;
     description: string;
@@ -11,9 +11,9 @@ type Teacher = {
 export default function TeacherCard({
     name,
     description,
-    qualifications,
+    // qualifications,
 }: Teacher) {
-    const t = useTranslations("AboutUs");
+    // const t = useTranslations("AboutUs");
     return (
         <div className={styles.card}>
             <div className={styles.imageWrapper}>
@@ -29,10 +29,10 @@ export default function TeacherCard({
             <div>
                 <h4 className={styles.teacherName}>{name}</h4>
                 <p className={styles.teacherDescription}>{description}</p>
-                <div className={styles.teacherQualifications}>
+                {/* <div className={styles.teacherQualifications}>
                     <strong>{t("teachers.qualifications")}</strong>
                     <span>{qualifications}</span>
-                </div>
+                </div> */}
             </div>
         </div>
     );

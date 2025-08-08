@@ -6,8 +6,9 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 export default function WhatsappButton() {
     const t = useTranslations("WhatsappButton")
+
     return (
-        <Link href={"https://wa.me/message/FE7ZRY4QAL36B1"} className={styles.buttonWrapper}>
+        <Link href="tel:+201005478226" className={styles.buttonWrapper}>
             <Image
                 width={25}
                 height={25}
