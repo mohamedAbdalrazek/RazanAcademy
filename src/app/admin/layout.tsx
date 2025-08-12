@@ -19,6 +19,7 @@ export default function RootLayout({ children }: Props) {
                 <main className="layout">
                     <SideBar />
                     {children}
+                    
                 </main>
             </body>
         </html>

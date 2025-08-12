@@ -60,8 +60,12 @@ a.active {
     border-radius: 5px;
     transition: 0.3s all;
 }
-.small-button:hover {
+.small-button:not[disabled]:hover {
     transform: scale(1.05);
     border-radius: 0;
     box-shadow: var(--box-shadow-pop);
+}
+
+button:disabled{
+    opacity: .5;
 }

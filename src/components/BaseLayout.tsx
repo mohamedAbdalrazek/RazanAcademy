@@ -8,6 +8,7 @@ import "../styles/global.css";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import WhatsappButton from "./WhatsappButton";
+import { Toaster } from "react-hot-toast";
 type Props = {
     children: ReactNode;
     locale: string;
@@ -30,6 +31,7 @@ export default async function BaseLayout({ children, locale }: Props) {
                     {children}
                     <WhatsappButton />
                     <Footer />
+                    <Toaster position="top-right" reverseOrder={false} />
                 </NextIntlClientProvider>
             </body>
         </html>

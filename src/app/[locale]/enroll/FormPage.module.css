@@ -70,6 +70,6 @@
     border: none;
 }
 
-.submitButton:hover {
+.submitButton:not[disabled]:hover {
     background-color: var(--subheader-color);
 }

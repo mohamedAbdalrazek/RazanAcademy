@@ -325,6 +325,8 @@
             "maxAge": "Age must be less than 100",
             "invalidEmail": "Please enter a valid email address",
             "invalidPhone": "Please enter a valid phone number",
+            "privateOrGroupRequired": "Please select a language",
+            "lessonsPerWeekRequired":"Please select how many sessions per week",
             "languageRequired": "Please select a language",
             "purposeRequired": "Please select a purpose of submission",
             "memorizationRequired": "Please select how much you memorize from Quran",
@@ -335,7 +337,12 @@
         "phoneNumber": "Phone Number",
         "email": "Email",
         "country": "Country of residence",
+        "privateOrGroup":"Please Choose(Private/Group)",
+
         "teachingLanguage": "Preferred Learning Language",
+        "private":"Private",
+        "group":"Group",
+        
         "arabic": "Arabic",
         "english": "English",
         "uzbek": "Uzbek (Chatting only)",
@@ -349,22 +356,24 @@
         "five": "More than five Juz",
         "completed": "Completed the Quran, by the grace of Allah",
         "lessonsPerWeek": "How many times per week?",
-        "once": "Once Special session",
-        "twice": "Twice Special session",
-        "three": "Three times Special sessions",
-        "group": "Two group sessions per week",
+        "lessons":{
+            "one":"One session / week",
+            "two":"Two sessions / week",
+            "three":"Three sessions / week",
+            "five":"Five sessions / week"
+        },
         "motherTongue": "Mother Tongue",
-        "interestedCourse": "Which course are you interested in?",
-        "noor-albayan-tajweed": "Noor Al Bayan or Tajweed",
-        "quran-memorization": "Quran memorization",
-        "quran-improvment": "Quran recitation improvement",
         "howDidYouKnowUs": "How did you know us?",
         "facebook": "Facebook",
         "instagram": "Instagram",
         "friend": "Friend",
         "family": "Family",
         "other": "Other",
-        "pleaseSpecify": "Please specify"
+        "pleaseSpecify": "Please specify",
+        "loading":"Loading...",
+        "submit":"Submit",
+        "success":"Registration sent!",
+        "submitError":"Somthing went wrong, try again later!"
     },
     "WhatsappButton": {
         "text": "Contact Us on Whatsapp"
