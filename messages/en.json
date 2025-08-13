@@ -177,6 +177,8 @@
     "pricingPage": {
         "heading": "Our Learning Plans",
         "subtitle": "Choose the perfect plan for your Quran learning journey",
+        "singlePlans": "Single Plans",
+        "groupPlans": "Group Plans",
         "plans": {
             "once": {
                 "name": "Light Path",
@@ -186,7 +188,6 @@
                     "30,60 mins/session",
                     "Quran recitation improvement or Quran memorization",
                     "The first lesson is a free trial"
-
                 ],
                 "price": "500 EGP"
             },
@@ -198,7 +199,6 @@
                     "30,60 mins/session",
                     "Quran recitation improvement or Quran memorization",
                     "The first lesson is a free trial"
-
                 ],
                 "price": "750 EGP"
             },
@@ -210,7 +210,6 @@
                     "30,60 mins/session",
                     "Quran recitation improvement or Quran memorization",
                     "The first lesson is a free trial"
-
                 ],
                 "price": "1200 EGP"
             },
@@ -222,7 +221,6 @@
                     "30,60 mins/session",
                     "Quran recitation improvement or Quran memorization",
                     "The first lesson is a free trial"
-
                 ],
                 "price": "1000 EGP"
             },
@@ -231,24 +229,23 @@
                 "audience": "Everyone",
                 "features": [
                     "2 sessions/week",
-                    "Shared 60 min class"
-                    ,"Quran recitation improvement, Quran memorization, Tajweed lessons or Noor Al Bayan.",
+                    "Shared 60 min class",
+                    "Quran recitation improvement, Quran memorization, Tajweed lessons or Noor Al Bayan.",
                     "The first lesson is a free trial"
                 ],
                 "price": "1000 EGP"
             },
-             "group2": {
+            "group2": {
                 "name": "Group Plan Two",
                 "audience": "Everyone",
                 "features": [
                     "3 sessions/week",
-                    "Shared 60 min class"
-                    ,"Quran recitation improvement, Quran memorization, Tajweed lessons or Noor Al Bayan.",
+                    "Shared 60 min class",
+                    "Quran recitation improvement, Quran memorization, Tajweed lessons or Noor Al Bayan.",
                     "The first lesson is a free trial"
                 ],
                 "price": "1000 EGP"
             }
-            
         },
         "mostPopular": "Most Popular",
         "getTrial": "Get Free Trial",
@@ -326,7 +323,7 @@
             "invalidEmail": "Please enter a valid email address",
             "invalidPhone": "Please enter a valid phone number",
             "privateOrGroupRequired": "Please select a language",
-            "lessonsPerWeekRequired":"Please select how many sessions per week",
+            "lessonsPerWeekRequired": "Please select how many sessions per week",
             "languageRequired": "Please select a language",
             "purposeRequired": "Please select a purpose of submission",
             "memorizationRequired": "Please select how much you memorize from Quran",
@@ -337,12 +334,10 @@
         "phoneNumber": "Phone Number",
         "email": "Email",
         "country": "Country of residence",
-        "privateOrGroup":"Please Choose(Private/Group)",
-
+        "privateOrGroup": "Please Choose(Private/Group)",
         "teachingLanguage": "Preferred Learning Language",
-        "private":"Private",
-        "group":"Group",
-        
+        "private": "Private",
+        "group": "Group",
         "arabic": "Arabic",
         "english": "English",
         "uzbek": "Uzbek (Chatting only)",
@@ -356,11 +351,11 @@
         "five": "More than five Juz",
         "completed": "Completed the Quran, by the grace of Allah",
         "lessonsPerWeek": "How many times per week?",
-        "lessons":{
-            "one":"One session / week",
-            "two":"Two sessions / week",
-            "three":"Three sessions / week",
-            "five":"Five sessions / week"
+        "lessons": {
+            "one": "One session / week",
+            "two": "Two sessions / week",
+            "three": "Three sessions / week",
+            "five": "Five sessions / week"
         },
         "motherTongue": "Mother Tongue",
         "howDidYouKnowUs": "How did you know us?",
@@ -370,10 +365,30 @@
         "family": "Family",
         "other": "Other",
         "pleaseSpecify": "Please specify",
-        "loading":"Loading...",
-        "submit":"Submit",
-        "success":"Registration sent!",
-        "submitError":"Somthing went wrong, try again later!"
+        "loading": "Loading...",
+        "submit": "Submit",
+        "success": "Registration sent!",
+        "submitError": "Somthing went wrong, try again later!"
+    },
+    "ReviewPage": {
+        "title": "Review Your Information",
+        "subtitle": "Please verify your details before submitting",
+        "personalInfo": "Personal Information",
+        "fullName": "Full Name",
+        "age": "Age",
+        "phone": "Phone Number",
+        "email": "Email",
+        "country": "Country",
+        "motherTongue": "Mother Tongue",
+        "lessonPreferences": "Lesson Preferences",
+        "lessonType": "Lesson Type",
+        "lessonsPerWeek": "Lessons Per Week",
+        "teachingLanguage": "Teaching Language",
+        "howFoundUs": "How You Found Us",
+        "source": "Source",
+        "otherSource": "Other Source",
+        "contact":"Contact Us",
+        "backHome": "Back To Home"
     },
     "WhatsappButton": {
         "text": "Contact Us on Whatsapp"

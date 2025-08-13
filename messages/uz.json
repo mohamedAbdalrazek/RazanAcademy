@@ -206,62 +206,81 @@
         "pages": "Sahifalar"
     },
     "pricingPage": {
-        "heading": "Bizning Qur'on o‘rganish rejalari",
-        "subtitle": "Sizning Qur'on o‘rganish sayohatingiz uchun eng yaxshi reja tanlang",
+        "singlePlans": "Yakka rejalar",
+        "groupPlans": "Guruh rejalar",
+        "heading": "Bizning o‘quv rejalarimiz",
+        "subtitle": "Qur’on o‘rganish sayohatingiz uchun eng mos rejani tanlang",
         "plans": {
             "once": {
-                "name": "Boshlang'ich",
+                "name": "Yengil yo‘l",
                 "audience": "Yangi boshlovchilar va bolalar",
                 "features": [
-                    "Haftasiga 2 ta dars",
-                    "Har biri 30 daqiqa",
-                    "Qur'on o‘qish va tajvid asoslari"
+                    "Haftasiga 1 ta dars",
+                    "Har dars 30 yoki 60 daqiqa",
+                    "Qur’on o‘qishni yaxshilash yoki Qur’on yodlash",
+                    "Birinchi dars bepul sinov"
                 ],
                 "price": "500 EGP"
             },
             "twice": {
-                "name": "Standart",
+                "name": "Barqaror o‘sish",
                 "audience": "Doimiy o‘quvchilar",
                 "features": [
-                    "Haftasiga 3 ta dars",
-                    "Har biri 45 daqiqa",
-                    "Tajvid va yodlash"
+                    "Haftasiga 2 ta dars",
+                    "Har dars 30 yoki 60 daqiqa",
+                    "Qur’on o‘qishni yaxshilash yoki Qur’on yodlash",
+                    "Birinchi dars bepul sinov"
                 ],
                 "price": "750 EGP"
             },
             "three": {
-                "name": "Intensiv",
-                "audience": "Tezlashtirilgan yodlash",
+                "name": "Yakuniy maqsad sari",
+                "audience": "Tezkor o‘quvchilar",
                 "features": [
-                    "Haftasiga 5 ta dars",
-                    "Har biri 60 daqiqa",
-                    "Tajvid bilan Hifz"
+                    "Haftasiga 3 ta dars",
+                    "Har dars 30 yoki 60 daqiqa",
+                    "Qur’on o‘qishni yaxshilash yoki Qur’on yodlash",
+                    "Birinchi dars bepul sinov"
                 ],
                 "price": "1200 EGP"
             },
             "four": {
-                "name": "Guruh rejasi",
-                "audience": "Oila a'zolari / Do‘stlar",
+                "name": "Intensiv reja",
+                "audience": "Sodiq o‘quvchilar",
                 "features": [
-                    "3 tagacha o‘quvchi",
-                    "Haftasiga 3 ta dars",
-                    "60 daqiqalik umumiy dars"
+                    "Haftasiga 5 ta dars",
+                    "Har dars 30 yoki 60 daqiqa",
+                    "Qur’on o‘qishni yaxshilash yoki Qur’on yodlash",
+                    "Birinchi dars bepul sinov"
                 ],
                 "price": "1000 EGP"
             },
-            "trial": {
-                "name": "Sinov darsi",
-                "audience": "Yangi o‘quvchilar",
+            "group1": {
+                "name": "Guruh rejasi bir",
+                "audience": "Hamma uchun",
                 "features": [
-                    "1 bepul 30 daqiqalik dars",
-                    "Majburiyatsiz"
+                    "Haftasiga 2 ta dars",
+                    "Umumiy 60 daqiqalik sinf",
+                    "Qur’on o‘qishni yaxshilash, Qur’on yodlash, Tajvid darslari yoki Nur al-Bayon",
+                    "Birinchi dars bepul sinov"
                 ],
-                "price": "Bepul"
+                "price": "1000 EGP"
+            },
+            "group2": {
+                "name": "Guruh rejasi ikki",
+                "audience": "Hamma uchun",
+                "features": [
+                    "Haftasiga 3 ta dars",
+                    "Umumiy 60 daqiqalik sinf",
+                    "Qur’on o‘qishni yaxshilash, Qur’on yodlash, Tajvid darslari yoki Nur al-Bayon",
+                    "Birinchi dars bepul sinov"
+                ],
+                "price": "1000 EGP"
             }
         },
         "mostPopular": "Eng mashhur",
-        "getTrial": "Bepul sinov olish",
-        "enroll": "Ro'yxatdan o'tish"
+        "getTrial": "Bepul sinov darsini oling",
+        "enroll": "Hozir ro‘yxatdan o‘ting"
     },
     "Footer": {
         "about": {
@@ -350,6 +369,26 @@
         "submit": "Yuborish",
         "success": "Ro'yxatdan o'tish yuborildi!",
         "submitError": "Xatolik yuz berdi, keyinroq qayta urinib ko‘ring!"
+    },
+    "ReviewPage": {
+        "title": "Ma'lumotlaringizni ko‘rib chiqing",
+        "subtitle": "Iltimos, yuborishdan oldin ma'lumotlaringizni tekshiring",
+        "personalInfo": "Shaxsiy ma'lumotlar",
+        "fullName": "To‘liq ism",
+        "age": "Yosh",
+        "phone": "Telefon raqam",
+        "email": "Elektron pochta",
+        "country": "Davlat",
+        "motherTongue": "Ona tili",
+        "lessonPreferences": "Dars tanlovlari",
+        "lessonType": "Dars turi",
+        "lessonsPerWeek": "Haftasiga darslar soni",
+        "teachingLanguage": "O‘qitish tili",
+        "howFoundUs": "Biz haqimizda qayerdan bildingiz",
+        "source": "Manba",
+        "otherSource": "Boshqa manba",
+        "contact": "Biz bilan bog‘laning",
+        "backHome": "Bosh sahifaga qaytish"
     },
     "WhatsappButton": {
         "text": "Biz bilan WhatsApp orqali bog'laning"

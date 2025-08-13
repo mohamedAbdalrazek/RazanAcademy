@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import styles from "./FormPage.module.css";
 import { createTranslator, useTranslations } from "next-intl";
 import { useState } from "react";
-import enMessages from '@/../../messages/en.json';
+import enMessages from "@/../../messages/en.json";
 import { useRouter } from "@/i18n/routing";
 import toast from "react-hot-toast";
 type FormValues = {
@@ -16,10 +16,7 @@ type FormValues = {
     privateOrGroup: "private" | "group";
     lessonsPerWeek: "one" | "two" | "three" | "five";
     teachingLanguage: "english" | "arabic" | "uzbek";
-    // Arabic-specific fields
-    // English-specific fields
     motherTongue?: string;
-    // Common fields
     howDidYouKnowUs?: "facebook" | "instagram" | "friend" | "family" | "other";
     otherSource?: string;
 };
@@ -36,39 +33,44 @@ export default function FormComponent() {
     const teachingLanguage = watch("teachingLanguage");
     const privateOrGroup = watch("privateOrGroup");
     const howDidYouKnowUsValue = watch("howDidYouKnowUs");
-    const [loading, setLoading] = useState(false)
-    const router = useRouter()
+    const [loading, setLoading] = useState(false);
+    const router = useRouter();
     const onSubmit = async (data: FormValues) => {
         try {
-            setLoading(true)
+            setLoading(true);
             const tEn = createTranslator({
-                locale: 'en',
-                messages: enMessages
+                locale: "en",
+                messages: enMessages,
             });
             const formedData = {
                 ...data,
                 privateOrGroup: tEn(`EnrollForm.${data.privateOrGroup}`),
-                lessonsPerWeek: tEn(`EnrollForm.lessons.${data.lessonsPerWeek}`),
-            }
-            const res = await fetch('/api/form/post', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formedData)
+                lessonsPerWeek: tEn(
+                    `EnrollForm.lessons.${data.lessonsPerWeek}`
+                ),
+            };
+            const res = await fetch("/api/form/post", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formedData),
             });
 
             const result = await res.json();
             if (result.success) {
+                localStorage.setItem(
+                    "enrollFormData",
+                    JSON.stringify(data)
+                );
                 toast.success(t("success"));
-                router.push("/")
+                router.push("/confirm");
             } else {
-                toast.error(t("submitError"))
-
+                toast.error(t("submitError"));
             }
         } catch (err) {
-            console.error(err)
-            toast.error(t("submitError"))
+            console.error(err);
+            toast.error(t("submitError"));
         } finally {
-            setLoading(false)
+            setLoading(false);
         }
     };
 
@@ -133,7 +135,9 @@ export default function FormComponent() {
                         id="phone"
                         className={styles.formInput}
                         {...register("phone", {
-                            required: `${t("phoneNumber")} ${t("Error.required")}`,
+                            required: `${t("phoneNumber")} ${t(
+                                "Error.required"
+                            )}`,
                             pattern: {
                                 value: /^[0-9]{10,15}$/,
                                 message: `${t("phoneNumber")} ${t(
@@ -206,7 +210,9 @@ export default function FormComponent() {
                                 type="radio"
                                 value="private"
                                 {...register("privateOrGroup", {
-                                    required: `${t("Error.privateOrGroupRequired")}`,
+                                    required: `${t(
+                                        "Error.privateOrGroupRequired"
+                                    )}`,
                                 })}
                             />
                             {t("private")}
@@ -227,56 +233,64 @@ export default function FormComponent() {
                         </span>
                     )}
                 </div>
-                {privateOrGroup && <div className={styles.formGroup}>
-                    <label className={styles.formLabel}>
-                        {t("lessonsPerWeek")}
-                    </label>
-                    <div className={styles.radioGroup}>
-                        {privateOrGroup === "private" && <label className={styles.radioLabel}>
-                            <input
-                                disabled={loading}
-                                type="radio"
-                                value="one"
-                                {...register("lessonsPerWeek", {
-                                    required: `${t("Error.lessonsPerWeekRequired")}`,
-                                })}
-                            />
-                            {t("lessons.one")}
-                        </label>}
-                        <label className={styles.radioLabel}>
-                            <input
-                                disabled={loading}
-                                type="radio"
-                                value="two"
-                                {...register("lessonsPerWeek")}
-                            />
-                            {t("lessons.two")}
+                {privateOrGroup && (
+                    <div className={styles.formGroup}>
+                        <label className={styles.formLabel}>
+                            {t("lessonsPerWeek")}
                         </label>
-                        <label className={styles.radioLabel}>
-                            <input
-                                disabled={loading}
-                                type="radio"
-                                value="three"
-                                {...register("lessonsPerWeek")}
-                            />
-                            {t("lessons.three")}
-                        </label>
-                        {privateOrGroup === "private" && <label className={styles.radioLabel}>
-                            <input
-                                disabled={loading}
-                                type="radio"
-                                value="five"
-                                {...register("lessonsPerWeek")}
-                            />
-                            {t("lessons.five")}
-                        </label>}
+                        <div className={styles.radioGroup}>
+                            {privateOrGroup === "private" && (
+                                <label className={styles.radioLabel}>
+                                    <input
+                                        disabled={loading}
+                                        type="radio"
+                                        value="one"
+                                        {...register("lessonsPerWeek", {
+                                            required: `${t(
+                                                "Error.lessonsPerWeekRequired"
+                                            )}`,
+                                        })}
+                                    />
+                                    {t("lessons.one")}
+                                </label>
+                            )}
+                            <label className={styles.radioLabel}>
+                                <input
+                                    disabled={loading}
+                                    type="radio"
+                                    value="two"
+                                    {...register("lessonsPerWeek")}
+                                />
+                                {t("lessons.two")}
+                            </label>
+                            <label className={styles.radioLabel}>
+                                <input
+                                    disabled={loading}
+                                    type="radio"
+                                    value="three"
+                                    {...register("lessonsPerWeek")}
+                                />
+                                {t("lessons.three")}
+                            </label>
+                            {privateOrGroup === "private" && (
+                                <label className={styles.radioLabel}>
+                                    <input
+                                        disabled={loading}
+                                        type="radio"
+                                        value="five"
+                                        {...register("lessonsPerWeek")}
+                                    />
+                                    {t("lessons.five")}
+                                </label>
+                            )}
+                        </div>
+                        {errors.lessonsPerWeek && (
+                            <span className={styles.errorMessage}>
+                                {errors.lessonsPerWeek.message}
+                            </span>
+                        )}
                     </div>
-                    {errors.lessonsPerWeek && (
-                        <span className={styles.errorMessage}>
-                            {errors.lessonsPerWeek.message}
-                        </span>
-                    )}
-                </div>}
+                )}
                 {/* Language Selection */}
                 <div className={styles.formGroup}>
                     <label className={styles.formLabel}>
@@ -322,7 +336,6 @@ export default function FormComponent() {
 
                 {/* Arabic-specific fields */}
 
-
                 {/* English-specific fields */}
                 {teachingLanguage !== "arabic" && (
                     <>
@@ -349,8 +362,6 @@ export default function FormComponent() {
                                 </span>
                             )}
                         </div>
-
-
                     </>
                 )}
 

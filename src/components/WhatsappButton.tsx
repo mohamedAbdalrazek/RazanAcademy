@@ -8,7 +8,7 @@ export default function WhatsappButton() {
     const t = useTranslations("WhatsappButton")
 
     return (
-        <Link href="tel:+201005478226" className={styles.buttonWrapper}>
+        <Link href="tel:+201557967776" className={styles.buttonWrapper}>
             <Image
                 width={25}
                 height={25}

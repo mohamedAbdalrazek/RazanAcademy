@@ -27,7 +27,6 @@ export default function Footer() {
         { title: t("links.quran"), href: "/quran" },
         { title: t("links.pricing"), href: "/pricing" },
         { title: t("links.library"), href: "/library" },
-        { title: t("links.blog"), href: "/blog" },
     ];
 
     const socialLinks = [
@@ -92,7 +91,7 @@ export default function Footer() {
                                 href="tel:+201557967776"
                                 className={styles.contactLink}
                             >
-                                201557967776+
+                                00201557967776
                             </a>
                         </li>
                         <li>

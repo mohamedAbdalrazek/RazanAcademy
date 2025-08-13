@@ -6,7 +6,7 @@ import SubHeading from "@/components/global/SubHeading";
 
 export default function PricingPage() {
     const t = useTranslations("pricingPage");
-    
+
     const singlePlanKeys = ["once", "twice", "three", "four"];
     const groupPlanKeys = ["group1", "group2"];
 
@@ -17,7 +17,7 @@ export default function PricingPage() {
             <div className={styles.container}>
                 <Heading text={t("heading")} />
                 <p className={styles.subtitle}>{t("subtitle")}</p>
-                <SubHeading text="Single plans" />
+                <SubHeading text={t("singlePlans")} />
                 <div className={styles.plansContainer}>
                     {singlePlanKeys.map((key, index) => {
                         const plan = t.raw(`plans.${key}`);
@@ -65,7 +65,7 @@ export default function PricingPage() {
                         );
                     })}
                 </div>
-                <SubHeading text="Group plans" />
+                <SubHeading text={t("groupPlans")} />
                 <div className={styles.plansContainer}>
                     {groupPlanKeys.map((key, index) => {
                         const plan = t.raw(`plans.${key}`);
@@ -117,3 +117,4 @@ export default function PricingPage() {
         </section>
     );
 }
+
