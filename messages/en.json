@@ -62,7 +62,7 @@
                 "href": "/quran"
             },
             "pricing": {
-                "title": "Pricing",
+                "title": "Monthly Plans",
                 "href": "/pricing"
             },
             "library": {
@@ -92,7 +92,7 @@
         "header": "About Us",
         "distinctiveEducational": {
             "header": "Distinctive Educational Approach",
-            "body": "We use modern teaching methods that focus on understanding the meanings of the Quran in addition to memorizing its verses. This helps students grasp the profound messages of the Quran in a more meaningful and impactful way."
+            "body": "We use clear curricula, modern teaching methods, and a system that makes the learning process easier for students."
         },
         "certifiedTeachers": {
             "header": "Certified and Experienced Teachers",
@@ -306,7 +306,7 @@
             "about": "About Us",
             "courses": "Courses",
             "quran": "Quran",
-            "pricing": "Pricing",
+            "pricing": "Monthly Plans",
             "library": "Library",
             "blog": "Blog",
             "contact": "Contact"

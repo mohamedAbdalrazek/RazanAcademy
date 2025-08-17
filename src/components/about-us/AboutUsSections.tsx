@@ -15,17 +15,18 @@ export default function AboutUsSections() {
         <div className={styles.services}>
             <div className={styles.section}>
                 <div className={styles.icon}>
-                    <LightBulbIcon />
+                    <BookOpenIcon />
                 </div>
                 <div className={styles.info}>
                     <h3 className={styles.infoHeader}>
-                        {t("distinctiveEducational.header")}
+                        {t("diversePrograms.header")}
                     </h3>
                     <p className={styles.infoBody}>
-                        {t("distinctiveEducational.body")}
+                        {t("diversePrograms.body")}
                     </p>
                 </div>
             </div>
+
             <div className={styles.section}>
                 <div className={styles.icon}>
                     <CertificateIcon />
@@ -52,14 +53,14 @@ export default function AboutUsSections() {
             </div>
             <div className={styles.section}>
                 <div className={styles.icon}>
-                    <BookOpenIcon />
+                    <LightBulbIcon />
                 </div>
                 <div className={styles.info}>
                     <h3 className={styles.infoHeader}>
-                        {t("diversePrograms.header")}
+                        {t("distinctiveEducational.header")}
                     </h3>
                     <p className={styles.infoBody}>
-                        {t("diversePrograms.body")}
+                        {t("distinctiveEducational.body")}
                     </p>
                 </div>
             </div>

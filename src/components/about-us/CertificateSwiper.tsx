@@ -19,6 +19,9 @@ export default function CertificateSwiper() {
         "/certificates/certificate-4.jpeg",
         "/certificates/certificate-5.jpeg",
         "/certificates/certificate-6.jpeg",
+        "/certificates/certificate-7.jpeg",
+        "/certificates/certificate-8.jpeg",
+        "/certificates/certificate-9.jpeg",
     ];
     return (
         <div className="certificate">
@@ -30,6 +33,7 @@ export default function CertificateSwiper() {
                 initialSlide={2}
                 speed={600}
                 zoom
+                
                 slidesPerView={"auto"}
                 navigation={true}
                 coverflowEffect={{
@@ -50,7 +54,6 @@ export default function CertificateSwiper() {
                             height={480}
                             alt={`Certificate ${index + 1}`}
                         />
-                       
                     </SwiperSlide>
                 ))}
             </Swiper>

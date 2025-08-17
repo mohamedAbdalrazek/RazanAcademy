@@ -7,14 +7,14 @@ import { useTranslations } from "next-intl";
 export default function CoursesList() {
     const t = useTranslations("Courses")
     const coursesKeys= [
-        "noor",
+        "quran",
         "tajweed",
-        "quran"
+        "noor",
     ] as const
     const coursesPictures = {
-        "noor":quran,
+        "quran":quran,
         "tajweed":quran,
-        "quran":quran
+        "noor":quran,
     }
     return (
         <div className={styles.coursesList}>

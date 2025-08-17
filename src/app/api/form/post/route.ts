@@ -116,8 +116,8 @@ export async function POST(req: Request) {
     `;
         const receiver = process.env.RECEIVER_EMAIL ?? ""
         const { data: emailResponse, error } = await resend.emails.send({
-            from: `Developer <${process.env.SENDER_EMAIL}>`, // Must be verified in Resend
-            to: receiver, // Change to your destination email
+            from: `Developer <${process.env.SENDER_EMAIL}>`,
+            to: receiver,
             subject: "New Form Submission",
             html: emailBody,
         });

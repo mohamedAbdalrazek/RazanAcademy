@@ -68,4 +68,5 @@ a.active {
 
 button:disabled{
     opacity: .5;
+    cursor:auto;
 }

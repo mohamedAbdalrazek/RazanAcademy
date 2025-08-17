@@ -62,7 +62,7 @@
                 "href": "/quran"
             },
             "pricing": {
-                "title": "Narxlash",
+                "title": "Oylik rejalar",
                 "href": "/pricing"
             },
             "library": {
@@ -87,7 +87,7 @@
         "header": "Biz haqimizda",
         "distinctiveEducational": {
             "header": "Ajralib turuvchi ta'lim yondashuvi",
-            "body": "Biz zamonaviy ta'lim usullaridan foydalanamiz, bu usullar Qur'on mazmunini tushunishga, oyatlarni yodlashdan tashqari e'tibor qaratadi. Bu talabalar uchun Qur'onning chuqur xabarlarini yanada ma'noli va ta'sirchan tarzda anglashga yordam beradi."
+            "body": "Biz aniq o‘quv dasturlari, zamonaviy o‘qitish usullari va talabaning o‘qish jarayonini yengillashtiradigan tizimdan foydalanamiz."
         },
         "certifiedTeachers": {
             "header": "Sertifikatlangan va tajribali o'qituvchilar",
@@ -306,7 +306,7 @@
             "about": "Biz haqimizda",
             "courses": "Kurslar",
             "quran": "Qur'on",
-            "pricing": "Narxlar",
+            "pricing": "Oylik rejalar",
             "library": "Kutubxona",
             "blog": "Blog",
             "contact": "Aloqa"
