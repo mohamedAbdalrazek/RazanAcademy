@@ -9,11 +9,8 @@ export async function GET(
         const versesArabic = await getVerses(id) as { text_uthmani: string }[]
 
         const translatedVerses = await getTranslatedVerses(id) 
-        console.log({translatedVerses})
         const versesAudio = await getVersesAudio(id) as { url: string }[]
-        // console.log({versesAudio})
         const fullAudio = await getFullAudio(id)
-        // console.log({fullAudio})
         const unformattedChapterInfo = await getChapterInfo(id)
         const chapterInfo = {
             name_arabic:unformattedChapterInfo.name_arabic,
@@ -23,7 +20,6 @@ export async function GET(
         }
         if (!versesArabic || !fullAudio || !versesAudio || !versesArabic.length  || !versesAudio.length
         ) {
-            console.log("error from the condition")
             return Response.json({ error: "Error in the api" }, {
                 status: 500
             })

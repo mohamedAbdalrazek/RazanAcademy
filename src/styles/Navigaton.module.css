@@ -1,4 +1,4 @@
-.nav{
+.nav {
     display: flex;
     padding-left: 20%;
     justify-content: space-between;
@@ -8,81 +8,82 @@
     align-items: center;
     max-width: 100%;
 }
-.navLinksWrapper{
+.navLinksWrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: calc(100% - 37px);
-
 }
-.navLink{
+.navLink {
     text-decoration: none;
     font-weight: 600;
     color: var(--main-dark);
-    transition: all .3s ease-in-out;
-
+    transition: all 0.3s ease-in-out;
 }
-.navLink:hover{
+.navLink:hover {
     transform: scale(1.05);
 }
-.barsIcon{
+.barsIcon {
     display: none;
     width: 25px;
     height: 25px;
     cursor: pointer;
     fill: var(--main-dark);
 }
-.closeIcon{
+.closeIcon {
     display: none;
 }
-.logo{
+.logo {
     display: none;
 }
 @media (max-width: 1090px) {
-    .nav{
+    .nav {
         padding-left: 10%;
     }
 }
 @media (max-width: 968px) {
-    .nav{
+    .nav {
         padding-left: 3%;
         padding-right: 3%;
     }
-    .navLink{
+    .navLink {
         font-size: 0.9rem;
     }
 }
 @media (max-width: 768px) {
-    .nav{
+    .nav {
         justify-content: space-between;
+        /* overflow-x: hidden; */
+        width: 100vw;
+        box-sizing: border-box;
     }
-    .navLinksWrapper{
-        position: absolute; 
-        width: 100%;
+    .navLinksWrapper {
+        box-sizing: border-box;
+
+        position: fixed;
+        width: 100vw;
         height: 100vh;
         top: 0;
-        left: 100%;
-        width: 100%;
+        left: 0;
+        transform: translateX(-100vw);
         background-color: white;
         flex-direction: column;
         justify-content: center;
         gap: 2rem;
         z-index: 1000;
-        transition: all .3s ease-in-out;
-
+        transition: all 0.3s ease-in-out;
     }
-    .openNavLinkWrapper{
-        left: 0;
+    .openNavLinkWrapper {
+        transform: translateX(0);
     }
-    .navLink{
+    .navLink {
         font-weight: 600;
         font-size: 1.2rem;
-
     }
-    .barsIcon{
+    .barsIcon {
         display: block;
     }
-    .closeIcon{
+    .closeIcon {
         display: block;
         position: absolute;
         top: 30px;
@@ -92,12 +93,12 @@
         fill: var(--main-dark);
         cursor: pointer;
     }
-    .logo{
+    .logo {
         display: block;
         width: 60px;
         height: auto;
     }
-    .mobileNavRight{
+    .mobileNavRight {
         display: flex;
         /* justify-content: space-between; */
         gap: 20px;
