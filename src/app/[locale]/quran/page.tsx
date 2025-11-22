@@ -17,16 +17,7 @@ type Props = {
     params: { locale: string };
 };
 
-export async function generateMetadata({
-    params: { locale },
-}: Omit<Props, "children">) {
-    const t = await getTranslations({ locale, namespace: "metaData" });
 
-    return {
-        title: t("QuranPage.title"),
-        description: t("QuranPage.description"),
-    };
-}
 export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
 }

@@ -5,7 +5,14 @@
     },
     "metaData": {
         "Layout": {
-            "title": "Razan Akademiyasi"
+            "title": "Razan Academy | Onlayn Qur'on va Arab Tili Darslari",
+            "description": "Razan Academy barcha yoshlar uchun Qur'on, tajvid, arab tili va islomiy fanlar bo‘yicha professional onlayn darslar taklif qiladi. Arab o‘qituvchilari bilan jonli va qulay dars jadvalida o‘qing.",
+            "keywords": "Razan Academy, onlayn Qur'on darslari, tajvid kurslari, arab tili o‘rganish, Qur'on yodlash, islomiy ta'lim, bolalar uchun Qur'on, arab o‘qituvchilari",
+            "ogTitle": "Razan Academy – Qur'on va Arab Tilini Onlayn O‘rganing",
+            "ogDescription": "Razan Academyga qo‘shiling va tajribali arab o‘qituvchilari bilan Qur'on, tajvid va arab tilini onlayn o‘rganing. Bolalar va kattalar uchun qulay jonli darslar.",
+            "ogAlt": "Razan Academy – Onlayn Qur'on va Arab Tili Ta'limi",
+            "twitterTitle": "Razan Academy | Qur'on va Arab Tilini Onlayn O‘rganish",
+            "twitterDescription": "Sertifikatlangan arab o‘qituvchilari bilan Qur'on, tajvid va arab tilini onlayn o‘rganing. Qulay jadval, interaktiv darslar va barcha yoshlar uchun dasturlar."
         },
         "HomePage": {
             "title": "Bosh sahifa",

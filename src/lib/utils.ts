@@ -11,6 +11,6 @@ export const fetchChapters = async () => {
 };
 
 
-
+export const BASE_URL = "https://www.razan-academy.net/"
 
 
