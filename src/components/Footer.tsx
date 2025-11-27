@@ -22,7 +22,7 @@ export default function Footer() {
     const locale = useLocale();
     const footerLinks = [
         { title: t("links.home"), href: "/" },
-        { title: t("links.about"), href: "/about-us" },
+        { title: t("links.about"), href: "/about" },
         { title: t("links.courses"), href: "/courses" },
         { title: t("links.quran"), href: "/quran" },
         { title: t("links.pricing"), href: "/pricing" },
